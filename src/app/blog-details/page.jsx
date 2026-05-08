@@ -1,6 +1,6 @@
 ﻿import BlogDetails from "@/components/BlogDetails";
 import Breadcrumb from "@/components/Breadcrumb";
-import FooterAreaOne from "@/components/FooterAreaOne";
+import FooterAreaFour from "@/components/FooterAreaFour";
 import HeaderFive from "@/components/HeaderFive";
 import SubscribeOne from "@/components/SubscribeOne";
 import Preloader from "@/helper/Preloader";
@@ -29,8 +29,8 @@ const page = () => {
 {/* Subscribe One */}
 <SubscribeOne />
 
-{/* Footer Area One */}
-<FooterAreaOne />
+{/* Footer Area Four */}
+<FooterAreaFour />
     </>
   );
 };

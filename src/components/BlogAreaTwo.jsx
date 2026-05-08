@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { blogs } from "@/data/blogs";
+
 const BlogAreaTwo = () => {
   return (
     <section className="blog-area space-bottom">
@@ -8,248 +10,62 @@ const BlogAreaTwo = () => {
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="title-area text-center">
-              <span className="sub-title">Blog</span>
-              <h2 className="sec-title">
-                Strategic Solutions For A Thriving Future
-              </h2>
+              <span className="sub-title">Latest From The Blog</span>
+              <h2 className="sec-title">Auto Tips & Repair Insights</h2>
             </div>
           </div>
         </div>
         <div className="row global-carousel blog-slider slider-shadow">
           <Swiper
             loop={true}
-            navigation={{
-              nextEl: ".testimonialOne-button-next",
-              prevEl: ".testimonialOne-button-prev",
-            }}
             spaceBetween={20}
             slidesPerGroup={1}
             speed={1000}
             pagination={{ clickable: true }}
             autoplay={{ delay: 6000 }}
             className="mySwiper"
+            style={{ alignItems: "stretch" }}
             breakpoints={{
-              0: {
-                slidesPerView: 1,
-              },
-              768: {
-                slidesPerView: 2,
-              },
-              992: {
-                slidesPerView: 3,
-              },
-              1200: {
-                slidesPerView: 3,
-              },
-              1400: {
-                slidesPerView: 3,
-              },
+              0: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              992: { slidesPerView: 3 },
+              1200: { slidesPerView: 3 },
+              1400: { slidesPerView: 3 },
             }}
           >
-            <SwiperSlide>
-              <div>
-                <div className="blog-card style2">
-                  <div className="blog-img">
-                    <img src="assets/img/blog/blog_s2_1.png" alt="Rapid Fix" />
-                    <div className="blog-date">
-                      <Link href="/blog">
-                        <span>17</span>Feb
+            {blogs.map((blog) => (
+              <SwiperSlide key={blog.slug}>
+                <div>
+                  <div className="blog-card style2">
+                    <div className="blog-img">
+                      <img src={blog.img} alt={blog.title} />
+                      <div className="blog-date">
+                        <Link href="/blog">
+                          <span>{blog.date.day}</span>
+                          {blog.date.month}
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="blog-content">
+                      <div className="blog-meta">
+                        <Link href="/blog">
+                          <i className="fas fa-user" /> By Rapid Fix Team
+                        </Link>
+                        <Link href="/blog">
+                          <i className="fas fa-tag" /> {blog.category}
+                        </Link>
+                      </div>
+                      <h3 className="blog-title">
+                        <Link href={`/blog/${blog.slug}`}>{blog.title}</Link>
+                      </h3>
+                      <Link className="link-btn style3" href={`/blog/${blog.slug}`}>
+                        Read More <i className="fas fa-arrow-right ms-2" />
                       </Link>
                     </div>
-                  </div>
-                  <div className="blog-content">
-                    <div className="blog-meta">
-                      <Link href="/blog">
-                        <i className="fas fa-user" />
-                        By admin
-                      </Link>
-                      <Link href="/blog">
-                        <i className="fas fa-comments" />
-                        Comments (05)
-                      </Link>
-                    </div>
-                    <h3 className="blog-title">
-                      <Link href="/blog-details">
-                        Strategic Solutions for Sustainable Success
-                      </Link>
-                    </h3>
-                    <Link className="link-btn style3" href="/blog-details">
-                      Read More <i className="fas fa-arrow-right ms-2" />
-                    </Link>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <div className="blog-card style2">
-                  <div className="blog-img">
-                    <img src="assets/img/blog/blog_s2_2.png" alt="Rapid Fix" />
-                    <div className="blog-date">
-                      <Link href="/blog">
-                        <span>17</span>Feb
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="blog-content">
-                    <div className="blog-meta">
-                      <Link href="/blog">
-                        <i className="fas fa-user" />
-                        By admin
-                      </Link>
-                      <Link href="/blog">
-                        <i className="fas fa-comments" />
-                        Comments (05)
-                      </Link>
-                    </div>
-                    <h3 className="blog-title">
-                      <Link href="/blog-details">
-                        Empowering Businesses Fueling Growth
-                      </Link>
-                    </h3>
-                    <Link className="link-btn style3" href="/blog-details">
-                      Read More <i className="fas fa-arrow-right ms-2" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <div className="blog-card style2">
-                  <div className="blog-img">
-                    <img src="assets/img/blog/blog_s2_3.png" alt="Rapid Fix" />
-                    <div className="blog-date">
-                      <Link href="/blog">
-                        <span>17</span>Feb
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="blog-content">
-                    <div className="blog-meta">
-                      <Link href="/blog">
-                        <i className="fas fa-user" />
-                        By admin
-                      </Link>
-                      <Link href="/blog">
-                        <i className="fas fa-comments" />
-                        Comments (05)
-                      </Link>
-                    </div>
-                    <h3 className="blog-title">
-                      <Link href="/blog-details">
-                        Strategic guidance for your business success
-                      </Link>
-                    </h3>
-                    <Link className="link-btn style3" href="/blog-details">
-                      Read More <i className="fas fa-arrow-right ms-2" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <div className="blog-card style2">
-                  <div className="blog-img">
-                    <img src="assets/img/blog/blog_s2_1.png" alt="Rapid Fix" />
-                    <div className="blog-date">
-                      <Link href="/blog">
-                        <span>17</span>Feb
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="blog-content">
-                    <div className="blog-meta">
-                      <Link href="/blog">
-                        <i className="fas fa-user" />
-                        By admin
-                      </Link>
-                      <Link href="/blog">
-                        <i className="fas fa-comments" />
-                        Comments (05)
-                      </Link>
-                    </div>
-                    <h3 className="blog-title">
-                      <Link href="/blog-details">
-                        Strategic Solutions for Sustainable Success
-                      </Link>
-                    </h3>
-                    <Link className="link-btn style3" href="/blog-details">
-                      Read More <i className="fas fa-arrow-right ms-2" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <div className="blog-card style2">
-                  <div className="blog-img">
-                    <img src="assets/img/blog/blog_s2_2.png" alt="Rapid Fix" />
-                    <div className="blog-date">
-                      <Link href="/blog">
-                        <span>17</span>Feb
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="blog-content">
-                    <div className="blog-meta">
-                      <Link href="/blog">
-                        <i className="fas fa-user" />
-                        By admin
-                      </Link>
-                      <Link href="/blog">
-                        <i className="fas fa-comments" />
-                        Comments (05)
-                      </Link>
-                    </div>
-                    <h3 className="blog-title">
-                      <Link href="/blog-details">
-                        Empowering Businesses Fueling Growth
-                      </Link>
-                    </h3>
-                    <Link className="link-btn style3" href="/blog-details">
-                      Read More <i className="fas fa-arrow-right ms-2" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <div className="blog-card style2">
-                  <div className="blog-img">
-                    <img src="assets/img/blog/blog_s2_3.png" alt="Rapid Fix" />
-                    <div className="blog-date">
-                      <Link href="/blog">
-                        <span>17</span>Feb
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="blog-content">
-                    <div className="blog-meta">
-                      <Link href="/blog">
-                        <i className="fas fa-user" />
-                        By admin
-                      </Link>
-                      <Link href="/blog">
-                        <i className="fas fa-comments" />
-                        Comments (05)
-                      </Link>
-                    </div>
-                    <h3 className="blog-title">
-                      <Link href="/blog-details">
-                        Strategic guidance for your business success
-                      </Link>
-                    </h3>
-                    <Link className="link-btn style3" href="/blog-details">
-                      Read More <i className="fas fa-arrow-right ms-2" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>

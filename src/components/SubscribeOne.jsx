@@ -10,7 +10,7 @@ const SubscribeOne = () => {
       >
         <div className="footer-logo">
           <Link href="/">
-            <img src="assets/img/logo-white.svg" alt="Rapid Fix" />
+            <img style={{ width: "200px" }} src="/assets/logo.png" alt="Rapid Fix" />
           </Link>
         </div>
         <div className="call-media-wrap">
@@ -20,8 +20,8 @@ const SubscribeOne = () => {
           <div className="media-body">
             <h6 className="title text-white">Requesting A Call:</h6>
             <h4 className="link">
-              <a className="text-white" href="tel:6295550129">
-                (629) 555-0129
+              <a className="text-white" href="tel:(437) 836-4848">
+                (437) 836-4848
               </a>
             </h4>
           </div>

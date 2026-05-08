@@ -57,21 +57,21 @@ const HeaderFive = () => {
               <div className="col-auto d-lg-none d-block">
                 <div className="header-logo">
                   <Link href="/">
-                    <img src="assets/img/logo.svg" alt="Rapid Fix" />
+                    <img src="/assets/logo.png" alt="Rapid Fix" width={150} />
                   </Link>
                 </div>
               </div>
               <div className="col-auto d-xl-block d-none header-sticky-none">
                 <div className="header-logo">
                   <Link href="/">
-                    <img src="assets/img/logo.svg" alt="Rapid Fix" />
+                    <img src="/assets/logo.png" alt="Rapid Fix" width={150} />
                   </Link>
                 </div>
               </div>
               <div className="col-auto header-sticky-logo">
                 <div className="header-logo">
                   <Link href="/">
-                    <img src="assets/img/logo.svg" alt="Rapid Fix" />
+                    <img src="/assets/logo.png" alt="Rapid Fix" width={150} />
                   </Link>
                 </div>
               </div>
@@ -84,64 +84,11 @@ const HeaderFive = () => {
                     <li>
                       <Link href="/about">About Us</Link>
                     </li>
-                    <li className="menu-item-has-children">
-                      <Link href="#">Services</Link>
-                      <ul className="sub-menu">
-                        <li>
-                          <Link href="/service">Service</Link>
-                        </li>
-                        <li>
-                          <Link href="/service-details">Service Details</Link>
-                        </li>
-                      </ul>
+                    <li>
+                      <Link href="/service">Services</Link>
                     </li>
-                    <li className="menu-item-has-children">
-                      <Link href="#">Projects</Link>
-                      <ul className="sub-menu">
-                        <li>
-                          <Link href="/project">Projects</Link>
-                        </li>
-                        <li>
-                          <Link href="/project-details">Projects Details</Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="menu-item-has-children">
-                      <Link href="#">Blog</Link>
-                      <ul className="sub-menu">
-                        <li>
-                          <Link href="/blog">Blog</Link>
-                        </li>
-                        <li>
-                          <Link href="/blog-details">Blog Details</Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="menu-item-has-children">
-                      <Link href="#">Pages</Link>
-                      <ul className="sub-menu">
-                        <li>
-                          <Link href="/team">Team Page</Link>
-                        </li>
-                        <li>
-                          <Link href="/team-details">Team Details</Link>
-                        </li>
-                        <li>
-                          <Link href="/shop">Shop Page</Link>
-                        </li>
-                        <li>
-                          <Link href="/shop-details">Shop Details</Link>
-                        </li>
-                        <li>
-                          <Link href="/cart">Cart</Link>
-                        </li>
-                        <li>
-                          <Link href="/checkout">Checkout</Link>
-                        </li>
-                        <li>
-                          <Link href="/wishlist">Wishlist</Link>
-                        </li>
-                      </ul>
+                    <li>
+                      <Link href="/blog">Blog</Link>
                     </li>
                     <li>
                       <Link href="/contact">Contact</Link>
@@ -183,8 +130,8 @@ const HeaderFive = () => {
                     </svg>
                   </div>
                   <div className="navbar-right-desc-details">
-                    <a className="link" href="tel:+2590256215">
-                      (629) 555-0129
+                    <a className="link" href="tel:(437) 836-4848">
+                      (437) 836-4848
                     </a>
                   </div>
                 </div>
@@ -198,7 +145,7 @@ const HeaderFive = () => {
           <div className="mobile-menu-area">
             <div className="mobile-logo">
               <Link href="/">
-                <img src="assets/img/logo.svg" alt="Rapid Fix" />
+                <img src="F:\Wehoware\projects\rapid fix\public\assets\logo.png" alt="Rapid Fix" />
               </Link>
               <button className="menu-toggle" onClick={mobileMenu}>
                 <i className="fa fa-times" />
@@ -212,85 +159,15 @@ const HeaderFive = () => {
                 <li>
                   <Link href="/about">About</Link>
                 </li>
+
                 <li className="menu-item-has-children submenu-item-has-children">
-                  <Link href="#">Pages</Link>
-                  <ul className="sub-menu submenu-class">
-                    <li>
-                      <Link href="/team">Team Page</Link>
-                    </li>
-                    <li>
-                      <Link href="/team-details">Team Details</Link>
-                    </li>
-                    <li>
-                      <Link href="/shop">Shop Page</Link>
-                    </li>
-                    <li>
-                      <Link href="/shop-details">Shop Details</Link>
-                    </li>
-                    <li>
-                      <Link href="/cart">Cart</Link>
-                    </li>
-                    <li>
-                      <Link href="/checkout">Checkout</Link>
-                    </li>
-                    <li>
-                      <Link href="/wishlist">Wishlist</Link>
-                    </li>
-                  </ul>
+                  <Link href="/service">Service</Link>
                 </li>
+                
                 <li className="menu-item-has-children submenu-item-has-children">
-                  <Link href="#">Project</Link>
-                  <ul className="sub-menu submenu-class">
-                    <li>
-                      <Link href="/project">Projects</Link>
-                    </li>
-                    <li>
-                      <Link href="/project-details">Project Details</Link>
-                    </li>
-                  </ul>
+                  <Link href="/blog">Blog</Link>
                 </li>
-                <li className="menu-item-has-children submenu-item-has-children">
-                  <Link href="#">Service</Link>
-                  <ul className="sub-menu submenu-class">
-                    <li>
-                      <Link href="/service">Service</Link>
-                    </li>
-                    <li>
-                      <Link href="/service-details">Service Details</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="menu-item-has-children submenu-item-has-children">
-                  <Link href="#">Shop</Link>
-                  <ul className="sub-menu submenu-class">
-                    <li>
-                      <Link href="/shop">Shop</Link>
-                    </li>
-                    <li>
-                      <Link href="/shop-details">Shop Details</Link>
-                    </li>
-                    <li>
-                      <Link href="/cart">Cart</Link>
-                    </li>
-                    <li>
-                      <Link href="/checkout">Checkout</Link>
-                    </li>
-                    <li>
-                      <Link href="/wishlist">Wishlist</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="menu-item-has-children submenu-item-has-children">
-                  <Link href="#">Blog</Link>
-                  <ul className="sub-menu submenu-class">
-                    <li>
-                      <Link href="/blog">Blog</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog-details">Blog Details</Link>
-                    </li>
-                  </ul>
-                </li>
+
                 <li>
                   <Link href="/contact">Contact</Link>
                 </li>

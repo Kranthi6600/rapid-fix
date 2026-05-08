@@ -1,19 +1,17 @@
-﻿
-import AboutTwo from "@/components/AboutTwo";
+﻿import AboutTwo from "@/components/AboutTwo";
 import Breadcrumb from "@/components/Breadcrumb";
 import CTAAreaOne from "@/components/CTAAreaOne";
-import FooterAreaOne from "@/components/FooterAreaOne";
+import FooterAreaFour from "@/components/FooterAreaFour";
 import HeaderFive from "@/components/HeaderFive";
 import ProcessAreaOne from "@/components/ProcessAreaOne";
 import SubscribeOne from "@/components/SubscribeOne";
-import TeamAreaTwo from "@/components/TeamAreaTwo";
 import TestimonialOne from "@/components/TestimonialOne";
 import Preloader from "@/helper/Preloader";
 
 export const metadata = {
-  title: "About || Rapid Fix - Car Repair & Auto Services NEXT Js Template",
+  title: "About Us | Rapid Fix - Auto & Diesel Repair Specialists",
   description:
-    "Rapid Fix is a clean and modern React Template suitable for any type of Auto Servicing, Car Repair & Maintenance website. It is created for automobile servicing providers who offer car wash, car service, routine maintenance, truck service, etc. This HTML template can be used for car servicing, car repairing, car wash, auto shop, mechanic shop, batteries shop, tire / wheel shop, and multipurpose businesses. We have used comment on codes and also decorated the codes beautifully so one can find it very easy to customize.",
+    "Learn about Rapid Fix — certified auto and diesel repair technicians with 15+ years of experience and 5,000+ vehicles serviced. We deliver fast, accurate, and affordable service for personal vehicles and commercial fleets.",
 };
 
 
@@ -27,7 +25,7 @@ const page = () => {
       <HeaderFive />
 
       {/* Breadcrumb */}
-      <Breadcrumb title={"About Us"} />
+      <Breadcrumb title={"About Us"} img="/assets/img/about/about-us.jpg"/>
 
       {/* About Area */}
       <AboutTwo />
@@ -41,14 +39,11 @@ const page = () => {
       {/* Testimonial One */}
       <TestimonialOne />
 
-      {/* Team Area Two */}
-      <TeamAreaTwo />
-
       {/* Subscribe One */}
       <SubscribeOne />
 
-      {/* Footer Area One */}
-      <FooterAreaOne />
+      {/* Footer Area Four */}
+      <FooterAreaFour />
     </>
   );
 };

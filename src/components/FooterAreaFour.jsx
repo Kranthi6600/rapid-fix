@@ -40,9 +40,6 @@ const FooterAreaFour = () => {
                       <Link href="/about">About</Link>
                     </li>
                     <li>
-                      <Link href="/team">Team</Link>
-                    </li>
-                    <li>
                       <Link href="/contact">Faq</Link>
                     </li>
                     <li>
@@ -102,7 +99,7 @@ const FooterAreaFour = () => {
                     <div className="contact-grid-details">
                       <p>Phone Number</p>
                       <h6>
-                        <Link href="tel:4378364848">(437) 836-4848</Link>
+                        <Link href="tel:(437) 836-4848">(437) 836-4848</Link>
                         <p />
                       </h6>
                     </div>
@@ -131,12 +128,12 @@ const FooterAreaFour = () => {
           <div className="row gy-3 justify-content-md-between justify-content-center">
             <div className="col-auto align-self-center">
               <p className="copyright-text text-center">
-                © <Link href="#">Rapid Fix</Link> 2024 | All Rights Reserved
+                © <Link href="#">Rapid Fix</Link> 2025 | All Rights Reserved | Developed by <Link href="https://wehoware.com" target="_blank" rel="noopener noreferrer">Wehoware</Link>
               </p>
             </div>
             <div className="col-auto">
               <div className="footer-links">
-                <Link href="/contact">Tarms &amp; Condition</Link>
+                <Link href="/contact">Terms &amp; Conditions</Link>
                 <Link href="/contact">Privacy Policy</Link>
                 <Link href="/contact">Contact Us</Link>
               </div>

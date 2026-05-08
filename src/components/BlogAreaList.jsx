@@ -1,140 +1,98 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
+import { blogs } from "@/data/blogs";
+
+const POSTS_PER_PAGE = 3;
 
 const BlogAreaList = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(blogs.length / POSTS_PER_PAGE);
+  const start = (currentPage - 1) * POSTS_PER_PAGE;
+  const paginated = blogs.slice(start, start + POSTS_PER_PAGE);
+
   return (
     <section className="blog-area space-top space-extra-bottom">
       <div className="container">
         <div className="row gx-40">
           <div className="col-xxl-8 col-lg-7">
-            <div className="blog-single-card">
-              <div className="blog-thumb">
-                <img src="assets/img/blog/blog_s1_1.png" alt="Rapid Fix" />
-              </div>
-              <div className="blog-content">
-                <div className="blog-meta">
-                  <Link href="/blog">
-                    <i className="fas fa-user" />
-                    By admin
-                  </Link>
-                  <Link href="/blog">
-                    <i className="fas fa-comments" />
-                    Comments (05)
-                  </Link>
+            {paginated.map((blog, index) => (
+              <div className="blog-single-card" key={index}>
+                <div className="blog-thumb">
+                  <img src={blog.img} alt={blog.title} />
                 </div>
-                <h3 className="blog-title">
-                  <Link href="/blog-details">
-                    Dependable Car Repair Solutio Professional Car Repair
-                    Services
+                <div className="blog-content">
+                  <div className="blog-meta">
+                    <Link href="/blog">
+                      <i className="fas fa-user" /> By Rapid Fix Team
+                    </Link>
+                    <Link href="/blog">
+                      <i className="fas fa-tag" /> {blog.category}
+                    </Link>
+                  </div>
+                  <h3 className="blog-title">
+                    <Link href={`/blog/${blog.slug}`}>{blog.title}</Link>
+                  </h3>
+                  <p className="blog-text">{blog.excerpt}</p>
+                  <Link href={`/blog/${blog.slug}`} className="btn style-border2">
+                    READ MORE <i className="fas fa-arrow-right" />
                   </Link>
-                </h3>
-                <p className="blog-text">
-                  Et purus duis sollicitudin dignissim habitant. Egestas nulla
-                  quis venenatis cras sed eu massa eu faucibus. Urna fusce
-                  aenean tortor pretium. Ac{" "}
-                </p>
-                <Link href="/blog-details" className="btn style-border2">
-                  {" "}
-                  READ MORE <i className="fas fa-arrow-right" />
-                </Link>
-                <div className="blog-date">
-                  <Link href="/blog">
-                    <span>17</span>Feb
-                  </Link>
+                  <div className="blog-date">
+                    <Link href="/blog">
+                      <span>{blog.date.day}</span>
+                      {blog.date.month}
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="blog-single-card">
-              <div className="blog-thumb">
-                <img src="assets/img/blog/blog_s1_2.png" alt="Rapid Fix" />
-              </div>
-              <div className="blog-content">
-                <div className="blog-meta">
-                  <Link href="/blog">
-                    <i className="fas fa-user" />
-                    By admin
-                  </Link>
-                  <Link href="/blog">
-                    <i className="fas fa-comments" />
-                    Comments (05)
-                  </Link>
-                </div>
-                <h3 className="blog-title">
-                  <Link href="/blog-details">
-                    Precision Repairs Personal Service Turning Wrenches Building
-                    Trust
-                  </Link>
-                </h3>
-                <p className="blog-text">
-                  Et purus duis sollicitudin dignissim habitant. Egestas nulla
-                  quis venenatis cras sed eu massa eu faucibus. Urna fusce
-                  aenean tortor pretium. Ac{" "}
-                </p>
-                <Link href="/blog-details" className="btn style-border2">
-                  {" "}
-                  READ MORE <i className="fas fa-arrow-right" />
-                </Link>
-                <div className="blog-date">
-                  <Link href="/blog">
-                    <span>17</span>Feb
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="blog-single-card">
-              <div className="blog-thumb">
-                <img src="assets/img/blog/blog_s1_3.png" alt="Rapid Fix" />
-              </div>
-              <div className="blog-content">
-                <div className="blog-meta">
-                  <Link href="/blog">
-                    <i className="fas fa-user" />
-                    By admin
-                  </Link>
-                  <Link href="/blog">
-                    <i className="fas fa-comments" />
-                    Comments (05)
-                  </Link>
-                </div>
-                <h3 className="blog-title">
-                  <Link href="/blog-details">
-                    Fixing Cars Fulfilling Dreams Gear Up for Seamless Driving
-                  </Link>
-                </h3>
-                <p className="blog-text">
-                  Et purus duis sollicitudin dignissim habitant. Egestas nulla
-                  quis venenatis cras sed eu massa eu faucibus. Urna fusce
-                  aenean tortor pretium. Ac{" "}
-                </p>
-                <Link href="/blog-details" className="btn style-border2">
-                  {" "}
-                  READ MORE <i className="fas fa-arrow-right" />
-                </Link>
-                <div className="blog-date">
-                  <Link href="/blog">
-                    <span>17</span>Feb
-                  </Link>
-                </div>
-              </div>
-            </div>
+            ))}
+
             <div className="pagination justify-content-center">
               <ul>
-                <li>
-                  <Link href="/blog">1</Link>
-                </li>
-                <li>
-                  <Link href="/blog">2</Link>
-                </li>
-                <li>
-                  <Link href="/blog">3</Link>
-                </li>
-                <li>
-                  <Link href="/blog">
-                    <i className="fas fa-angle-right" />
-                  </Link>
-                </li>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <li key={page} className={currentPage === page ? "active" : ""}>
+                    <button
+                      onClick={() => {
+                        setCurrentPage(page);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                      style={{
+                        background: "none",
+                        border: "none",
+                        cursor: "pointer",
+                        padding: 0,
+                      }}
+                    >
+                      <Link
+                        href="#"
+                        onClick={(e) => e.preventDefault()}
+                        className={currentPage === page ? "active" : ""}
+                      >
+                        {page}
+                      </Link>
+                    </button>
+                  </li>
+                ))}
+                {currentPage < totalPages && (
+                  <li>
+                    <button
+                      onClick={() => {
+                        setCurrentPage((p) => p + 1);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                      style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
+                    >
+                      <Link href="#" onClick={(e) => e.preventDefault()}>
+                        <i className="fas fa-angle-right" />
+                      </Link>
+                    </button>
+                  </li>
+                )}
               </ul>
             </div>
           </div>
+
           <div className="col-xxl-4 col-lg-5">
             <aside className="sidebar-area">
               <div className="widget widget_search">
@@ -146,113 +104,55 @@ const BlogAreaList = () => {
                   </button>
                 </form>
               </div>
+
               <div className="widget widget_categories">
                 <h3 className="widget_title">Category</h3>
                 <ul>
-                  <li>
-                    <Link href="/blog">
-                      Precision Auto Works <span>(4)</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blog">
-                      Mobile Car Repair <span>(5)</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blog">
-                      Elite Automotive Service <span>(8)</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blog">
-                      Pro Auto Fix <span>(4)</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blog">
-                      Drive-In Garage <span>(3)</span>
-                    </Link>
-                  </li>
+                  <li><Link href="/blog">Auto Repair <span>(3)</span></Link></li>
+                  <li><Link href="/blog">Diesel Repair <span>(2)</span></Link></li>
+                  <li><Link href="/blog">Diagnostics <span>(4)</span></Link></li>
+                  <li><Link href="/blog">Fleet Services <span>(2)</span></Link></li>
+                  <li><Link href="/blog">Maintenance Tips <span>(5)</span></Link></li>
                 </ul>
               </div>
+
               <div className="widget">
-                <h3 className="widget_title">Popular post</h3>
+                <h3 className="widget_title">Popular Posts</h3>
                 <div className="recent-post-wrap">
-                  <div className="recent-post">
-                    <div className="media-body">
-                      <h4 className="post-title">
-                        <Link className="text-inherit" href="/blog-details">
-                          Quick Fix Motors
+                  {blogs.slice(0, 3).map((post, i) => (
+                    <div className="recent-post" key={i}>
+                      <div className="media-body">
+                        <h4 className="post-title">
+                          <Link className="text-inherit" href={`/blog/${post.slug}`}>
+                            {post.title}
+                          </Link>
+                        </h4>
+                        <div className="recent-post-meta">
+                          <Link href="/blog">{post.date.full}</Link>
+                        </div>
+                      </div>
+                      <div className="media-img">
+                        <Link href={`/blog/${post.slug}`}>
+                          <img src={post.img} alt={post.title} />
                         </Link>
-                      </h4>
-                      <div className="recent-post-meta">
-                        <Link href="/blog">Sep 15, 2024</Link>
                       </div>
                     </div>
-                    <div className="media-img">
-                      <Link href="/blog-details">
-                        <img
-                          src="assets/img/blog/recent-post1.png"
-                          alt="Rapid Fix"
-                        />
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="recent-post">
-                    <div className="media-body">
-                      <h4 className="post-title">
-                        <Link className="text-inherit" href="/blog-details">
-                          Professional Service
-                        </Link>
-                      </h4>
-                      <div className="recent-post-meta">
-                        <Link href="/blog">Jun 25, 2024</Link>
-                      </div>
-                    </div>
-                    <div className="media-img">
-                      <Link href="/blog-details">
-                        <img
-                          src="assets/img/blog/recent-post2.png"
-                          alt="Rapid Fix"
-                        />
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="recent-post">
-                    <div className="media-body">
-                      <h4 className="post-title">
-                        <Link className="text-inherit" href="/blog-details">
-                          Gear Wrench Auto
-                        </Link>
-                      </h4>
-                      <div className="recent-post-meta">
-                        <Link href="/blog">Jun 25, 2024</Link>
-                      </div>
-                    </div>
-                    <div className="media-img">
-                      <Link href="/blog-details">
-                        <img
-                          src="assets/img/blog/recent-post3.png"
-                          alt="Rapid Fix"
-                        />
-                      </Link>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
+
               <div className="widget widget_tag_cloud">
                 <h3 className="widget_title">Tags</h3>
                 <div className="tagcloud">
-                  <Link href="/blog">Mechanic</Link>
-                  <Link href="/blog">Auto Fixers</Link>
-                  <Link href="/blog">Car Fix</Link>
-                  <Link href="/blog">Pro Auto Fix</Link>
-                  <Link href="/blog">Service</Link>
-                  <Link href="/blog">Auto Fix</Link>
                   <Link href="/blog">Auto Repair</Link>
-                  <Link href="/blog">Masters</Link>
-                  <Link href="/blog">Automotive</Link>
+                  <Link href="/blog">Diesel</Link>
+                  <Link href="/blog">Brakes</Link>
+                  <Link href="/blog">Oil Change</Link>
+                  <Link href="/blog">Fleet</Link>
+                  <Link href="/blog">Diagnostics</Link>
+                  <Link href="/blog">SSC</Link>
+                  <Link href="/blog">Maintenance</Link>
+                  <Link href="/blog">Truck Repair</Link>
                 </div>
               </div>
             </aside>

@@ -78,7 +78,7 @@ const ClientAreaFour = () => {
                       <div className="client-logo">
                         <Link href="/">
                           <img
-                            src="assets/img/update-img/client/1-1.png"
+                            src="/assets/img/about/about-1.jpg"
                             alt="Rapid Fix"
                           />
                         </Link>
@@ -90,7 +90,7 @@ const ClientAreaFour = () => {
                       <div className="client-logo">
                         <Link href="/">
                           <img
-                            src="assets/img/update-img/client/1-2.png"
+                            src="/assets/img/about/about-2.jpg"
                             alt="Rapid Fix"
                           />
                         </Link>
@@ -102,7 +102,7 @@ const ClientAreaFour = () => {
                       <div className="client-logo">
                         <Link href="/">
                           <img
-                            src="assets/img/update-img/client/1-3.png"
+                            src="/assets/img/about/about-3.jpg"
                             alt="Rapid Fix"
                           />
                         </Link>
@@ -114,7 +114,7 @@ const ClientAreaFour = () => {
                       <div className="client-logo">
                         <Link href="/">
                           <img
-                            src="assets/img/update-img/client/1-4.png"
+                            src="/assets/img/about/about-4.jpg"
                             alt="Rapid Fix"
                           />
                         </Link>
@@ -126,7 +126,7 @@ const ClientAreaFour = () => {
                       <div className="client-logo">
                         <Link href="/">
                           <img
-                            src="assets/img/update-img/client/1-5.png"
+                            src="/assets/img/about/about-5.jpg"
                             alt="Rapid Fix"
                           />
                         </Link>
@@ -138,7 +138,7 @@ const ClientAreaFour = () => {
                       <div className="client-logo">
                         <Link href="/">
                           <img
-                            src="assets/img/update-img/client/1-6.png"
+                            src="/assets/img/about/about-6.jpg"
                             alt="Rapid Fix"
                           />
                         </Link>
@@ -150,7 +150,7 @@ const ClientAreaFour = () => {
                       <div className="client-logo">
                         <Link href="/">
                           <img
-                            src="assets/img/update-img/client/1-7.png"
+                            src="/assets/img/about/about-7.jpg"
                             alt="Rapid Fix"
                           />
                         </Link>
@@ -198,7 +198,7 @@ const ClientAreaFour = () => {
                       <div className="client-logo">
                         <Link href="/">
                           <img
-                            src="assets/img/update-img/client/1-8.png"
+                            src="/assets/img/about/about-8.jpg"
                             alt="Rapid Fix"
                           />
                         </Link>
@@ -210,7 +210,7 @@ const ClientAreaFour = () => {
                       <div className="client-logo">
                         <Link href="/">
                           <img
-                            src="assets/img/update-img/client/1-9.png"
+                            src="/assets/img/about/about-9.jpg"
                             alt="Rapid Fix"
                           />
                         </Link>
@@ -222,7 +222,7 @@ const ClientAreaFour = () => {
                       <div className="client-logo">
                         <Link href="/">
                           <img
-                            src="assets/img/update-img/client/1-10.png"
+                            src="/assets/img/about/about-10.jpg"
                             alt="Rapid Fix"
                           />
                         </Link>
@@ -234,7 +234,7 @@ const ClientAreaFour = () => {
                       <div className="client-logo">
                         <Link href="/">
                           <img
-                            src="assets/img/update-img/client/1-11.png"
+                            src="/assets/img/about/about-11.jpg"
                             alt="Rapid Fix"
                           />
                         </Link>
@@ -246,7 +246,7 @@ const ClientAreaFour = () => {
                       <div className="client-logo">
                         <Link href="/">
                           <img
-                            src="assets/img/update-img/client/1-12.png"
+                            src="/assets/img/about/about-12.jpg"
                             alt="Rapid Fix"
                           />
                         </Link>
@@ -258,7 +258,7 @@ const ClientAreaFour = () => {
                       <div className="client-logo">
                         <Link href="/">
                           <img
-                            src="assets/img/update-img/client/1-13.png"
+                            src="/assets/img/about/about-13.jpg"
                             alt="Rapid Fix"
                           />
                         </Link>
@@ -270,7 +270,7 @@ const ClientAreaFour = () => {
                       <div className="client-logo">
                         <Link href="/">
                           <img
-                            src="assets/img/update-img/client/1-14.png"
+                            src="/assets/img/about/about-14.jpg"
                             alt="Rapid Fix"
                           />
                         </Link>

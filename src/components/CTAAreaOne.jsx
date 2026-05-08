@@ -3,10 +3,10 @@ import Link from "next/link";
 
 const CTAAreaOne = () => {
   return (
-    <div className="cta-area-1">
-      <div className="cta1-bg-thumb">
-        <img src="assets/img/bg/cta-bg1-1.png" alt="Rapid Fix" />
-      </div>
+    <div
+        className="footer-top-1 bg-theme"
+        style={{ backgroundImage: "url(assets/img/bg/footer-top-bg1-1.png)" }}
+      >
       <div className="container">
         <div className="cta-wrap1">
           <div className="row justify-content-md-between align-items-center">

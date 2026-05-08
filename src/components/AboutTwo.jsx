@@ -9,10 +9,10 @@ const AboutTwo = () => {
           <div className="col-xxl-7 col-xl-6">
             <div className="about-thumb2 mb-40 mb-xl-0">
               <div className="about-img-1">
-                <img src="assets/img/normal/about_2-1.png" alt="Rapid Fix" />
+                <img src="/assets/img/about/about-15.jpg" alt="Rapid Fix" />
               </div>
               <div className="about-img-2">
-                <img src="assets/img/normal/about_2-2.png" alt="Rapid Fix" />
+                <img src="/assets/img/about/about-16.jpg" alt="Rapid Fix" />
               </div>
               <div className="about-counter-wrap jump-reverse">
                 <img src="assets/img/icon/about_icon2-1.svg" alt="Rapid Fix" />
@@ -59,7 +59,7 @@ const AboutTwo = () => {
               <div className="title-area mb-30">
                 <span className="sub-title">Know About Us</span>
                 <h2 className="sec-title">
-                  Non Leo Libero Amet The Maecenas Gravida{" "}
+                  More Than Mechanics — Your Trusted Vehicle Partners{" "}
                   <img
                     className="title-bg-shape shape-center"
                     src="assets/img/bg/title-bg-shape.png"
@@ -67,10 +67,16 @@ const AboutTwo = () => {
                   />
                 </h2>
                 <p className="sec-text">
-                  A car repair is a service provided to fix any issues or
-                  damages with a your vehicle. It involves diagnosing the
-                  problem, repairing or replacing the necessary parts, and
-                  ensuring that the car
+                  At Rapid Fix, we're more than just mechanics — we're your
+                  partners in keeping your vehicles running at peak performance.
+                  Our team of certified technicians brings years of expertise in
+                  both auto and diesel repair.
+                </p>
+                <p className="sec-text mt-15">
+                  We invest in the latest diagnostic technology and training to
+                  deliver fast, accurate, and affordable service. From personal
+                  vehicles to commercial fleets, we treat every job with the
+                  same commitment to quality.
                 </p>
               </div>
               <div className="about-feature-wrap style-shadow">
@@ -79,11 +85,11 @@ const AboutTwo = () => {
                 </div>
                 <div className="about-feature-wrap-details">
                   <h5 className="about-feature-title">
-                    Elite Automotive Service
+                    Certified Expert Technicians
                   </h5>
                   <p className="about-feature-text">
-                    Et purus duis sollicitudin dignissim habitant. Egestas nulla
-                    quis venenatis cras sed{" "}
+                    Our certified team handles everything from routine
+                    maintenance to complex diesel overhauls with precision.
                   </p>
                 </div>
               </div>
@@ -92,10 +98,10 @@ const AboutTwo = () => {
                   <img src="assets/img/icon/about_icon2-4.svg" alt="Rapid Fix" />
                 </div>
                 <div className="about-feature-wrap-details">
-                  <h5 className="about-feature-title">Pro Drive Garage</h5>
+                  <h5 className="about-feature-title">Advanced Diagnostics & Fleet Service</h5>
                   <p className="about-feature-text">
-                    Et purus duis sollicitudin dignissim habitant. Egestas nulla
-                    quis venenatis cras sed{" "}
+                    State-of-the-art technology and scheduled maintenance plans
+                    keep personal vehicles and commercial fleets road-ready.
                   </p>
                 </div>
               </div>

@@ -1,143 +1,67 @@
 import Link from "next/link";
 
+const services = [
+  {
+    icon: "assets/img/icon/service-icon_1-1.svg",
+    img: "assets/img/service/service-3.jpg",
+    title: "Auto Repair",
+    text: "Complete auto repair for all makes and models — brakes, suspension, steering, and more.",
+  },
+  {
+    icon: "assets/img/icon/service-icon_1-2.svg",
+    img: "assets/img/service/service-2.jpg",
+    title: "Diesel Repair",
+    text: "Specialized diesel engine diagnostics, repair, and maintenance for trucks and equipment.",
+  },
+  {
+    icon: "assets/img/icon/service-icon_1-3.svg",
+    img: "assets/img/service/service-4.jpg",
+    title: "Diagnostics",
+    text: "State-of-the-art computer diagnostics to pinpoint issues fast and accurately.",
+  },
+  {
+    icon: "assets/img/icon/service-icon_1-4.svg",
+    img: "assets/img/service/service-5.jpg",
+    title: "Maintenance",
+    text: "Preventative maintenance services including oil changes, tune-ups, and fluid flushes.",
+  },
+  {
+    icon: "assets/img/icon/service-icon_1-5.svg",
+    img: "assets/img/service/service-6.jpg",
+    title: "Fleet Services",
+    text: "Keep your fleet running with scheduled maintenance plans and priority service.",
+  },
+  {
+    icon: "assets/img/icon/service-icon_1-6.svg",
+    img: "assets/img/service/service-7.jpg",
+    title: "Safety Standards Certificate (SSC)",
+    text: "Comprehensive vehicle inspections to keep you safe and road-ready.",
+  },
+];
 
 const ServiceAreaOne_multi_img = () => {
   return (
     <div className="service-area-1 space overflow-hidden">
       <div className="container">
         <div className="row gy-4 justify-content-center">
-          <div className="col-lg-4 col-md-6">
-            <div className="service-card style-shadow">
-              <div className="service-card_content">
-                <div className="service-card_icon">
-                  <img src="assets/img/icon/service-icon_1-1.svg" alt="img" />
+          {services.map((service, index) => (
+            <div className="col-lg-4 col-md-6" key={index}>
+              <div className="service-card style-shadow">
+                <div className="service-card_content">
+                  <div className="service-card_icon">
+                    <img src={service.icon} alt={service.title} />
+                  </div>
+                  <h4 className="service-card_title h5">
+                    <Link href="/service">{service.title}</Link>
+                  </h4>
+                  <p className="service-card_text">{service.text}</p>
                 </div>
-                <h4 className="service-card_title h5">
-                  <Link href="/service-details">Auto Fixers</Link>
-                </h4>
-                <p className="service-card_text">
-                  A car repair is a service provided to fix any issues or
-                  damages with your{" "}
-                </p>
-                <Link href="/service-details" className="link-btn">
-                  Read More <i className="fas fa-arrow-right" />
-                </Link>
-              </div>
-              <div className="service-card_img">
-                <img src="assets/img/service/service-1-1.png" alt="img" />
+                <div className="service-card_img">
+                  <img src={service.img} alt={service.title} />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
-            <div className="service-card style-shadow">
-              <div className="service-card_content">
-                <div className="service-card_icon">
-                  <img src="assets/img/icon/service-icon_1-2.svg" alt="img" />
-                </div>
-                <h4 className="service-card_title h5">
-                  <Link href="/service-details">Mechanic Masters</Link>
-                </h4>
-                <p className="service-card_text">
-                  A car repair is a service provided to fix any issues or
-                  damages with your{" "}
-                </p>
-                <Link href="/service-details" className="link-btn">
-                  Read More <i className="fas fa-arrow-right" />
-                </Link>
-              </div>
-              <div className="service-card_img">
-                <img src="assets/img/service/service-1-2.png" alt="img" />
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
-            <div className="service-card style-shadow">
-              <div className="service-card_content">
-                <div className="service-card_icon">
-                  <img src="assets/img/icon/service-icon_1-3.svg" alt="img" />
-                </div>
-                <h4 className="service-card_title h5">
-                  <Link href="/service-details">Drive-In Garage</Link>
-                </h4>
-                <p className="service-card_text">
-                  A car repair is a service provided to fix any issues or
-                  damages with your{" "}
-                </p>
-                <Link href="/service-details" className="link-btn">
-                  Read More <i className="fas fa-arrow-right" />
-                </Link>
-              </div>
-              <div className="service-card_img">
-                <img src="assets/img/service/service-1-3.png" alt="img" />
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
-            <div className="service-card style-shadow">
-              <div className="service-card_content">
-                <div className="service-card_icon">
-                  <img src="assets/img/icon/service-icon_1-4.svg" alt="img" />
-                </div>
-                <h4 className="service-card_title h5">
-                  <Link href="/service-details">Car Care Clinic</Link>
-                </h4>
-                <p className="service-card_text">
-                  A car repair is a service provided to fix any issues or
-                  damages with your{" "}
-                </p>
-                <Link href="/service-details" className="link-btn">
-                  Read More <i className="fas fa-arrow-right" />
-                </Link>
-              </div>
-              <div className="service-card_img">
-                <img src="assets/img/service/service-1-4.png" alt="img" />
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
-            <div className="service-card style-shadow">
-              <div className="service-card_content">
-                <div className="service-card_icon">
-                  <img src="assets/img/icon/service-icon_1-5.svg" alt="img" />
-                </div>
-                <h4 className="service-card_title h5">
-                  <Link href="/service-details">Car Repair Services</Link>
-                </h4>
-                <p className="service-card_text">
-                  A car repair is a service provided to fix any issues or
-                  damages with your{" "}
-                </p>
-                <Link href="/service-details" className="link-btn">
-                  Read More <i className="fas fa-arrow-right" />
-                </Link>
-              </div>
-              <div className="service-card_img">
-                <img src="assets/img/service/service-1-5.png" alt="img" />
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
-            <div className="service-card style-shadow">
-              <div className="service-card_content">
-                <div className="service-card_icon">
-                  <img src="assets/img/icon/service-icon_1-6.svg" alt="img" />
-                </div>
-                <h4 className="service-card_title h5">
-                  <Link href="/service-details">Repair Solutions</Link>
-                </h4>
-                <p className="service-card_text">
-                  A car repair is a service provided to fix any issues or
-                  damages with your{" "}
-                </p>
-                <Link href="/service-details" className="link-btn">
-                  Read More <i className="fas fa-arrow-right" />
-                </Link>
-              </div>
-              <div className="service-card_img">
-                <img src="assets/img/service/service-1-6.png" alt="img" />
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

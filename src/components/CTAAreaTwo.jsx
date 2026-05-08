@@ -30,7 +30,7 @@ const CTAAreaTwo = () => {
             </div>
             <div className="col-lg-5">
               <div className="cta2-bg-thumb">
-                <img src="assets/img/normal/cta-thumb-2-1.png" alt="Rapid Fix"/>
+                <img style={{borderRadius: '10px'}} src="/assets/img/service/service-3.webp" alt="Rapid Fix"/>
               </div>
             </div>
           </div>

@@ -10,9 +10,9 @@ const TestimonialOne = () => {
     >
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
-            <div className="testimonial-thumb1">
-              <img src="assets/img/testimonial/testimonial-1-1.png" alt="Rapid Fix" />
+          <div className="col-lg-6 d-flex align-items-center justify-content-center">
+            <div className="testimonial-thumb1 text-center">
+              <img src="/assets/img/about/about-17.jpg" alt="Rapid Fix" style={{ maxWidth: "100%", margin: "0 auto" }} />
             </div>
           </div>
           <div className="col-lg-6">
@@ -20,7 +20,7 @@ const TestimonialOne = () => {
               <div className="title-area">
                 <span className="sub-title">Clients testimonial</span>
 
-                <h2 className="sec-title text-white">
+                <h2>
                   Car Repair The Best <br /> Services
                 </h2>
               </div>
@@ -66,7 +66,7 @@ const TestimonialOne = () => {
                           <div className="testi-card-profile">
                             <div className="testi-card-profile-details">
                               <h4 className="testi-profile-title">
-                                Nafiz Bhuiyan
+                                Johnson
                               </h4>
                               <span className="testi-profile-desig">
                                 Customer
@@ -80,11 +80,7 @@ const TestimonialOne = () => {
                             </div>
                           </div>
                           <p className="testi-card_text">
-                            Roof services include repairs installations, and
-                            maintena resident commercial buildings. Expert the a
-                            technicians diagnose and ther address issues roofing
-                            mater gutter systems, and ventilation a Roof
-                            services
+                            Rapid Fix handles all our fleet maintenance and never lets us down. Their priority scheduling keeps our trucks on the road and their pricing is transparent. Quality workmanship you can count on.
                           </p>
                           <div className="rating">
                             <i className="fas fa-star" />
@@ -104,7 +100,7 @@ const TestimonialOne = () => {
                           <div className="testi-card-profile">
                             <div className="testi-card-profile-details">
                               <h4 className="testi-profile-title">
-                                Nafiz Bhuiyan
+                                Smith
                               </h4>
                               <span className="testi-profile-desig">
                                 Customer
@@ -118,11 +114,7 @@ const TestimonialOne = () => {
                             </div>
                           </div>
                           <p className="testi-card_text">
-                            Roof services include repairs installations, and
-                            maintena resident commercial buildings. Expert the a
-                            technicians diagnose and ther address issues roofing
-                            mater gutter systems, and ventilation a Roof
-                            services
+                            Needed an urgent diesel repair and they got me in the same day. The team explained everything clearly and the final bill was exactly what they quoted. Hands down the most reliable shop in Scarborough.
                           </p>
                           <div className="rating">
                             <i className="fas fa-star" />
@@ -142,7 +134,7 @@ const TestimonialOne = () => {
                           <div className="testi-card-profile">
                             <div className="testi-card-profile-details">
                               <h4 className="testi-profile-title">
-                                Nafiz Bhuiyan
+                                Williams
                               </h4>
                               <span className="testi-profile-desig">
                                 Customer
@@ -156,11 +148,7 @@ const TestimonialOne = () => {
                             </div>
                           </div>
                           <p className="testi-card_text">
-                            Roof services include repairs installations, and
-                            maintena resident commercial buildings. Expert the a
-                            technicians diagnose and ther address issues roofing
-                            mater gutter systems, and ventilation a Roof
-                            services
+                            I've taken both my personal car and work truck to Rapid Fix multiple times. Fast turnaround, honest pricing, and quality work every single visit. Finally, an auto and diesel shop I can actually trust.
                           </p>
                           <div className="rating">
                             <i className="fas fa-star" />

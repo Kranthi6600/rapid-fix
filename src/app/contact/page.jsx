@@ -1,14 +1,14 @@
 ﻿import Breadcrumb from "@/components/Breadcrumb";
 import ContactArea from "@/components/ContactArea";
-import FooterAreaOne from "@/components/FooterAreaOne";
+import FooterAreaFour from "@/components/FooterAreaFour";
 import HeaderFive from "@/components/HeaderFive";
 import SubscribeOne from "@/components/SubscribeOne";
 import Preloader from "@/helper/Preloader";
 
 export const metadata = {
-  title: "Contact || Rapid Fix - Car Repair & Auto Services NEXT Js Template",
+  title: "Contact Us | Rapid Fix - 112 Sinnott Rd, Scarborough",
   description:
-    "Rapid Fix is a clean and modern React Template suitable for any type of Auto Servicing, Car Repair & Maintenance website. It is created for automobile servicing providers who offer car wash, car service, routine maintenance, truck service, etc. This HTML template can be used for car servicing, car repairing, car wash, auto shop, mechanic shop, batteries shop, tire / wheel shop, and multipurpose businesses. We have used comment on codes and also decorated the codes beautifully so one can find it very easy to customize.",
+    "Contact Rapid Fix at 112 Sinnott Rd, Scarborough, ON. Call (437) 836-4848. Open Monday to Friday, 8:00 AM – 6:00 PM. Book your auto or diesel repair service today.",
 };
 
 
@@ -22,7 +22,7 @@ const page = () => {
        <HeaderFive />
 
 {/* Breadcrumb */}
-<Breadcrumb title={"Cart"} />
+<Breadcrumb title={"Contact-Us"} img="/assets/img/contact/contact-us.jpg"/>
 
    {/* Contact Area */}
    <ContactArea />
@@ -30,8 +30,8 @@ const page = () => {
 {/* Subscribe One */}
 <SubscribeOne />
 
-{/* Footer Area One */}
-<FooterAreaOne />
+{/* Footer Area Four */}
+<FooterAreaFour />
     </>
   );
 };

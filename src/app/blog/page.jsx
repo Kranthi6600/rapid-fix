@@ -1,14 +1,14 @@
 ﻿import BlogAreaList from "@/components/BlogAreaList";
 import Breadcrumb from "@/components/Breadcrumb";
-import FooterAreaOne from "@/components/FooterAreaOne";
+import FooterAreaFour from "@/components/FooterAreaFour";
 import HeaderFive from "@/components/HeaderFive";
 import SubscribeOne from "@/components/SubscribeOne";
 import Preloader from "@/helper/Preloader";
 
 export const metadata = {
-  title: "Blog || Rapid Fix - Car Repair & Auto Services NEXT Js Template",
+  title: "Blog | Rapid Fix - Auto & Diesel Repair Tips",
   description:
-    "Rapid Fix is a clean and modern React Template suitable for any type of Auto Servicing, Car Repair & Maintenance website. It is created for automobile servicing providers who offer car wash, car service, routine maintenance, truck service, etc. This HTML template can be used for car servicing, car repairing, car wash, auto shop, mechanic shop, batteries shop, tire / wheel shop, and multipurpose businesses. We have used comment on codes and also decorated the codes beautifully so one can find it very easy to customize.",
+    "Read the Rapid Fix blog for expert auto and diesel repair tips, maintenance advice, fleet management insights, and everything you need to keep your vehicle running at its best.",
 };
 
 
@@ -22,7 +22,7 @@ const page = () => {
       <HeaderFive />
 
       {/* Breadcrumb */}
-      <Breadcrumb title={"Blog"} />
+      <Breadcrumb title={"Blog"} img="/assets/img/blog/blog-1.jpg"/>
 
       {/* Blog Area List */}
       <BlogAreaList />
@@ -30,8 +30,8 @@ const page = () => {
       {/* Subscribe One */}
       <SubscribeOne />
 
-      {/* Footer Area One */}
-      <FooterAreaOne />
+      {/* Footer Area Four */}
+      <FooterAreaFour />
     </>
   );
 };

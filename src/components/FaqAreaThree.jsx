@@ -1,21 +1,13 @@
 
 const FaqAreaThree = () => {
   return (
-    <div className="faq-area-1 space">
-      <div className="container">
-        <div
-          className="faq-wrap space"
-          style={{
-            backgroundImage: "url(assets/img/update-img/faq-bg.png)",
-            backgroundColor: "#F4F4F4",
-            backgroundSize: "cover",
-          }}
-        >
+    <div className="faq-area-1 space ">
+      <div className="container py-5" style={{ marginTop: "100px" }}>
+        <div className="faq-wrap space cta-wrap2 bg-theme">
           <div className="row justify-content-center">
             <div className="col-xl-5 col-lg-6 col-11">
               <div className="title-area text-center">
-                <span className="sub-title">ask anything</span>
-                <h2 className="sec-title">
+                <h2 style={{ color: "white" }}>
                   Frequently Asked Questions
                 </h2>
               </div>

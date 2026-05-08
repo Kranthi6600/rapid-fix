@@ -9,7 +9,7 @@ const HeroSix = () => {
           <div className="row flex-row-reverse align-items-center">
             <div className="col-md-6">
               <div className="hero-thumb text-center">
-                <img src="assets/img/update-img/hero6-1.png" alt="Rapid Fix" />
+                <img style={{borderRadius: '10px'}} src="/assets/img/hero/home-2.webp" alt="Rapid Fix" />
               </div>
             </div>
             <div className="col-md-6">
