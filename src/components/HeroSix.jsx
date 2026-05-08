@@ -9,18 +9,27 @@ const HeroSix = () => {
     <div className="hero-wrapper" id="hero">
       <div className="container">
         <div className="hero-6" style={{ backgroundColor: "#EAE1D6" }}>
-          <div className="row flex-row-reverse align-items-center">
-            <div className="col-md-6" data-aos="fade-left" data-aos-duration="1000">
+          <div className="row align-items-center">
+            <div className="col-md-6 order-md-2" data-aos="fade-left" data-aos-duration="1000">
               <div className="hero-thumb text-center">
-                <img style={{borderRadius: '10px'}} src="/assets/img/hero/home-2.webp" alt="Rapid Fix" />
+                <img
+                  style={{ borderRadius: "10px", width: "100%", height: "auto" }}
+                  src="/assets/img/hero/home-2.webp"
+                  alt="Rapid Fix"
+                />
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 order-md-1">
               <div className="hero-style6">
                 <span className="sub-title" data-aos="fade-down" data-aos-duration="700">
                   Trusted Auto &amp; Diesel Repair
                 </span>
-                <h1 className="hero-title" style={{ height: "3.2em", overflow: "hidden" }} data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                <h1
+                  className="hero-title hero-title-animated"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                  data-aos-duration="800"
+                >
                   <TypeAnimation
                     sequence={[
                       "Expert auto & diesel repair",
@@ -42,10 +51,20 @@ const HeroSix = () => {
                     style={{ display: "block" }}
                   />
                 </h1>
-                <p className="hero-text" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                <p
+                  className="hero-text"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  data-aos-duration="800"
+                >
                   Fast turnaround, honest pricing, and quality workmanship — every time.
                 </p>
-                <div className="btn-group" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+                <div
+                  className="btn-group"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  data-aos-duration="800"
+                >
                   <Link href="/contact" className="btn style2 style-radius">
                     Request Service
                   </Link>
