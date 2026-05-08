@@ -10,7 +10,7 @@ const ClientAreaTwo = () => {
     <div
       className="client-bg-area-2"
       style={{ 
-        backgroundImage: "url(/assets/img/service/service-16.jpg)",
+        backgroundImage: "url(/assets/img/service/service-18.jpg)",
         marginTop: "8rem"
       }}
     >
