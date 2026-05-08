@@ -1,5 +1,9 @@
 {
   "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(xargs grep *)"
+    ],
     "additionalDirectories": [
       "F:\\Wehoware\\projects\\rapid fix\\src\\app\\blog"
     ]

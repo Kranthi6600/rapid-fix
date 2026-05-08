@@ -6,7 +6,7 @@ const FaqAreaTwo = () => {
     <section className="faq-area-2 space">
       <div className="container">
         <div className="row gx-60 flex-row-reverse">
-          <div className="col-xl-6">
+          <div className="col-xl-6" data-aos="fade-left" data-aos-duration="900">
             <div className="faq-thumb2 mb-xl-0 mb-50">
               <div className="about-counter-grid jump">
                 <img
@@ -25,17 +25,17 @@ const FaqAreaTwo = () => {
                       }
                     </TrackVisibility>
                   </h3>
-                  <h4 className="about-counter-text">Services we provide</h4>
+                  <h4 className="about-counter-text">Happy customers served</h4>
                 </div>
               </div>
-              <img src="assets/img/normal/faq-thumb-2-1.png" alt="Rapid Fix" />
+              <img src="/assets/img/Faq/faq-3.png" alt="Rapid Fix" />
             </div>
           </div>
-          <div className="col-xl-6">
-            <div className="title-area">
-              <span className="sub-title">ask anything</span>
+          <div className="col-xl-6" data-aos="fade-right" data-aos-duration="900">
+            <div className="title-area" data-aos="fade-up" data-aos-delay="100">
+              <span className="sub-title">FREQUENTLY ASKED QUESTIONS</span>
               <h2 className="sec-title">
-                Empowering businesses <br /> For A Brighter Future{" "}
+                Everything You Need To Know <br /> About Auto Repair{" "}
                 <img
                   className="title-bg-shape"
                   src="assets/img/bg/title-bg-shape.png"
@@ -44,7 +44,7 @@ const FaqAreaTwo = () => {
               </h2>
             </div>
             <div className="accordion-area accordion" id="faqAccordion">
-              <div className="accordion-card style2 active">
+              <div className="accordion-card style2 active" data-aos="fade-up" data-aos-delay="150">
                 <div className="accordion-header" id="collapse-item-1">
                   <button
                     className="accordion-button "
@@ -55,7 +55,7 @@ const FaqAreaTwo = () => {
                     aria-controls="collapse-1"
                   >
                     {" "}
-                    What is the purpose of a business plan?
+                    What types of vehicles do you service?
                   </button>
                 </div>
                 <div
@@ -66,14 +66,12 @@ const FaqAreaTwo = () => {
                 >
                   <div className="accordion-body">
                     <p className="faq-text">
-                      Some essential steps to start a business include
-                      conducting market research, creating Some essential steps
-                      to start a business.
+                      We service all types of vehicles including cars, trucks, and diesel vehicles. Our experienced mechanics handle everything from routine maintenance to complex engine repairs for both personal and commercial vehicles.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="accordion-card style2">
+              <div className="accordion-card style2" data-aos="fade-up" data-aos-delay="250">
                 <div className="accordion-header" id="collapse-item-2">
                   <button
                     className="accordion-button collapsed"
@@ -84,7 +82,7 @@ const FaqAreaTwo = () => {
                     aria-controls="collapse-2"
                   >
                     {" "}
-                    How can I register my business name?
+                    How long does a typical repair take?
                   </button>
                 </div>
                 <div
@@ -95,14 +93,12 @@ const FaqAreaTwo = () => {
                 >
                   <div className="accordion-body">
                     <p className="faq-text">
-                      Some essential steps to start a business include
-                      conducting market research, creating Some essential steps
-                      to start a business.
+                      Repair times vary depending on the service needed. Routine maintenance like oil changes typically take 30-60 minutes, while more complex repairs may take a few hours to a full day. We always provide accurate time estimates and keep you informed throughout the process.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="accordion-card style2">
+              <div className="accordion-card style2" data-aos="fade-up" data-aos-delay="350">
                 <div className="accordion-header" id="collapse-item-3">
                   <button
                     className="accordion-button collapsed"
@@ -113,7 +109,7 @@ const FaqAreaTwo = () => {
                     aria-controls="collapse-3"
                   >
                     {" "}
-                    How can I protect my intellectual property?
+                    Do you offer warranty on your services?
                   </button>
                 </div>
                 <div
@@ -124,9 +120,7 @@ const FaqAreaTwo = () => {
                 >
                   <div className="accordion-body">
                     <p className="faq-text">
-                      Some essential steps to start a business include
-                      conducting market research, creating Some essential steps
-                      to start a business.
+                      Yes! We stand behind our work with comprehensive warranties on parts and labor. Most repairs come with a 12-month or 20,000 km warranty, giving you peace of mind and assurance in the quality of our service.
                     </p>
                   </div>
                 </div>

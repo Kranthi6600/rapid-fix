@@ -7,7 +7,7 @@ const Breadcrumb = ({ title, img = "/assets/img/normal/breadcrumb-thumb.png" }) 
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
-            <div className="breadcumb-content">
+            <div className="breadcumb-content" data-aos="fade-right" data-aos-duration="800">
               <h1 className="breadcumb-title">{title}</h1>
               <ul className="breadcumb-menu">
                 <li>
@@ -17,9 +17,15 @@ const Breadcrumb = ({ title, img = "/assets/img/normal/breadcrumb-thumb.png" }) 
               </ul>
             </div>
           </div>
-          <div className="col-lg-6 d-lg-block d-none">
+          <div className="col-lg-6 d-lg-block d-none" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
             <div className="breadcumb-thumb">
-              <img src={img} alt="Rapid Fix" />
+              <img
+                src={img}
+                alt="Rapid Fix"
+                style={{
+                  animation: "breadcrumbFloat 3s ease-in-out infinite",
+                }}
+              />
             </div>
           </div>
         </div>

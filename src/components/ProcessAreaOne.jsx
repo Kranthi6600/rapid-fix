@@ -18,7 +18,7 @@ const ProcessAreaOne = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-6">
-            <div className="title-area text-center">
+            <div className="title-area text-center" data-aos="fade-up">
               <span className="sub-title">Work Process</span>
               <h2 className="sec-title">
                 It Dependable Car Repair Best Solutions
@@ -27,7 +27,7 @@ const ProcessAreaOne = () => {
           </div>
         </div>
         <div className="row gy-30">
-          <div className="col-lg-4 process-card-wrap">
+          <div className="col-lg-4 process-card-wrap" data-aos="zoom-in" data-aos-delay="100">
             <div className="process-card">
               <div className="process-card-icon">
                 <img src="/assets/img/icon/process-icon-1-1.svg" alt="Rapid Fix" />
@@ -40,7 +40,7 @@ const ProcessAreaOne = () => {
               </p>
             </div>
           </div>
-          <div className="col-lg-4 process-card-wrap">
+          <div className="col-lg-4 process-card-wrap" data-aos="zoom-in" data-aos-delay="200">
             <div className="process-card process-card-center">
               <div className="process-card-icon">
                 <img src="/assets/img/icon/process-icon-1-2.svg" alt="Rapid Fix" />
@@ -53,7 +53,7 @@ const ProcessAreaOne = () => {
               </p>
             </div>
           </div>
-          <div className="col-lg-4 process-card-wrap">
+          <div className="col-lg-4 process-card-wrap" data-aos="zoom-in" data-aos-delay="300">
             <div className="process-card">
               <div className="process-card-icon">
                 <img src="/assets/img/icon/process-icon-1-3.svg" alt="Rapid Fix" />

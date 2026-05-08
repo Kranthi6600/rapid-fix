@@ -11,6 +11,7 @@ import ProductAreaOne from "@/components/ProductAreaOne";
 import ProductAreaTwo from "@/components/ProductAreaTwo";
 import SubscribeTwo from "@/components/SubscribeTwo";
 import Preloader from "@/helper/Preloader";
+import ServiceAreaTwo from "@/components/ServiceAreaTwo";
 
 export const metadata = {
   title: "Home || Rapid Fix - Car Repair & Auto Services NEXT Js Template",
@@ -23,14 +24,14 @@ const page = () => {
   return (
     <>
       {/* Preloader */}
-  <Preloader />
+      <Preloader />
 
       {/* Header Five */}
       <HeaderFive />
 
       {/* Hero Six */}
       <HeroSix />
-
+      
       {/* Category Area One */}
       <CategoryAreaOne />
 

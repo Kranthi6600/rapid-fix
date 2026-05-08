@@ -7,13 +7,15 @@ const SubscribeOne = () => {
       <div
         className="footer-top-1 bg-theme"
         style={{ backgroundImage: "url(assets/img/bg/footer-top-bg1-1.png)" }}
+        data-aos="zoom-in"
+        data-aos-duration="800"
       >
-        <div className="footer-logo">
+        <div className="footer-logo" data-aos="fade-down" data-aos-delay="100">
           <Link href="/">
             <img style={{ width: "200px" }} src="/assets/logo.png" alt="Rapid Fix" />
           </Link>
         </div>
-        <div className="call-media-wrap">
+        <div className="call-media-wrap" data-aos="fade-up" data-aos-delay="200">
           <div className="icon">
             <img src="assets/img/icon/phone-1.svg" alt="Rapid Fix" />
           </div>
@@ -26,7 +28,7 @@ const SubscribeOne = () => {
             </h4>
           </div>
         </div>
-        <div className="social-btn">
+        <div className="social-btn" data-aos="fade-up" data-aos-delay="300">
           <a href="https://facebook.com/">
             <i className="fab fa-facebook-f" />
           </a>

@@ -45,7 +45,13 @@ const ServiceAreaOne_multi_img = () => {
       <div className="container">
         <div className="row gy-4 justify-content-center">
           {services.map((service, index) => (
-            <div className="col-lg-4 col-md-6" key={index}>
+            <div
+              className="col-lg-4 col-md-6"
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={`${(index % 3) * 100 + 100}`}
+              data-aos-duration="800"
+            >
               <div className="service-card style-shadow">
                 <div className="service-card_content">
                   <div className="service-card_icon">

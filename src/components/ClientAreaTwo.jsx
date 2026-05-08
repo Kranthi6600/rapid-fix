@@ -2,11 +2,17 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, FreeMode, Thumbs, EffectFade } from "swiper";
 import Link from "next/link";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 const ClientAreaTwo = () => {
   return (
     <div
       className="client-bg-area-2"
-      style={{ backgroundImage: "url(assets/img/bg/client-bg2-1.png)" }}
+      style={{ 
+        backgroundImage: "url(/assets/img/service/service-16.jpg)",
+        marginTop: "8rem"
+      }}
     >
       <div className="client-area-2 space text-center">
         <div className="container">
@@ -41,7 +47,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-1.png" alt="Rapid Fix" />
+                      <img src="/assets/img/service/service-11.png" alt="Rapid Fix" />
                     </Link>
                   </div>
                 </div>
@@ -50,7 +56,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-2.png" alt="Rapid Fix" />
+                      <img src="/assets/img/service/service-12.png" alt="Rapid Fix" />
                     </Link>
                   </div>
                 </div>
@@ -59,7 +65,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-3.png" alt="Rapid Fix" />
+                      <img src="/assets/img/service/service-13.png" alt="Rapid Fix" />
                     </Link>
                   </div>
                 </div>
@@ -68,7 +74,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-4.png" alt="Rapid Fix" />
+                      <img src="/assets/img/service/service-14.png" alt="Rapid Fix" />
                     </Link>
                   </div>
                 </div>
@@ -77,7 +83,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-5.png" alt="Rapid Fix" />
+                      <img src="/assets/img/service/service-15.png" alt="Rapid Fix" />
                     </Link>
                   </div>
                 </div>
@@ -86,7 +92,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-1.png" alt="Rapid Fix" />
+                      <img src="/assets/img/service/service-11.png" alt="Rapid Fix" />
                     </Link>
                   </div>
                 </div>
@@ -95,7 +101,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-2.png" alt="Rapid Fix" />
+                      <img src="/assets/img/service/service-12.png" alt="Rapid Fix" />
                     </Link>
                   </div>
                 </div>
@@ -105,7 +111,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-3.png" alt="Rapid Fix" />
+                      <img src="/assets/img/service/service-13.png" alt="Rapid Fix" />
                     </Link>
                   </div>
                 </div>
@@ -114,7 +120,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-4.png" alt="Rapid Fix" />
+                      <img src="/assets/img/service/service-14.png" alt="Rapid Fix" />
                     </Link>
                   </div>
                 </div>
@@ -123,7 +129,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-5.png" alt="Rapid Fix" />
+                      <img src="/assets/img/service/service-15.png" alt="Rapid Fix" />
                     </Link>
                   </div>
                 </div>
@@ -186,24 +192,30 @@ const ClientAreaTwo = () => {
                             <div className="testi-card-profile">
                               <div className="testi-profile_thumb">
                                 <img
-                                  src="assets/img/testimonial/testimonial-2-1.png"
+                                  src="/assets/img/service/service-19.jpg"
                                   alt="Rapid Fix"
+                                  style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "50%" }}
                                 />
                               </div>
                               <div className="testi-card-profile-details">
                                 <h4 className="testi-profile-title">
-                                  James Anderson{" "}
+                                  Johnson
                                 </h4>
                                 <span className="testi-profile-desig">
-                                  Software Engineer
+                                  Customer
                                 </span>
                               </div>
                             </div>
                             <p className="testi-card_text">
-                              Working with this company has been a game-changer
-                              for my business. Their expertise and innovative
-                              approach have helped us achieve remarkable
+                              Rapid Fix handles all our fleet maintenance and never lets us down. Their priority scheduling keeps our trucks on the road and their pricing is transparent. Quality workmanship you can count on.
                             </p>
+                            <div className="rating" style={{ marginTop: "1rem" }}>
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -215,24 +227,30 @@ const ClientAreaTwo = () => {
                             <div className="testi-card-profile">
                               <div className="testi-profile_thumb">
                                 <img
-                                  src="assets/img/testimonial/testimonial-2-1.png"
+                                  src="/assets/img/service/service-20.jpg"
                                   alt="Rapid Fix"
+                                  style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "50%" }}
                                 />
                               </div>
                               <div className="testi-card-profile-details">
                                 <h4 className="testi-profile-title">
-                                  James Anderson{" "}
+                                  Smith
                                 </h4>
                                 <span className="testi-profile-desig">
-                                  Software Engineer
+                                  Customer
                                 </span>
                               </div>
                             </div>
                             <p className="testi-card_text">
-                              Working with this company has been a game-changer
-                              for my business. Their expertise and innovative
-                              approach have helped us achieve remarkable
+                              Needed an urgent diesel repair and they got me in the same day. The team explained everything clearly and the final bill was exactly what they quoted. Hands down the most reliable shop in Scarborough.
                             </p>
+                            <div className="rating" style={{ marginTop: "1rem" }}>
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -244,53 +262,30 @@ const ClientAreaTwo = () => {
                             <div className="testi-card-profile">
                               <div className="testi-profile_thumb">
                                 <img
-                                  src="assets/img/testimonial/testimonial-2-1.png"
+                                  src="/assets/img/service/service-21.jpg"
                                   alt="Rapid Fix"
+                                  style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "50%" }}
                                 />
                               </div>
                               <div className="testi-card-profile-details">
                                 <h4 className="testi-profile-title">
-                                  James Anderson{" "}
+                                  Williams
                                 </h4>
                                 <span className="testi-profile-desig">
-                                  Software Engineer
+                                  Customer
                                 </span>
                               </div>
                             </div>
                             <p className="testi-card_text">
-                              Working with this company has been a game-changer
-                              for my business. Their expertise and innovative
-                              approach have helped us achieve remarkable
+                              I've taken both my personal car and work truck to Rapid Fix multiple times. Fast turnaround, honest pricing, and quality work every single visit. Finally, an auto and diesel shop I can actually trust.
                             </p>
-                          </div>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div>
-                        <div className="testi-card style2">
-                          <div className="testi-card_content">
-                            <div className="testi-card-profile">
-                              <div className="testi-profile_thumb">
-                                <img
-                                  src="assets/img/testimonial/testimonial-2-1.png"
-                                  alt="Rapid Fix"
-                                />
-                              </div>
-                              <div className="testi-card-profile-details">
-                                <h4 className="testi-profile-title">
-                                  James Anderson{" "}
-                                </h4>
-                                <span className="testi-profile-desig">
-                                  Software Engineer
-                                </span>
-                              </div>
+                            <div className="rating" style={{ marginTop: "1rem" }}>
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
                             </div>
-                            <p className="testi-card_text">
-                              Working with this company has been a game-changer
-                              for my business. Their expertise and innovative
-                              approach have helped us achieve remarkable
-                            </p>
                           </div>
                         </div>
                       </div>
@@ -310,10 +305,7 @@ const ClientAreaTwo = () => {
           </div>
         </div>
         <div className="testimonial-thumb-2">
-          <img
-            src="assets/img/normal/testimonial-thumb-2-1.png"
-            alt="Rapid Fix"
-          />
+          <img src="/assets/img/service/service-17.jpg" alt="Rapid Fix" />
         </div>
       </div>
     </div>

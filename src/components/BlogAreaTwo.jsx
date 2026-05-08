@@ -9,13 +9,13 @@ const BlogAreaTwo = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-6">
-            <div className="title-area text-center">
+            <div className="title-area text-center" data-aos="fade-up">
               <span className="sub-title">Latest From The Blog</span>
               <h2 className="sec-title">Auto Tips & Repair Insights</h2>
             </div>
           </div>
         </div>
-        <div className="row global-carousel blog-slider slider-shadow">
+        <div className="row global-carousel blog-slider slider-shadow" data-aos="fade-up" data-aos-delay="150">
           <Swiper
             loop={true}
             spaceBetween={20}

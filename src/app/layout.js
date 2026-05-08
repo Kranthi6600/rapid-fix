@@ -1,4 +1,5 @@
 import BootstrapInit from "@/helper/BootstrapInit";
+import Animation from "@/helper/Animation";
 import "./font.css";
 import "./globals.scss";
 
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body suppressHydrationWarning={true}>
         <BootstrapInit />
+        <Animation />
         {children}
       </body>
     </html>

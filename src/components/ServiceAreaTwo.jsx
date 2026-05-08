@@ -7,10 +7,9 @@ const ServiceAreaTwo = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-6">
-            <div className="title-area text-center">
-              <span className="sub-title">Our Services</span>
+            <div className="title-area text-center" data-aos="fade-up">
               <h2 className="sec-title">
-                Trusted Car Repair the Professionals{" "}
+                Expert Auto & Diesel Repair – Built for Reliability
                 <img
                   className="title-bg-shape shape-center"
                   src="assets/img/bg/title-bg-shape.png"
@@ -23,12 +22,12 @@ const ServiceAreaTwo = () => {
       </div>
       <div className="container">
         <div className="row gy-4 justify-content-center">
-          <div className="col-lg-4 col-md-6">
+          <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div className="service-card style2">
               <div
                 className="service-card_content"
                 style={{
-                  backgroundImage: "url(assets/img/service/service-2-1.png)",
+                  backgroundImage: "url(/assets/img/service/service-8.jpg)",
                 }}
               >
                 <div>
@@ -39,25 +38,22 @@ const ServiceAreaTwo = () => {
                     />
                   </div>
                   <h4 className="service-card_title h5">
-                    <Link href="/service-details">Mechanic Masters</Link>
+                    <Link href="#">Mechanic Masters</Link>
                   </h4>
                   <p className="service-card_text">
-                    Customer satisfaction is crucial for amohlo di business as
-                    it leads to customer loyalty.{" "}
+                    Fleet services, priority scheduling, honest pricing. Minimise
+                    downtime.
                   </p>
                 </div>
               </div>
-              <Link href="/service-details" className="btn style4">
-                Read More <i className="fas fa-arrow-right" />
-              </Link>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6">
+          <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div className="service-card style2">
               <div
                 className="service-card_content"
                 style={{
-                  backgroundImage: "url(assets/img/service/service-2-2.png)",
+                  backgroundImage: "url(/assets/img/service/service-9.jpg)",
                 }}
               >
                 <div>
@@ -68,25 +64,22 @@ const ServiceAreaTwo = () => {
                     />
                   </div>
                   <h4 className="service-card_title h5">
-                    <Link href="/service-details">Speedy Auto Repair</Link>
+                    <Link href="#">Speedy Auto Repair</Link>
                   </h4>
                   <p className="service-card_text">
-                    Customer satisfaction is crucial for amohlo di business as
-                    it leads to customer loyalty.{" "}
+                    Fast turnaround on auto & diesel repairs. Get back on the
+                    road quicker.
                   </p>
                 </div>
               </div>
-              <Link href="/service-details" className="btn style4">
-                Read More <i className="fas fa-arrow-right" />
-              </Link>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6">
+          <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div className="service-card style2">
               <div
                 className="service-card_content"
                 style={{
-                  backgroundImage: "url(assets/img/service/service-2-3.png)",
+                  backgroundImage: "url(/assets/img/service/service-10.jpg)",
                 }}
               >
                 <div>
@@ -97,17 +90,14 @@ const ServiceAreaTwo = () => {
                     />
                   </div>
                   <h4 className="service-card_title h5">
-                    <Link href="/service-details">Precision Auto Works</Link>
+                    <Link href="#">Precision Auto Works</Link>
                   </h4>
                   <p className="service-card_text">
-                    Customer satisfaction is crucial for amohlo di business as
-                    it leads to customer loyalty.{" "}
+                    Diagnostics, preventative maintenance, and Safety
+                    Certificates. Keep your fleet safe.
                   </p>
                 </div>
               </div>
-              <Link href="/service-details" className="btn style4">
-                Read More <i className="fas fa-arrow-right" />
-              </Link>
             </div>
           </div>
         </div>

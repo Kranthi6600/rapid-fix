@@ -6,7 +6,7 @@ const AboutTwo = () => {
     <div className="space-top">
       <div className="container">
         <div className="row">
-          <div className="col-xxl-7 col-xl-6">
+          <div className="col-xxl-7 col-xl-6" data-aos="fade-right" data-aos-duration="900">
             <div className="about-thumb2 mb-40 mb-xl-0">
               <div className="about-img-1">
                 <img src="/assets/img/about/about-15.jpg" alt="Rapid Fix" />
@@ -54,11 +54,11 @@ const AboutTwo = () => {
               </div>
             </div>
           </div>
-          <div className="col-xxl-5 col-xl-6">
+          <div className="col-xxl-5 col-xl-6" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
             <div className="about-content-wrap">
               <div className="title-area mb-30">
-                <span className="sub-title">Know About Us</span>
-                <h2 className="sec-title">
+                <span className="sub-title" data-aos="fade-up" data-aos-delay="200">Know About Us</span>
+                <h2 className="sec-title" data-aos="fade-up" data-aos-delay="250">
                   More Than Mechanics — Your Trusted Vehicle Partners{" "}
                   <img
                     className="title-bg-shape shape-center"
@@ -66,20 +66,14 @@ const AboutTwo = () => {
                     alt="Rapid Fix"
                   />
                 </h2>
-                <p className="sec-text">
+                <p className="sec-text" data-aos="fade-up" data-aos-delay="300">
                   At Rapid Fix, we're more than just mechanics — we're your
                   partners in keeping your vehicles running at peak performance.
                   Our team of certified technicians brings years of expertise in
                   both auto and diesel repair.
                 </p>
-                <p className="sec-text mt-15">
-                  We invest in the latest diagnostic technology and training to
-                  deliver fast, accurate, and affordable service. From personal
-                  vehicles to commercial fleets, we treat every job with the
-                  same commitment to quality.
-                </p>
               </div>
-              <div className="about-feature-wrap style-shadow">
+              <div className="about-feature-wrap style-shadow" data-aos="fade-up" data-aos-delay="350">
                 <div className="icon">
                   <img src="assets/img/icon/about_icon2-3.svg" alt="Rapid Fix" />
                 </div>
@@ -93,7 +87,7 @@ const AboutTwo = () => {
                   </p>
                 </div>
               </div>
-              <div className="about-feature-wrap style-shadow">
+              <div className="about-feature-wrap style-shadow" data-aos="fade-up" data-aos-delay="450">
                 <div className="icon">
                   <img src="assets/img/icon/about_icon2-4.svg" alt="Rapid Fix" />
                 </div>

@@ -6,8 +6,8 @@ const CategoryAreaOne = () => {
   return (
     <div className="category-area-1 pt-95 pb-100">
       <div className="container">
-        <h4 className="text-center fw-extrabold mb-20">What We Service</h4>
-        <div className="row gx-0 global-carousel category-slider3">
+        <h4 className="text-center fw-extrabold mb-20" data-aos="fade-up">What We Service</h4>
+        <div className="row gx-0 global-carousel category-slider3" data-aos="fade-up" data-aos-delay="100">
           <Swiper
             navigation={{
               nextEl: ".team-slider2-next",
@@ -22,33 +22,18 @@ const CategoryAreaOne = () => {
             className="mySwiper"
             modules={[FreeMode, Navigation, Thumbs, EffectFade, Autoplay]}
             breakpoints={{
-              0: {
-                slidesPerView: 2,
-              },
-              768: {
-                slidesPerView: 3,
-              },
-              992: {
-                slidesPerView: 4,
-              },
-              1200: {
-                slidesPerView: 5,
-              },
-              1400: {
-                slidesPerView: 5,
-              },
+              0: { slidesPerView: 2 },
+              768: { slidesPerView: 3 },
+              992: { slidesPerView: 4 },
+              1200: { slidesPerView: 5 },
+              1400: { slidesPerView: 5 },
             }}
           >
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-1.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-1.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
@@ -56,13 +41,8 @@ const CategoryAreaOne = () => {
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-2.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-2.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
@@ -70,13 +50,8 @@ const CategoryAreaOne = () => {
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-3.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-3.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
@@ -84,13 +59,8 @@ const CategoryAreaOne = () => {
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-4.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-4.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
@@ -98,13 +68,8 @@ const CategoryAreaOne = () => {
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-5.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-5.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
@@ -112,13 +77,8 @@ const CategoryAreaOne = () => {
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-6.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-6.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
@@ -126,13 +86,8 @@ const CategoryAreaOne = () => {
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-7.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-7.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
@@ -140,13 +95,8 @@ const CategoryAreaOne = () => {
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-8.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-8.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
@@ -154,13 +104,8 @@ const CategoryAreaOne = () => {
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-1.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-1.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
@@ -168,13 +113,8 @@ const CategoryAreaOne = () => {
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-2.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-2.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
@@ -182,13 +122,8 @@ const CategoryAreaOne = () => {
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-3.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-3.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
@@ -196,13 +131,8 @@ const CategoryAreaOne = () => {
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-4.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-4.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
@@ -210,13 +140,8 @@ const CategoryAreaOne = () => {
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-5.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-5.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
@@ -224,13 +149,8 @@ const CategoryAreaOne = () => {
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-6.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-6.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
@@ -238,13 +158,8 @@ const CategoryAreaOne = () => {
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-7.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-7.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
@@ -252,13 +167,8 @@ const CategoryAreaOne = () => {
             <SwiperSlide>
               <div>
                 <div className="category-card-item">
-                  <img
-                    src="assets/img/update-img/category/category1-8.png"
-                    alt="Rapid Fix"
-                  />
-                  <h6 className="category-card-title">
-                    <Link href="/service">Auto Repair</Link>
-                  </h6>
+                  <img src="assets/img/update-img/category/category1-8.png" alt="Rapid Fix" />
+                  <h6 className="category-card-title"><Link href="/service">Auto Repair</Link></h6>
                   <p className="category-card-text">All Makes &amp; Models</p>
                 </div>
               </div>
