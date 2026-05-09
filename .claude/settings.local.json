@@ -5,7 +5,8 @@
       "Bash(xargs grep *)"
     ],
     "additionalDirectories": [
-      "F:\\Wehoware\\projects\\rapid fix\\src\\app\\blog"
+      "F:\\Wehoware\\projects\\rapid fix\\src\\app\\blog",
+      "f:\\Wehoware\\projects\\rapid fix\\public\\assets\\img\\favicons"
     ]
   }
 }
