@@ -4,16 +4,19 @@ import Link from "next/link";
 const CTAAreaOne = () => {
   return (
     <div
-        className="footer-top-1 bg-theme"
-        style={{ backgroundImage: "url(assets/img/bg/footer-top-bg1-1.png)" }}
+        className="footer-top-1 bg-theme mb-4"
+        style={{
+          backgroundImage: "url(assets/img/bg/footer-top-bg1-1.png)",
+          position: "relative"
+        }}
       >
       <div className="container">
         <div className="cta-wrap1">
           <div className="row justify-content-md-between align-items-center">
             <div className="col-lg-6 col-md-8">
-              <div className="title-area mb-md-0" data-aos="fade-right" data-aos-duration="800">
-                <span className="sub-title style2 text-white">Contact us</span>
-                <h2 className="sec-title text-white mb-0">
+              <div className="title-area mb-md-0" data-aos="fade-right" data-aos-duration="800" style={{ position: "relative" }}>
+                <span className="sub-title style2 text-white" style={{ position: "relative", zIndex: "1" }}>Contact us</span>
+                <h2 className="sec-title text-white mb-0" style={{ position: "relative", zIndex: "1" }}>
                   Where Engines Roar and Problems Soar
                 </h2>
               </div>

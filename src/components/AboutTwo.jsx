@@ -9,7 +9,7 @@ const AboutTwo = () => {
           <div className="col-xxl-7 col-xl-6" data-aos="fade-right" data-aos-duration="900">
             <div className="about-thumb2 mb-40 mb-xl-0">
               <div className="about-img-1">
-                <img src="/assets/img/about/about-15.jpg" alt="Rapid Fix" />
+                <img src="/assets/img/about/about-15.jpeg" alt="Rapid Fix" />
               </div>
               <div className="about-img-2">
                 <img src="/assets/img/about/about-16.jpg" alt="Rapid Fix" />

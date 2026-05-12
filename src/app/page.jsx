@@ -1,14 +1,16 @@
 import BlogAreaTwo from "@/components/BlogAreaTwo";
-import CTAAreaTwo from "@/components/CTAAreaTwo";
+import CTAAreaOne from "@/components/CTAAreaOne";
 import ClientAreaTwo from "@/components/ClientAreaTwo";
 import FaqAreaTwo from "@/components/FaqAreaTwo";
 import FooterAreaFour from "@/components/FooterAreaFour";
 import HeaderFive from "@/components/HeaderFive";
-import HeroSix from "@/components/HeroSix";
+import HeroThree from "@/components/HeroThree";
+import AboutThree from "../components/AboutThree.jsx";
 import ProductAreaOne from "@/components/ProductAreaOne";
-import SubscribeTwo from "@/components/SubscribeTwo";
 import Preloader from "@/helper/Preloader";
 import ServiceAreaTwo from "@/components/ServiceAreaTwo";
+import MarqueeOne from "@/components/MarqueeOne";
+import SubscribeTwo from "@/components/SubscribeTwo.jsx";
 
 export const metadata = {
   title: "Rapid Fix | Auto & Diesel Repair in Scarborough, ON",
@@ -25,25 +27,29 @@ const page = () => {
       {/* Header Five */}
       <HeaderFive />
 
-      {/* Hero Six */}
-      <HeroSix />
+      {/* Hero Three */}
+      <HeroThree />
+
+      {/* About Three */}
+      <AboutThree />
+
+      {/* Marquee One */}
+      <MarqueeOne />
 
       {/* Service Area Two */}
       <ServiceAreaTwo />
 
+      {/* CTA Area One */}
+      <CTAAreaOne/>
+
       {/* Product Area One */}
       <ProductAreaOne />
 
-      {/* CTA Area Two */}
-      <CTAAreaTwo />
-
-     {/* Client Area Two */}
-      <ClientAreaTwo />
-
       {/* Blog Area Two */}
-      <div className="space-top">
-        <BlogAreaTwo />
-      </div>
+      <BlogAreaTwo />
+
+      {/* Client Area Two */}
+      <ClientAreaTwo />
 
       {/* Faq Area Two */}
       <FaqAreaTwo />

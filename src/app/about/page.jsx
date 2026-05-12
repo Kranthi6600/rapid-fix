@@ -25,7 +25,7 @@ const page = () => {
       <HeaderFive />
 
       {/* Breadcrumb */}
-      <Breadcrumb title={"About Us"} img="/assets/img/about/about-us.jpg"/>
+      <Breadcrumb title={"About Us"} style={{borderRadius: "100px"}} img="/assets/img/about/about-us.jpeg"/>
 
       {/* About Area */}
       <AboutTwo />
