@@ -304,7 +304,7 @@ const ClientAreaTwo = () => {
           </div>
         </div>
         <div className="testimonial-thumb-2">
-          <img src="/assets/img/service/service-17.jpg" alt="Rapid Fix" />
+          <img style={{borderRadius: "0px 10px 10px 0px"}} src="/assets/img/service/service-17.jpeg" alt="Rapid Fix" />
         </div>
       </div>
     </div>

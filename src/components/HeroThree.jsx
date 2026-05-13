@@ -99,7 +99,7 @@ const HeroThree = () => {
             <div
               className="hero-slide"
               style={{
-                backgroundImage: "url(assets/img/hero/banner2.jpeg)",
+                backgroundImage: "url(assets/img/hero/banner5.jpeg)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",

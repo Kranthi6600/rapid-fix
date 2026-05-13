@@ -21,7 +21,7 @@ const AboutThree = () => {
           <div className="col-xl-7 text-xl-center">
             <div className="about-thumb3 mb-40 mb-xl-0">
               <div className="about-img-1">
-                <img src="assets/img/about/wcu-3.png" alt="Rapid Fix" />
+                <img style={{borderRadius:'10px'}} src="assets/img/hero/banner7.jpeg" alt="Rapid Fix" />
               </div>
             </div>
           </div>

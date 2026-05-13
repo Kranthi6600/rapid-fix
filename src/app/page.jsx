@@ -11,6 +11,8 @@ import Preloader from "@/helper/Preloader";
 import ServiceAreaTwo from "@/components/ServiceAreaTwo";
 import MarqueeOne from "@/components/MarqueeOne";
 import SubscribeTwo from "@/components/SubscribeTwo.jsx";
+import CTAAreaTwo from "@/components/CTAAreaTwo.jsx";
+import CounterOne from "@/components/CounterOne.jsx";
 
 export const metadata = {
   title: "Rapid Fix | Auto & Diesel Repair in Scarborough, ON",
@@ -30,6 +32,12 @@ const page = () => {
       {/* Hero Three */}
       <HeroThree />
 
+      {/* Counter One */}
+      <div style={{marginTop:'150px'}}>
+        <CounterOne />
+      </div>
+
+
       {/* About Three */}
       <AboutThree />
 
@@ -40,7 +48,7 @@ const page = () => {
       <ServiceAreaTwo />
 
       {/* CTA Area One */}
-      <CTAAreaOne/>
+      <CTAAreaOne />
 
       {/* Product Area One */}
       <ProductAreaOne />

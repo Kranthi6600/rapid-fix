@@ -7,8 +7,8 @@ const SubscribeTwo = () => {
         <div className="footer-logo" data-aos="fade-down" data-aos-delay="100">
           <Link href="/">
             <img
-              style={{ width: "170px" }}
-              src="/assets/logo1.png"
+              style={{ width: "170px"}}
+              src="/assets/logo.png"
               alt="Rapid Fix"
             />
           </Link>
