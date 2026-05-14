@@ -74,7 +74,7 @@ const CounterOne = () => {
                             </span>
                           )}
                         </h2>
-                        <p className="counter-card_text">Team Member</p>
+                        <p className="counter-card_text">Team Members</p>
                       </div>
                       <div className="counter-card_icon">
                         <img
@@ -95,7 +95,7 @@ const CounterOne = () => {
                             </span>
                           )}
                         </h2>
-                        <p className="counter-card_text">Project Done</p>
+                        <p className="counter-card_text">Projects Done</p>
                       </div>
                       <div className="counter-card_icon">
                         <img

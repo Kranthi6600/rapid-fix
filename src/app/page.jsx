@@ -1,5 +1,4 @@
 import BlogAreaTwo from "@/components/BlogAreaTwo";
-import CTAAreaOne from "@/components/CTAAreaOne";
 import ClientAreaTwo from "@/components/ClientAreaTwo";
 import FaqAreaTwo from "@/components/FaqAreaTwo";
 import FooterAreaFour from "@/components/FooterAreaFour";
@@ -33,7 +32,7 @@ const page = () => {
       <HeroThree />
 
       {/* Counter One */}
-      <div style={{marginTop:'150px'}}>
+      <div style={{ marginTop: '150px' }}>
         <CounterOne />
       </div>
 
@@ -47,8 +46,10 @@ const page = () => {
       {/* Service Area Two */}
       <ServiceAreaTwo />
 
-      {/* CTA Area One */}
-      <CTAAreaOne />
+      {/* CTA Area Two */}
+      <div style={{ marginTop: '100px' }}>
+        <CTAAreaTwo />
+      </div>
 
       {/* Product Area One */}
       <ProductAreaOne />
