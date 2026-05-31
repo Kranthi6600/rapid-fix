@@ -33,6 +33,13 @@ html, body {
   50%       { transform: translateY(-18px); }
 }
 
+// Loading bar animation for App Router navigation
+@keyframes loadingBar {
+  0%   { transform: translateX(-100%); }
+  50%  { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+
 // ─── Hero animated title height ─────────────────────────────────────────────
 .hero-title-animated {
   height: 3.2em;

@@ -2,22 +2,28 @@
 import { useEffect, useState } from "react";
 
 const Preloader = () => {
-  let [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
+
   useEffect(() => {
-    setTimeout(function () {
-      setActive(false);
-    }, 2000);
+    const seen = sessionStorage.getItem("preloaderSeen");
+    if (!seen) {
+      setActive(true);
+      const timer = setTimeout(() => {
+        setActive(false);
+        sessionStorage.setItem("preloaderSeen", "true");
+      }, 400);
+      return () => clearTimeout(timer);
+    }
   }, []);
+
+  if (!active) return null;
+
   return (
-    <>
-      {active === true && (
-        <div className="preloader ">
-          <div className="preloader-inner">
-            <span className="loader"> </span>
-          </div>
-        </div>
-      )}
-    </>
+    <div className="preloader">
+      <div className="preloader-inner">
+        <span className="loader" />
+      </div>
+    </div>
   );
 };
 

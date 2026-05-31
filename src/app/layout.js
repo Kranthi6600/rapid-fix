@@ -1,5 +1,6 @@
 import BootstrapInit from "@/helper/BootstrapInit";
 import Animation from "@/helper/Animation";
+import WorkRequestModal from "@/components/WorkRequestModal";
 import "./font.css";
 import "./globals.scss";
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
         <BootstrapInit />
         <Animation />
         {children}
+        <WorkRequestModal />
       </body>
     </html>
   );
