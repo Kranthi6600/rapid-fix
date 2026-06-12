@@ -52,53 +52,8 @@ const ContactArea = () => {
   };
 
   const submitForm = async () => {
-    if (!validateForm()) {
-      return;
-    }
-
-    setIsSubmitting(true);
-    setSubmitStatus('');
-
-    try {
-      // Format the appointment data
-      const appointmentData = {
-        ...formData,
-        timestamp: new Date().toISOString(),
-        type: 'appointment_request'
-      };
-
-      // Send to our Next.js API route
-      const response = await fetch('/api/contact/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(appointmentData)
-      });
-
-      const data = await response.json();
-
-      if (response.ok && data.success) {
-        setSubmitStatus('success');
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          service: 'Choose',
-          date: '',
-          time: '',
-          message: ''
-        });
-      } else {
-        setSubmitStatus('error');
-      }
-    } catch (error) {
-      console.error('Appointment submission error:', error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Do nothing — form submission disabled
+    return;
   };
 
   const handleSubmit = async (e) => {
