@@ -51,9 +51,7 @@ const ContactArea = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
+  const submitForm = async () => {
     if (!validateForm()) {
       return;
     }
@@ -101,6 +99,11 @@ const ContactArea = () => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await submitForm();
   };
 
   // Generate time slots
@@ -326,7 +329,7 @@ const ContactArea = () => {
                     <a
                       href="#"
                       className={`btn style2 ${isSubmitting ? 'disabled' : ''}`}
-                      onClick={(e) => { e.preventDefault(); handleSubmit(e); }}
+                      onClick={(e) => { e.preventDefault(); submitForm(); }}
                       style={{ pointerEvents: isSubmitting ? 'none' : 'auto', opacity: isSubmitting ? 0.65 : 1 }}
                     >
                       {isSubmitting ? (
