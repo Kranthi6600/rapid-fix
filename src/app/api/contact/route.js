@@ -15,6 +15,15 @@ export async function POST(req) {
       );
     }
 
+    // Check if env vars are set
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      console.error('Missing EMAIL_USER or EMAIL_PASS environment variables');
+      return NextResponse.json(
+        { success: false, message: 'Server configuration error: Email credentials not set.' },
+        { status: 500 }
+      );
+    }
+
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
