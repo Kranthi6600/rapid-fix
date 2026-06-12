@@ -323,10 +323,11 @@ const ContactArea = () => {
                     {errors.message && <div className="invalid-feedback">{errors.message}</div>}
                   </div>
                   <div className="form-btn col-12">
-                    <button 
-                      type="submit" 
-                      className="btn style2" 
-                      disabled={isSubmitting}
+                    <a
+                      href="#"
+                      className={`btn style2 ${isSubmitting ? 'disabled' : ''}`}
+                      onClick={(e) => { e.preventDefault(); handleSubmit(e); }}
+                      style={{ pointerEvents: isSubmitting ? 'none' : 'auto', opacity: isSubmitting ? 0.65 : 1 }}
                     >
                       {isSubmitting ? (
                         <>
@@ -338,7 +339,7 @@ const ContactArea = () => {
                           Book Appointment <i className="fas fa-arrow-right ms-2" />
                         </>
                       )}
-                    </button>
+                    </a>
                   </div>
                   
                   {submitStatus === 'success' && (
