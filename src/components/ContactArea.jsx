@@ -69,8 +69,8 @@ const ContactArea = () => {
         type: 'appointment_request'
       };
 
-      // Send to email (you can replace this with your preferred backend)
-      const response = await fetch('https://formspree.io/f/your-form-id', {
+      // Send to our Next.js API route
+      const response = await fetch('/api/contact/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -78,7 +78,9 @@ const ContactArea = () => {
         body: JSON.stringify(appointmentData)
       });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (response.ok && data.success) {
         setSubmitStatus('success');
         // Reset form
         setFormData({
