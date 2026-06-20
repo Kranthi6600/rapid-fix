@@ -6,7 +6,7 @@ const SubscribeOne = () => {
     <div className="container">
       <div
         className="footer-top-1 bg-theme"
-        style={{ backgroundImage: "url(assets/img/bg/footer-top-bg1-1.png)" }}
+        style={{ backgroundImage: "url(/assets/img/bg/footer-top-bg1-1.png)" }}
         data-aos="zoom-in"
         data-aos-duration="800"
       >
@@ -17,7 +17,7 @@ const SubscribeOne = () => {
         </div>
         <div className="call-media-wrap" data-aos="fade-up" data-aos-delay="200">
           <div className="icon">
-            <img src="assets/img/icon/phone-1.svg" alt="Rapid Fix" />
+            <img src="/assets/img/icon/phone-1.svg" alt="Rapid Fix" />
           </div>
           <div className="media-body">
             <h6 className="title text-white">Requesting A Call:</h6>

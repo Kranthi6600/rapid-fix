@@ -127,8 +127,8 @@ const ContactArea = () => {
       <div className="contact-area space">
         <div className="container">
           <div className="row gy-4 justify-content-center">
-            <div className="col-xxl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div className="contact-info">
+            <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+              <div className="contact-info h-100">
                 <div className="contact-info_icon">
                   <i className="fas fa-map-marker-alt" />
                 </div>
@@ -137,8 +137,8 @@ const ContactArea = () => {
                 <p className="contact-info_text">Scarborough, ON M1L 4S6</p>
               </div>
             </div>
-            <div className="col-xxl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div className="contact-info">
+            <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+              <div className="contact-info h-100">
                 <div className="contact-info_icon">
                   <i className="fas fa-phone-alt" />
                 </div>
@@ -148,8 +148,8 @@ const ContactArea = () => {
                 </p>
               </div>
             </div>
-            <div className="col-xxl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-              <div className="contact-info">
+            <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+              <div className="contact-info h-100">
                 <div className="contact-info_icon">
                   <i className="fas fa-clock" />
                 </div>
@@ -158,8 +158,8 @@ const ContactArea = () => {
                 <p className="contact-info_text">Sat – Sun: Closed</p>
               </div>
             </div>
-            <div className="col-xxl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-              <div className="contact-info">
+            <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+              <div className="contact-info h-100">
                 <div className="contact-info_icon">
                   <i className="fas fa-envelope" />
                 </div>
@@ -191,7 +191,7 @@ const ContactArea = () => {
               <div className="faq-thumb2 mb-xl-0 mb-50">
                 <div className="about-counter-grid jump">
                   <img
-                    src="assets/img/icon/faq2-counter-icon-1.svg"
+                    src="/assets/img/icon/faq2-counter-icon-1.svg"
                     alt="Rapid Fix"
                   />
                   <div className="media-right">

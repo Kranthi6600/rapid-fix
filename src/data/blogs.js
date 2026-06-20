@@ -4,7 +4,7 @@ export const blogs = [
     title: "How to Know When Your Brakes Need Replacing",
     date: { day: "12", month: "Jan", full: "Jan 12, 2025" },
     category: "Auto Repair",
-    img: "assets/img/blog/blog-2.jpg",
+    img: "/assets/img/blog/blog-2.jpg",
     tags: ["Brakes", "Auto Repair", "Safety"],
     excerpt:
       "Squealing, grinding, or a soft brake pedal are warning signs you can't ignore. Learn the key indicators that your brakes are due for an inspection — and why waiting too long can cost you more.",
@@ -37,7 +37,7 @@ export const blogs = [
     title: "Diesel vs. Gas: What Every Truck Owner Should Know",
     date: { day: "28", month: "Feb", full: "Feb 28, 2025" },
     category: "Diesel Repair",
-    img: "assets/img/blog/blog-3.jpg",
+    img: "/assets/img/blog/blog-3.jpg",
     tags: ["Diesel", "Truck Repair", "Maintenance"],
     excerpt:
       "Diesel engines are built for power and longevity, but they come with their own maintenance needs. We break down the key differences and what it takes to keep a diesel truck running at its best.",
@@ -70,7 +70,7 @@ export const blogs = [
     title: "5 Signs Your Car Needs an Immediate Diagnostic Check",
     date: { day: "05", month: "Mar", full: "Mar 05, 2025" },
     category: "Diagnostics",
-    img: "assets/img/blog/blog-4.jpg",
+    img: "/assets/img/blog/blog-4.jpg",
     tags: ["Diagnostics", "Check Engine", "Auto Repair"],
     excerpt:
       "From check engine lights to unusual smells, modern vehicles send signals before problems escalate. Our technicians use state-of-the-art tools to read those signals accurately — here's what to watch for.",
@@ -103,7 +103,7 @@ export const blogs = [
     title: "The Importance of Regular Oil Changes for Engine Longevity",
     date: { day: "18", month: "Mar", full: "Mar 18, 2025" },
     category: "Maintenance Tips",
-    img: "assets/img/blog/blog-5.jpg",
+    img: "/assets/img/blog/blog-5.jpg",
     tags: ["Oil Change", "Maintenance", "Engine"],
     excerpt:
       "Skipping an oil change might seem harmless, but over time it leads to sludge buildup and accelerated engine wear. Discover how a simple routine service can add years to your vehicle's life.",
@@ -136,7 +136,7 @@ export const blogs = [
     title: "Fleet Maintenance: Keeping Your Business Moving",
     date: { day: "02", month: "Apr", full: "Apr 02, 2025" },
     category: "Fleet Services",
-    img: "assets/img/blog/blog-6.jpg",
+    img: "/assets/img/blog/blog-6.jpg",
     tags: ["Fleet", "Maintenance", "Commercial"],
     excerpt:
       "Downtime costs money. A proactive fleet maintenance plan reduces breakdowns, extends vehicle life, and keeps your drivers safe. See how Rapid Fix partners with local businesses to keep their fleets road-ready.",
@@ -169,7 +169,7 @@ export const blogs = [
     title: "What Is a Safety Standards Certificate and Why Does It Matter?",
     date: { day: "20", month: "Apr", full: "Apr 20, 2025" },
     category: "Auto Repair",
-    img: "assets/img/blog/blog-7.jpg",
+    img: "/assets/img/blog/blog-7.jpg",
     tags: ["SSC", "Safety", "Vehicle Inspection"],
     excerpt:
       "An SSC is required when buying or selling a used vehicle in Ontario. Our certified inspectors walk you through every checkpoint — so you can buy or sell with complete confidence and no surprises.",

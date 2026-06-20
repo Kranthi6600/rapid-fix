@@ -46,7 +46,7 @@ const ProductAreaOne = () => {
               data-aos-delay={`${(index % 3) * 100 + 100}`}
               data-aos-duration="800"
             >
-              <div className="product-card service-card">
+              <div className="product-card service-card h-100">
                 <div className="product-content text-center">
                   <h3 className="product-title">
                     <Link href="/service">{p.title}</Link>

@@ -55,7 +55,7 @@ const TestimonialOne = () => {
                               <span className="testi-profile-desig">Customer</span>
                             </div>
                             <div className="quote-icon">
-                              <img src="assets/img/icon/quote1-1.svg" alt="Rapid Fix" />
+                              <img src="/assets/img/icon/quote1-1.svg" alt="Rapid Fix" />
                             </div>
                           </div>
                           <p className="testi-card_text">
@@ -78,7 +78,7 @@ const TestimonialOne = () => {
                               <span className="testi-profile-desig">Customer</span>
                             </div>
                             <div className="quote-icon">
-                              <img src="assets/img/icon/quote1-1.svg" alt="Rapid Fix" />
+                              <img src="/assets/img/icon/quote1-1.svg" alt="Rapid Fix" />
                             </div>
                           </div>
                           <p className="testi-card_text">
@@ -101,7 +101,7 @@ const TestimonialOne = () => {
                               <span className="testi-profile-desig">Customer</span>
                             </div>
                             <div className="quote-icon">
-                              <img src="assets/img/icon/quote1-1.svg" alt="Rapid Fix" />
+                              <img src="/assets/img/icon/quote1-1.svg" alt="Rapid Fix" />
                             </div>
                           </div>
                           <p className="testi-card_text">

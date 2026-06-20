@@ -76,6 +76,61 @@ select.form-select {
   padding-right: 2.5rem;
 }
 
+/* Contact info cards: smaller, equal height and width */
+.contact-info {
+  padding: 20px 12px !important;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-info_icon {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.contact-info_title {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.contact-info_text {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 2px;
+}
+
+.contact-info_text:last-child {
+  margin-bottom: 0;
+}
+
+/* Service cards: equal height and aligned */
+.service-card.h-100,
+.product-card.h-100 {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card_content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card_text,
+.service-desc {
+  flex: 1 1 auto;
+}
+
+.product-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .form-group {

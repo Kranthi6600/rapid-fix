@@ -15,7 +15,7 @@ const AboutTwo = () => {
                 <img src="/assets/img/about/about-16.jpg" alt="Rapid Fix" />
               </div>
               <div className="about-counter-wrap jump-reverse">
-                <img src="assets/img/icon/about_icon2-1.svg" alt="Rapid Fix" />
+                <img src="/assets/img/icon/about_icon2-1.svg" alt="Rapid Fix" />
                 <h3 className="about-counter">
                   <TrackVisibility once>
                     {({ isVisible }) =>
@@ -34,7 +34,7 @@ const AboutTwo = () => {
                 <div className="about-year-grid-wrap">
                   <div className="icon">
                     <img
-                      src="assets/img/icon/about_icon2-2.png"
+                      src="/assets/img/icon/about_icon2-2.png"
                       alt="Rapid Fix"
                     />
                   </div>
@@ -62,7 +62,7 @@ const AboutTwo = () => {
                   More Than Mechanics — Your Trusted Vehicle Partners{" "}
                   <img
                     className="title-bg-shape shape-center"
-                    src="assets/img/bg/title-bg-shape.png"
+                    src="/assets/img/bg/title-bg-shape.png"
                     alt="Rapid Fix"
                   />
                 </h2>
@@ -75,7 +75,7 @@ const AboutTwo = () => {
               </div>
               <div className="about-feature-wrap style-shadow" data-aos="fade-up" data-aos-delay="350">
                 <div className="icon">
-                  <img src="assets/img/icon/about_icon2-3.svg" alt="Rapid Fix" />
+                  <img src="/assets/img/icon/about_icon2-3.svg" alt="Rapid Fix" />
                 </div>
                 <div className="about-feature-wrap-details">
                   <h5 className="about-feature-title">
@@ -89,7 +89,7 @@ const AboutTwo = () => {
               </div>
               <div className="about-feature-wrap style-shadow" data-aos="fade-up" data-aos-delay="450">
                 <div className="icon">
-                  <img src="assets/img/icon/about_icon2-4.svg" alt="Rapid Fix" />
+                  <img src="/assets/img/icon/about_icon2-4.svg" alt="Rapid Fix" />
                 </div>
                 <div className="about-feature-wrap-details">
                   <h5 className="about-feature-title">Advanced Diagnostics & Fleet Service</h5>

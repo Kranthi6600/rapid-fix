@@ -52,7 +52,7 @@ const ServiceAreaOne_multi_img = () => {
               data-aos-delay={`${(index % 3) * 100 + 100}`}
               data-aos-duration="800"
             >
-              <div className="service-card style-shadow">
+              <div className="service-card style-shadow h-100">
                 <div className="service-card_content">
                   <div className="service-card_icon">
                     <img src={service.icon} alt={service.title} />

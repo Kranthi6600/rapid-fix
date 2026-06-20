@@ -13,7 +13,7 @@ const BlogDetailContent = ({ blog }) => {
           <div className="col-xxl-8 col-lg-7">
             <div className="blog-details-card">
               <div className="blog-thumb">
-                <img src={`/${img}`} alt={title} />
+                <img src={img} alt={title} />
                 <div className="blog-meta">
                   <span>
                     <i className="far fa-user" /> By Rapid Fix Team
@@ -44,7 +44,7 @@ const BlogDetailContent = ({ blog }) => {
                 <div className="row gy-4">
                   <div className="col-sm-6">
                     <div className="blog-thumb mb-sm-0 mb-30">
-                      <img src={`/${img}`} alt={title} />
+                      <img src={img} alt={title} />
                     </div>
                   </div>
                   <div className="col-sm-6">
@@ -173,7 +173,7 @@ const BlogDetailContent = ({ blog }) => {
                       </div>
                       <div className="media-img">
                         <Link href={`/blog/${post.slug}`}>
-                          <img src={`/${post.img}`} alt={post.title} />
+                          <img src={post.img} alt={post.title} />
                         </Link>
                       </div>
                     </div>

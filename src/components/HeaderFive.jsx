@@ -156,7 +156,7 @@ const HeaderFive = () => {
           <div className="mobile-menu-area">
             <div className="mobile-logo">
               <Link href="/">
-                <img src="F:\Wehoware\projects\rapid fix\public\assets\logo1.png" alt="Rapid Fix" />
+                <img src="/assets/logo1.png" alt="Rapid Fix" />
               </Link>
               <button className="menu-toggle" onClick={mobileMenu}>
                 <i className="fa fa-times" />

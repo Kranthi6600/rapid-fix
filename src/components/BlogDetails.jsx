@@ -8,7 +8,7 @@ const BlogDetails = () => {
           <div className="col-xxl-8 col-lg-7">
             <div className="blog-details-card">
               <div className="blog-thumb">
-                <img src="assets/img/blog/blog_details1_1.png" alt="Rapid Fix" />
+                <img src="/assets/img/blog/blog_details1_1.png" alt="Rapid Fix" />
                 <div className="blog-meta">
                   <Link href="/blog-details">
                     <i className="far fa-comments" />
@@ -61,7 +61,7 @@ const BlogDetails = () => {
                   <div className="col-sm-6">
                     <div className="blog-thumb mb-sm-0 mb-30">
                       <img
-                        src="assets/img/blog/blog_details1_2.png"
+                        src="/assets/img/blog/blog_details1_2.png"
                         alt="Rapid Fix"
                       />
                     </div>
@@ -258,7 +258,7 @@ const BlogDetails = () => {
                     <div className="media-img">
                       <Link href="/blog-details">
                         <img
-                          src="assets/img/blog/recent-post1.png"
+                          src="/assets/img/blog/recent-post1.png"
                           alt="Rapid Fix"
                         />
                       </Link>
@@ -278,7 +278,7 @@ const BlogDetails = () => {
                     <div className="media-img">
                       <Link href="/blog-details">
                         <img
-                          src="assets/img/blog/recent-post2.png"
+                          src="/assets/img/blog/recent-post2.png"
                           alt="Rapid Fix"
                         />
                       </Link>
@@ -298,7 +298,7 @@ const BlogDetails = () => {
                     <div className="media-img">
                       <Link href="/blog-details">
                         <img
-                          src="assets/img/blog/recent-post3.png"
+                          src="/assets/img/blog/recent-post3.png"
                           alt="Rapid Fix"
                         />
                       </Link>

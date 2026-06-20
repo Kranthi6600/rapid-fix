@@ -150,7 +150,7 @@ const ClientAreaTwo = () => {
                   <h2 className="sec-title text-white">WHAT OUR CLIENT SAYS</h2>
                 </div>
                 <div className="quote-icon">
-                  <img src="assets/img/icon/quote2-1.svg" alt="Rapid Fix" />
+                  <img src="/assets/img/icon/quote2-1.svg" alt="Rapid Fix" />
                 </div>
                 <div className="row global-carousel testi-slider-2">
                   <Swiper
