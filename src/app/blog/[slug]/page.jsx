@@ -1,4 +1,7 @@
-import { blogs } from "@/data/blogs";
+"use client";
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import Link from "next/link";
 import BlogDetailContent from "@/components/BlogDetailContent";
 import Breadcrumb from "@/components/Breadcrumb";
 import FooterArea from "@/components/FooterArea";
@@ -6,30 +9,58 @@ import Header from "@/components/Header";
 import Subscribe from "@/components/Subscribe";
 import Preloader from "@/helper/Preloader";
 
-export function generateStaticParams() {
-  return blogs.map((blog) => ({ slug: blog.slug }));
-}
+const BlogSlugPage = () => {
+  const params = useParams();
+  const slug = params?.slug;
+  const [blog, setBlog] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-export async function generateMetadata({ params }) {
-  const blog = blogs.find((b) => b.slug === params.slug);
-  if (!blog) return {};
-  return {
-    title: `${blog.title} | Rapid Fix Blog`,
-    description: blog.excerpt,
-  };
-}
+  useEffect(() => {
+    if (!slug) return;
+    const fetchBlog = async () => {
+      try {
+        const res = await fetch(`/api/blogs/${slug}`);
+        const result = await res.json();
+        if (result.success && result.data) {
+          setBlog(result.data);
+        } else {
+          setError(result.message || "Blog not found");
+        }
+      } catch (err) {
+        setError("Failed to load blog post");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBlog();
+  }, [slug]);
 
-const BlogSlugPage = ({ params }) => {
-  const blog = blogs.find((b) => b.slug === params.slug);
+  if (loading) {
+    return (
+      <>
+        <Preloader />
+        <Header />
+        <div className="space-top space-extra-bottom text-center">
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <FooterArea />
+      </>
+    );
+  }
 
-  if (!blog) {
+  if (error || !blog) {
     return (
       <>
         <Preloader />
         <Header />
         <Breadcrumb title="Blog Not Found" img="/assets/img/blog/blog-1.jpg" />
         <div className="container space-top space-extra-bottom text-center">
-          <h2>Post not found</h2>
+          <h2 className="mb-20">Post Not Found</h2>
+          <p className="text-muted mb-30">{error || "The blog post you are looking for does not exist."}</p>
+          <Link href="/blog" className="btn style2">Back to Blog</Link>
         </div>
         <FooterArea />
       </>
@@ -40,7 +71,7 @@ const BlogSlugPage = ({ params }) => {
     <>
       <Preloader />
       <Header />
-      <Breadcrumb title={blog.title} img="/assets/img/blog/blog-1.jpg" />
+      <Breadcrumb title={blog.title} img={blog.thumbnail || "/assets/img/blog/blog-1.jpg"} />
       <BlogDetailContent blog={blog} />
       <Subscribe />
       <FooterArea />

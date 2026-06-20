@@ -1,12 +1,42 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
-import { blogs } from "@/data/blogs";
+import { useEffect, useState } from "react";
 
 const POSTS_PER_PAGE = 3;
 
+const getDateParts = (iso) => {
+  if (!iso) return { day: "", month: "", full: "" };
+  const d = new Date(iso);
+  return {
+    day: d.getDate().toString().padStart(2, "0"),
+    month: d.toLocaleString("en-US", { month: "short" }),
+    full: d.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    }),
+  };
+};
+
+const stripHtml = (html) => {
+  if (!html) return "";
+  return html.replace(/<[^>]*>?/gm, "");
+};
+
 const BlogAreaList = () => {
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    fetch("/api/blogs")
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.success) setBlogs(result.data);
+      })
+      .catch(() => {})
+      .finally(() => setLoading(false));
+  }, []);
 
   const totalPages = Math.ceil(blogs.length / POSTS_PER_PAGE);
   const start = (currentPage - 1) * POSTS_PER_PAGE;
@@ -17,37 +47,54 @@ const BlogAreaList = () => {
       <div className="container">
         <div className="row gx-40">
           <div className="col-xxl-8 col-lg-7">
-            {paginated.map((blog, index) => (
-              <div
-                className="blog-single-card"
-                key={index}
-                data-aos="fade-up"
-                data-aos-delay={`${index * 100}`}
-              >
-                <div className="blog-thumb">
-                  <img src={blog.img} alt={blog.title} />
-                </div>
-                <div className="blog-content">
-                  <div className="blog-meta">
-                    <Link href="/blog"><i className="fas fa-user" /> By Rapid Fix Team</Link>
-                    <Link href="/blog"><i className="fas fa-tag" /> {blog.category}</Link>
-                  </div>
-                  <h3 className="blog-title">
-                    <Link href={`/blog/${blog.slug}`}>{blog.title}</Link>
-                  </h3>
-                  <p className="blog-text">{blog.excerpt}</p>
-                  <Link href={`/blog/${blog.slug}`} className="btn style-border2">
-                    READ MORE <i className="fas fa-arrow-right" />
-                  </Link>
-                  <div className="blog-date">
-                    <Link href="/blog">
-                      <span>{blog.date.day}</span>
-                      {blog.date.month}
-                    </Link>
-                  </div>
+            {loading && (
+              <div className="text-center py-5">
+                <div className="spinner-border text-primary" role="status">
+                  <span className="visually-hidden">Loading...</span>
                 </div>
               </div>
-            ))}
+            )}
+
+            {!loading && blogs.length === 0 && (
+              <div className="text-center py-5">
+                <p>No blog posts available at the moment.</p>
+              </div>
+            )}
+
+            {paginated.map((blog, index) => {
+              const date = getDateParts(blog.published_at || blog.created_at);
+              return (
+                <div className="blog-single-card" key={blog.id || index}>
+                  <div className="blog-thumb">
+                    <img
+                      src={blog.thumbnail || "/assets/img/blog/blog-1.jpg"}
+                      alt={blog.thumbnail_alt || blog.title}
+                    />
+                  </div>
+                  <div className="blog-content">
+                    <div className="blog-meta">
+                      <Link href="/blog"><i className="fas fa-user" /> By Rapid Fix Team</Link>
+                      {blog.wehoware_blog_categories?.name && (
+                        <Link href="/blog"><i className="fas fa-tag" /> {blog.wehoware_blog_categories.name}</Link>
+                      )}
+                    </div>
+                    <h3 className="blog-title">
+                      <Link href={`/blog/${blog.slug}`}>{blog.title}</Link>
+                    </h3>
+                    <p className="blog-text">{stripHtml(blog.excerpt)}</p>
+                    <Link href={`/blog/${blog.slug}`} className="btn style-border2">
+                      READ MORE <i className="fas fa-arrow-right" />
+                    </Link>
+                    <div className="blog-date">
+                      <Link href="/blog">
+                        <span>{date.day}</span>
+                        {date.month}
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
 
             <div className="pagination justify-content-center">
               <ul>
@@ -99,23 +146,26 @@ const BlogAreaList = () => {
               <div className="widget" data-aos="fade-up" data-aos-delay="300">
                 <h3 className="widget_title">Popular Posts</h3>
                 <div className="recent-post-wrap">
-                  {blogs.slice(0, 3).map((post, i) => (
-                    <div className="recent-post" key={i}>
-                      <div className="media-body">
-                        <h4 className="post-title">
-                          <Link className="text-inherit" href={`/blog/${post.slug}`}>{post.title}</Link>
-                        </h4>
-                        <div className="recent-post-meta">
-                          <Link href="/blog">{post.date.full}</Link>
+                  {blogs.slice(0, 3).map((post, i) => {
+                    const pDate = getDateParts(post.published_at || post.created_at);
+                    return (
+                      <div className="recent-post" key={post.id || i}>
+                        <div className="media-body">
+                          <h4 className="post-title">
+                            <Link className="text-inherit" href={`/blog/${post.slug}`}>{post.title}</Link>
+                          </h4>
+                          <div className="recent-post-meta">
+                            <Link href="/blog">{pDate.full}</Link>
+                          </div>
+                        </div>
+                        <div className="media-img">
+                          <Link href={`/blog/${post.slug}`}>
+                            <img src={post.thumbnail || "/assets/img/blog/blog-1.jpg"} alt={post.title} />
+                          </Link>
                         </div>
                       </div>
-                      <div className="media-img">
-                        <Link href={`/blog/${post.slug}`}>
-                          <img src={post.img} alt={post.title} />
-                        </Link>
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
 

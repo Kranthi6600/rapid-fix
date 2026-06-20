@@ -1,45 +1,77 @@
+"use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const services = [
-  {
-    icon: "/assets/img/icon/service-icon_1-1.svg",
-    img: "/assets/img/service/service-3.jpg",
-    title: "Auto Repair",
-    text: "Complete auto repair for all makes and models — brakes, suspension, steering, and more.",
-  },
-  {
-    icon: "/assets/img/icon/service-icon_1-2.svg",
-    img: "/assets/img/service/service-2.jpg",
-    title: "Diesel Repair",
-    text: "Specialized diesel engine diagnostics, repair, and maintenance for trucks and equipment.",
-  },
-  {
-    icon: "/assets/img/icon/service-icon_1-3.svg",
-    img: "/assets/img/service/service-4.jpg",
-    title: "Diagnostics",
-    text: "State-of-the-art computer diagnostics to pinpoint issues fast and accurately.",
-  },
-  {
-    icon: "/assets/img/icon/service-icon_1-4.svg",
-    img: "/assets/img/service/service-5.jpg",
-    title: "Maintenance",
-    text: "Preventative maintenance services including oil changes, tune-ups, and fluid flushes.",
-  },
-  {
-    icon: "/assets/img/icon/service-icon_1-5.svg",
-    img: "/assets/img/service/service-6.jpg",
-    title: "Fleet Services",
-    text: "Keep your fleet running with scheduled maintenance plans and priority service.",
-  },
-  {
-    icon: "/assets/img/icon/service-icon_1-6.svg",
-    img: "/assets/img/service/service-7.jpg",
-    title: "Safety Standards Certificate (SSC)",
-    text: "Comprehensive vehicle inspections to keep you safe and road-ready.",
-  },
+const iconList = [
+  "/assets/img/icon/service-icon_1-1.svg",
+  "/assets/img/icon/service-icon_1-2.svg",
+  "/assets/img/icon/service-icon_1-3.svg",
+  "/assets/img/icon/service-icon_1-4.svg",
+  "/assets/img/icon/service-icon_1-5.svg",
+  "/assets/img/icon/service-icon_1-6.svg",
 ];
 
+const stripHtml = (html) => {
+  if (!html) return "";
+  return html.replace(/<[^>]*>?/gm, "");
+};
+
 const ServiceAreaTwo_multi_img = () => {
+  const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const res = await fetch("/api/services");
+        const result = await res.json();
+        if (result.success) {
+          setServices(result.data);
+        } else {
+          setError(result.message || "Failed to load services");
+        }
+      } catch (err) {
+        setError("Failed to load services");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchServices();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="service-area-1 space overflow-hidden">
+        <div className="container text-center py-5">
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="service-area-1 space overflow-hidden">
+        <div className="container text-center py-5">
+          <p className="text-danger">{error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (services.length === 0) {
+    return (
+      <div className="service-area-1 space overflow-hidden">
+        <div className="container text-center py-5">
+          <p>No services available at the moment.</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="service-area-1 space overflow-hidden">
       <div className="container">
@@ -47,7 +79,7 @@ const ServiceAreaTwo_multi_img = () => {
           {services.map((service, index) => (
             <div
               className="col-lg-4 col-md-6"
-              key={index}
+              key={service.id || index}
               data-aos="fade-up"
               data-aos-delay={`${(index % 3) * 100 + 100}`}
               data-aos-duration="800"
@@ -55,15 +87,25 @@ const ServiceAreaTwo_multi_img = () => {
               <div className="service-card style-shadow h-100">
                 <div className="service-card_content">
                   <div className="service-card_icon">
-                    <img src={service.icon} alt={service.title} />
+                    <img
+                      src={iconList[index % iconList.length]}
+                      alt={service.title}
+                    />
                   </div>
                   <h4 className="service-card_title h5">
-                    <Link href="/service">{service.title}</Link>
+                    <Link href={`/service/${service.slug}`}>{service.title}</Link>
                   </h4>
-                  <p className="service-card_text">{service.text}</p>
+                  <p className="service-card_text">
+                    {stripHtml(service.description)}
+                  </p>
                 </div>
                 <div className="service-card_img">
-                  <img src={service.img} alt={service.title} />
+                  <img
+                    src={
+                      service.thumbnail || "/assets/img/service/service-1.jpg"
+                    }
+                    alt={service.thumbnail_alt || service.title}
+                  />
                 </div>
               </div>
             </div>
