@@ -4,7 +4,7 @@ import Link from "next/link";
 const CTAAreaOne = () => {
   return (
     <div
-        className="footer-top-1 bg-theme mb-4"
+        className="footer-top-1 bg-theme"
         style={{
           backgroundImage: "url(assets/img/bg/footer-top-bg1-1.png)",
           position: "relative"

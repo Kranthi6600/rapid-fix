@@ -15,7 +15,7 @@ const TestimonialOne = () => {
             </div>
           </div>
           <div className="col-lg-6" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
-            <div className="space">
+            <div style={{ padding: "30px 0 80px" }}>
               <div className="title-area" data-aos="fade-up" data-aos-delay="200">
                 <span className="sub-title">Clients testimonial</span>
                 <h2>
