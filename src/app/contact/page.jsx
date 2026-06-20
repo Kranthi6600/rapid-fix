@@ -1,14 +1,14 @@
-﻿import Breadcrumb from "@/components/Breadcrumb";
+import Breadcrumb from "@/components/Breadcrumb";
 import ContactArea from "@/components/ContactArea";
-import FooterAreaFour from "@/components/FooterAreaFour";
-import HeaderFive from "@/components/HeaderFive";
-import SubscribeOne from "@/components/SubscribeOne";
+import FooterArea from "@/components/FooterArea";
+import Header from "@/components/Header";
+import Subscribe from "@/components/Subscribe";
 import Preloader from "@/helper/Preloader";
 
 export const metadata = {
   title: "Contact Us | Rapid Fix - 112 Sinnott Rd, Scarborough",
   description:
-    "Contact Rapid Fix at 112 Sinnott Rd, Scarborough, ON. Call (437) 836-4848. Open Monday to Friday, 8:00 AM – 6:00 PM. Book your auto or diesel repair service today.",
+    "Contact Rapid Fix at 112 Sinnott Rd, Scarborough, ON. Call (437) 836-4848. Open Monday to Friday, 8:00 AM � 6:00 PM. Book your auto or diesel repair service today.",
 };
 
 
@@ -18,8 +18,8 @@ const page = () => {
       {/* Preloader */}
   <Preloader />
 
-       {/* Header one */}
-       <HeaderFive />
+       {/* Header */}
+       <Header />
 
 {/* Breadcrumb */}
 <Breadcrumb title={"Contact-Us"} img="/assets/img/contact/contact-us.jpg"/>
@@ -27,13 +27,14 @@ const page = () => {
    {/* Contact Area */}
    <ContactArea />
 
-{/* Subscribe One */}
-<SubscribeOne />
+{/* Subscribe */}
+<Subscribe />
 
-{/* Footer Area Four */}
-<FooterAreaFour />
+{/* Footer Area */}
+<FooterArea />
     </>
   );
 };
 
 export default page;
+

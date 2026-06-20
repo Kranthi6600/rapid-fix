@@ -1,34 +1,44 @@
 import Link from "next/link";
 
+
 const SubscribeTwo = () => {
   return (
     <div className="container">
-      <div className="footer-top-3" data-aos="zoom-in" data-aos-duration="800">
+      <div
+        className="footer-top-1 bg-theme"
+        style={{ backgroundImage: "url(/assets/img/bg/footer-top-bg1-1.png)" }}
+        data-aos="zoom-in"
+        data-aos-duration="800"
+      >
         <div className="footer-logo" data-aos="fade-down" data-aos-delay="100">
           <Link href="/">
-            <img
-              style={{ width: "170px"}}
-              src="/assets/logo.png"
-              alt="Rapid Fix"
-            />
+            <img style={{ width: "200px" }} src="/assets/logo.png" alt="Rapid Fix" />
           </Link>
         </div>
-        <h3 className="footer-top-title text-white" data-aos="fade-up" data-aos-delay="150">
-          Stay connected with Rapid Fix
-        </h3>
-        <form className="newsletter-form" data-aos="fade-up" data-aos-delay="250">
-          <div className="form-group">
-            <input
-              className="form-control"
-              type="email"
-              placeholder="Your Email Address"
-              required=""
-            />
+        <div className="call-media-wrap" data-aos="fade-up" data-aos-delay="200">
+          <div className="icon">
+            <img src="/assets/img/icon/phone-1.svg" alt="Rapid Fix" />
           </div>
-          <button type="submit" className="btn style5">
-            <i className="fas fa-arrow-right" />
-          </button>
-        </form>
+          <div className="media-body">
+            <h6 className="title text-white">Requesting A Call:</h6>
+            <h4 className="link">
+              <a className="text-white" href="tel:(437) 836-4848">
+                (437) 836-4848
+              </a>
+            </h4>
+          </div>
+        </div>
+        <div className="social-btn" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://facebook.com/">
+            <i className="fab fa-facebook-f" />
+          </a>
+          <a href="https://twitter.com/">
+            <i className="fab fa-twitter" />
+          </a>
+          <a href="https://instagram.com/">
+            <i className="fab fa-instagram" />
+          </a>
+        </div>
       </div>
     </div>
   );

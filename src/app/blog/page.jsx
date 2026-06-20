@@ -1,8 +1,8 @@
-﻿import BlogAreaList from "@/components/BlogAreaList";
+import BlogAreaList from "@/components/BlogAreaList";
 import Breadcrumb from "@/components/Breadcrumb";
-import FooterAreaFour from "@/components/FooterAreaFour";
-import HeaderFive from "@/components/HeaderFive";
-import SubscribeOne from "@/components/SubscribeOne";
+import FooterArea from "@/components/FooterArea";
+import Header from "@/components/Header";
+import Subscribe from "@/components/Subscribe";
 import Preloader from "@/helper/Preloader";
 
 export const metadata = {
@@ -18,8 +18,8 @@ const page = () => {
       {/* Preloader */}
  <Preloader />
 
-      {/* Header one */}
-      <HeaderFive />
+      {/* Header */}
+      <Header />
 
       {/* Breadcrumb */}
       <Breadcrumb title={"Blog"} img="/assets/img/blog/blog-1.jpg"/>
@@ -27,13 +27,14 @@ const page = () => {
       {/* Blog Area List */}
       <BlogAreaList />
 
-      {/* Subscribe One */}
-      <SubscribeOne />
+      {/* Subscribe */}
+      <Subscribe />
 
-      {/* Footer Area Four */}
-      <FooterAreaFour />
+      {/* Footer Area */}
+      <FooterArea />
     </>
   );
 };
 
 export default page;
+

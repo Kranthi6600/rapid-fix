@@ -1,17 +1,17 @@
-﻿import AboutTwo from "@/components/AboutTwo";
+import About from "@/components/About";
 import Breadcrumb from "@/components/Breadcrumb";
-import CTAAreaOne from "@/components/CTAAreaOne";
-import FooterAreaFour from "@/components/FooterAreaFour";
-import HeaderFive from "@/components/HeaderFive";
-import ProcessAreaOne from "@/components/ProcessAreaOne";
-import SubscribeOne from "@/components/SubscribeOne";
-import TestimonialOne from "@/components/TestimonialOne";
+import CTAAreaTwo from "@/components/CTAAreaTwo";
+import FooterArea from "@/components/FooterArea";
+import Header from "@/components/Header";
+import ProcessArea from "@/components/ProcessArea";
+import SubscribeTwo from "@/components/SubscribeTwo";
+import Testimonials from "@/components/Testimonials";
 import Preloader from "@/helper/Preloader";
 
 export const metadata = {
   title: "About Us | Rapid Fix - Auto & Diesel Repair Specialists",
   description:
-    "Learn about Rapid Fix — certified auto and diesel repair technicians with 15+ years of experience and 5,000+ vehicles serviced. We deliver fast, accurate, and affordable service for personal vehicles and commercial fleets.",
+    "Learn about Rapid Fix � certified auto and diesel repair technicians with 15+ years of experience and 5,000+ vehicles serviced. We deliver fast, accurate, and affordable service for personal vehicles and commercial fleets.",
 };
 
 
@@ -21,31 +21,32 @@ const page = () => {
       {/* Preloader */}
   <Preloader />
 
-      {/* Header one */}
-      <HeaderFive />
+      {/* Header */}
+      <Header />
 
       {/* Breadcrumb */}
       <Breadcrumb title={"About Us"} style={{borderRadius: "100px"}} img="/assets/img/about/about-us.jpeg"/>
 
-      {/* About Area */}
-      <AboutTwo />
+      {/* About */}
+      <About />
 
-      {/* Process Area One */}
-      <ProcessAreaOne />
+      {/* Process Area */}
+      <ProcessArea />
 
-      {/* CTA Area One */}
-      <CTAAreaOne />
+      {/* CTA Area Two */}
+      <CTAAreaTwo />
 
-      {/* Testimonial One */}
-      <TestimonialOne />
+      {/* Testimonials */}
+      <Testimonials />
 
-      {/* Subscribe One */}
-      <SubscribeOne />
+      {/* Subscribe Two */}
+      <SubscribeTwo />
 
-      {/* Footer Area Four */}
-      <FooterAreaFour />
+      {/* Footer Area */}
+      <FooterArea />
     </>
   );
 };
 
 export default page;
+

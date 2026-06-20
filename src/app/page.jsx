@@ -1,17 +1,17 @@
-import BlogAreaTwo from "@/components/BlogAreaTwo";
-import ClientAreaTwo from "@/components/ClientAreaTwo";
-import FaqAreaTwo from "@/components/FaqAreaTwo";
-import FooterAreaFour from "@/components/FooterAreaFour";
-import HeaderFive from "@/components/HeaderFive";
-import HeroThree from "@/components/HeroThree";
-import AboutThree from "../components/AboutThree.jsx";
-import ProductAreaOne from "@/components/ProductAreaOne";
+import BlogArea from "@/components/BlogArea";
+import ClientArea from "@/components/ClientArea";
+import FaqArea from "@/components/FaqArea";
+import FooterArea from "@/components/FooterArea";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import AboutHome from "../components/AboutHome.jsx";
+import ProductArea from "@/components/ProductArea";
 import Preloader from "@/helper/Preloader";
-import ServiceAreaTwo from "@/components/ServiceAreaTwo";
-import MarqueeOne from "@/components/MarqueeOne";
-import SubscribeTwo from "@/components/SubscribeTwo.jsx";
-import CTAAreaTwo from "@/components/CTAAreaTwo.jsx";
-import CounterOne from "@/components/CounterOne.jsx";
+import ServiceArea from "@/components/ServiceArea";
+import MarqueeComponent from "@/components/Marquee";
+import Subscribe from "@/components/Subscribe.jsx";
+import CTAArea from "@/components/CTAArea.jsx";
+import Counter from "@/components/Counter.jsx";
 
 export const metadata = {
   title: "Rapid Fix | Auto & Diesel Repair in Scarborough, ON",
@@ -25,51 +25,52 @@ const page = () => {
       {/* Preloader */}
       <Preloader />
 
-      {/* Header Five */}
-      <HeaderFive />
+      {/* Header */}
+      <Header />
 
-      {/* Hero Three */}
-      <HeroThree />
+      {/* Hero */}
+      <Hero />
 
-      {/* Counter One */}
+      {/* Counter */}
       <div style={{ marginTop: '150px' }}>
-        <CounterOne />
+        <Counter />
       </div>
 
 
-      {/* About Three */}
-      <AboutThree />
+      {/* About Home */}
+      <AboutHome />
 
-      {/* Marquee One */}
-      <MarqueeOne />
+      {/* Marquee */}
+      <MarqueeComponent />
 
-      {/* Service Area Two */}
-      <ServiceAreaTwo />
+      {/* Service Area */}
+      <ServiceArea />
 
-      {/* CTA Area Two */}
+      {/* CTA Area */}
       <div style={{ marginTop: '100px' }}>
-        <CTAAreaTwo />
+        <CTAArea />
       </div>
 
-      {/* Product Area One */}
-      <ProductAreaOne />
+      {/* Product Area */}
+      <ProductArea />
 
-      {/* Blog Area Two */}
-      <BlogAreaTwo />
+      {/* Blog Area */}
+      <BlogArea />
 
-      {/* Client Area Two */}
-      <ClientAreaTwo />
+      {/* Client Area */}
+      <ClientArea />
 
-      {/* Faq Area Two */}
-      <FaqAreaTwo />
+      {/* Faq Area */}
+      <FaqArea />
 
-      {/* Subscribe Two */}
-      <SubscribeTwo />
+      {/* Subscribe */}
+      <Subscribe />
 
-      {/* Footer Area Four */}
-      <FooterAreaFour />
+      {/* Footer Area */}
+      <FooterArea />
     </>
   );
 };
 
 export default page;
+

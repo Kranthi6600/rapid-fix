@@ -1,9 +1,9 @@
 import { blogs } from "@/data/blogs";
 import BlogDetailContent from "@/components/BlogDetailContent";
 import Breadcrumb from "@/components/Breadcrumb";
-import FooterAreaFour from "@/components/FooterAreaFour";
-import HeaderFive from "@/components/HeaderFive";
-import SubscribeOne from "@/components/SubscribeOne";
+import FooterArea from "@/components/FooterArea";
+import Header from "@/components/Header";
+import Subscribe from "@/components/Subscribe";
 import Preloader from "@/helper/Preloader";
 
 export function generateStaticParams() {
@@ -26,12 +26,12 @@ const BlogSlugPage = ({ params }) => {
     return (
       <>
         <Preloader />
-        <HeaderFive />
+        <Header />
         <Breadcrumb title="Blog Not Found" img="/assets/img/blog/blog-1.jpg" />
         <div className="container space-top space-extra-bottom text-center">
           <h2>Post not found</h2>
         </div>
-        <FooterAreaFour />
+        <FooterArea />
       </>
     );
   }
@@ -39,11 +39,11 @@ const BlogSlugPage = ({ params }) => {
   return (
     <>
       <Preloader />
-      <HeaderFive />
+      <Header />
       <Breadcrumb title={blog.title} img="/assets/img/blog/blog-1.jpg" />
       <BlogDetailContent blog={blog} />
-      <SubscribeOne />
-      <FooterAreaFour />
+      <Subscribe />
+      <FooterArea />
     </>
   );
 };
