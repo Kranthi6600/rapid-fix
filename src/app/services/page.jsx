@@ -16,7 +16,7 @@ const page = () => {
   return (
     <>
       {/* Preloader */}
-      <Preloader />
+ <Preloader />
 
       {/* Header */}
       <Header />
@@ -30,8 +30,8 @@ const page = () => {
       {/* Subscribe */}
       <Subscribe />
 
-      {/* Footer Area */}
-      <FooterArea />
+{/* Footer Area */}
+<FooterArea />
     </>
   );
 };

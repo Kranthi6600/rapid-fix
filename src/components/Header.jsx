@@ -102,7 +102,7 @@ const Header = () => {
                         <ul className="sub-menu">
                           {categories.map((cat) => (
                             <li key={cat.id}>
-                              <Link href={`/services/${cat.slug}/`}>
+                              <Link href={`/services/${cat.serviceSlug}`}>
                                 {cat.name}
                               </Link>
                             </li>
@@ -200,7 +200,7 @@ const Header = () => {
                     <ul className="sub-menu">
                       {categories.map((cat) => (
                         <li key={cat.id}>
-                          <Link href={`/services/${cat.slug}/`}>
+                          <Link href={`/services/${cat.serviceSlug}`}>
                             {cat.name}
                           </Link>
                         </li>

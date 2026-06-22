@@ -33,6 +33,7 @@ export async function GET(req) {
             id: cat.id,
             name: cat.name,
             slug: cat.slug,
+            serviceSlug: service.slug,
           });
         }
       });
