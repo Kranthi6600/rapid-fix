@@ -25,9 +25,18 @@ export async function GET(req) {
     }
 
     const data = await res.json();
+    const services = data.data || [];
+
+    // Sort in FIFO order (oldest first)
+    services.sort((a, b) => {
+      const aDate = new Date(a.created_at || 0).getTime();
+      const bDate = new Date(b.created_at || 0).getTime();
+      return aDate - bDate;
+    });
+
     return NextResponse.json({
       success: true,
-      data: data.data || [],
+      data: services,
       pagination: data.pagination,
     });
   } catch (error) {

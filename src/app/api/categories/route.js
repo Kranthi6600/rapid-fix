@@ -23,6 +23,13 @@ export async function GET(req) {
     const data = await res.json();
     const services = data.data || [];
 
+    // Sort in FIFO order (oldest first)
+    services.sort((a, b) => {
+      const aDate = new Date(a.created_at || 0).getTime();
+      const bDate = new Date(b.created_at || 0).getTime();
+      return aDate - bDate;
+    });
+
     const categoriesMap = new Map();
     services.forEach((service) => {
       const cats = service.wehoware_service_categories;
