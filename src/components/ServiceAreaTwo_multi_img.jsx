@@ -21,7 +21,7 @@ const truncateText = (text, maxLength) => {
   return text.substring(0, maxLength).trim() + "...";
 };
 
-const ServiceAreaTwo_multi_img = () => {
+const ServiceAreaTwo_multi_img = ({ category = "" }) => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -45,6 +45,14 @@ const ServiceAreaTwo_multi_img = () => {
     fetchServices();
   }, []);
 
+  const filteredServices = category
+    ? services.filter((s) => {
+        const cats = s.wehoware_service_categories;
+        const catList = Array.isArray(cats) ? cats : cats ? [cats] : [];
+        return catList.some((c) => c.slug === category);
+      })
+    : services;
+
   if (loading) {
     return (
       <div className="service-area-1 space overflow-hidden">
@@ -67,11 +75,11 @@ const ServiceAreaTwo_multi_img = () => {
     );
   }
 
-  if (services.length === 0) {
+  if (filteredServices.length === 0) {
     return (
       <div className="service-area-1 space overflow-hidden">
         <div className="container text-center py-5">
-          <p>No services available at the moment.</p>
+          <p>{category ? "No services found for this category." : "No services available at the moment."}</p>
         </div>
       </div>
     );
@@ -81,7 +89,7 @@ const ServiceAreaTwo_multi_img = () => {
     <div className="service-area-1 space overflow-hidden">
       <div className="container">
         <div className="row gy-4 justify-content-center">
-          {services.map((service, index) => (
+          {filteredServices.map((service, index) => (
             <div
               className="col-lg-4 col-md-6"
               key={service.id || index}

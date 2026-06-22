@@ -5,6 +5,7 @@ import FooterArea from "@/components/FooterArea";
 import Header from "@/components/Header";
 import Subscribe from "@/components/Subscribe";
 import Preloader from "@/helper/Preloader";
+import ServiceAreaTwo_multi_img from "@/components/ServiceAreaTwo_multi_img";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
@@ -19,6 +20,7 @@ const ServiceDetailPage = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isCategory, setIsCategory] = useState(false);
 
   useEffect(() => {
     if (!slug) return;
@@ -29,7 +31,23 @@ const ServiceDetailPage = () => {
         if (result.success && result.data) {
           setData(result.data);
         } else {
-          setError(result.message || "Service not found");
+          // Not a service — check if it's a category
+          const allRes = await fetch("/api/services");
+          const allResult = await allRes.json();
+          if (allResult.success && allResult.data) {
+            const hasCategory = allResult.data.some((s) => {
+              const cats = s.wehoware_service_categories;
+              const catList = Array.isArray(cats) ? cats : cats ? [cats] : [];
+              return catList.some((c) => c.slug === slug);
+            });
+            if (hasCategory) {
+              setIsCategory(true);
+            } else {
+              setError(result.message || "Service not found");
+            }
+          } else {
+            setError(result.message || "Service not found");
+          }
         }
       } catch (err) {
         setError("Failed to load service details");
@@ -50,6 +68,19 @@ const ServiceDetailPage = () => {
             <span className="visually-hidden">Loading...</span>
           </div>
         </div>
+        <FooterArea />
+      </>
+    );
+  }
+
+  if (isCategory) {
+    return (
+      <>
+        <Preloader />
+        <Header />
+        <Breadcrumb title={"Service"} img={"/assets/img/services/service-1.jpg"} />
+        <ServiceAreaTwo_multi_img category={slug} />
+        <Subscribe />
         <FooterArea />
       </>
     );
