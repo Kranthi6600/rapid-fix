@@ -12,6 +12,44 @@ const formatDate = (iso) => {
   });
 };
 
+const sanitizeHtml = (html) => {
+  if (!html) return "";
+  let cleaned = html;
+  // Loop until no more empty tags are found
+  let prev;
+  do {
+    prev = cleaned;
+    // Remove tags that are empty or contain only whitespace / &nbsp; / &#160; / <br> / <br/>
+    cleaned = cleaned.replace(
+      /<([a-z][a-z0-9]*)[^>]*>([\s\u00A0]|&nbsp;|&#160;|<br\s*\/?>)*<\/\1>/gi,
+      ""
+    );
+  } while (cleaned !== prev);
+  return cleaned;
+};
+
+const stripFirstParagraph = (html) => {
+  if (!html) return "";
+  const lower = html.toLowerCase();
+  const startIdx = lower.indexOf("<p");
+  if (startIdx === -1) return html;
+  const endIdx = lower.indexOf("</p>", startIdx);
+  if (endIdx === -1) return html;
+  // Remove everything from the first <p to the matching </p>
+  const result = html.slice(0, startIdx) + html.slice(endIdx + 4);
+  return result;
+};
+
+const stripHtml = (html) => {
+  if (!html) return "";
+  return html
+    .replace(/<[^>]*>/g, "")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&#160;/gi, " ")
+    .trim();
+};
+
 const BlogDetailContent = ({ blog }) => {
   const [recentPosts, setRecentPosts] = useState([]);
 
@@ -79,9 +117,15 @@ const BlogDetailContent = ({ blog }) => {
                     <i className="far fa-calendar" /> {dateStr}
                   </p>
                 )}
-                {excerpt && <p className="lead mb-30">{excerpt}</p>}
+                {excerpt && (
+                  <p className="lead mb-30">{stripHtml(excerpt)}</p>
+                )}
                 {content && (
-                  <div dangerouslySetInnerHTML={{ __html: content }} />
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: sanitizeHtml(stripFirstParagraph(content)),
+                    }}
+                  />
                 )}
               </div>
 

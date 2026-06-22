@@ -200,6 +200,13 @@ img { max-width: 100%; height: auto; }
   @media (max-width: 575px) { height: 260px; }
 }
 
+// ─── Reduce gap between nav item and dropdown ─────────────────────────────
+.main-menu ul.sub-menu {
+  top: calc(100% - 5px) !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
 // Init main SCSS File
 @import "~/public/assets/css/fontawesome.min.css";
 @import "/public/assets/css/demo.scss";

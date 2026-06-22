@@ -5,6 +5,7 @@ import Link from "next/link";
 const Header = () => {
   const [active, setActive] = useState(false);
   const [scroll, setScroll] = useState(false);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     var offCanvasNav = document.getElementById("offcanvas-navigation");
@@ -42,6 +43,17 @@ const Header = () => {
       }
       return () => (window.onscroll = null);
     };
+  }, []);
+
+  useEffect(() => {
+    fetch("/api/categories")
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.success && Array.isArray(result.data)) {
+          setCategories(result.data);
+        }
+      })
+      .catch(() => {});
   }, []);
 
   const mobileMenu = () => {
@@ -84,8 +96,19 @@ const Header = () => {
                     <li>
                       <Link href="/about">About Us</Link>
                     </li>
-                    <li>
+                    <li className="menu-item-has-children">
                       <Link href="/services">Services</Link>
+                      {categories.length > 0 && (
+                        <ul className="sub-menu">
+                          {categories.map((cat) => (
+                            <li key={cat.id}>
+                              <Link href={`/services?category=${cat.slug}`}>
+                                {cat.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </li>
                     <li>
                       <Link href="/blog">Blog</Link>
@@ -173,6 +196,17 @@ const Header = () => {
 
                 <li className="menu-item-has-children submenu-item-has-children">
                   <Link href="/services">Service</Link>
+                  {categories.length > 0 && (
+                    <ul className="sub-menu">
+                      {categories.map((cat) => (
+                        <li key={cat.id}>
+                          <Link href={`/services?category=${cat.slug}`}>
+                            {cat.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
                 
                 <li className="menu-item-has-children submenu-item-has-children">

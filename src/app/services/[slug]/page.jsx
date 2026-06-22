@@ -72,7 +72,6 @@ const ServiceDetailPage = () => {
 
   const {
     title,
-    description,
     content,
     thumbnail,
     thumbnail_alt,
@@ -111,14 +110,9 @@ const ServiceDetailPage = () => {
                 </div>
               )}
 
-              {/* Title & Description */}
+              {/* Title */}
               <div>
                 <h2 className="service-title mb-20">{title}</h2>
-                {description && (
-                  <p className="service-desc lead text-muted mb-30">
-                    {stripHtml(description)}
-                  </p>
-                )}
               </div>
 
               {/* Full Content */}
