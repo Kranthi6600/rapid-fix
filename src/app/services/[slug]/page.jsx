@@ -63,7 +63,7 @@ const ServiceDetailPage = () => {
         <div className="space-top space-extra-bottom text-center">
           <h2 className="mb-20">Service Not Found</h2>
           <p className="text-muted mb-30">{error || "The service you are looking for does not exist."}</p>
-          <Link href="/service" className="btn style2">Browse All Services</Link>
+          <Link href="/services" className="btn style2">Browse All Services</Link>
         </div>
         <FooterArea />
       </>
@@ -90,7 +90,7 @@ const ServiceDetailPage = () => {
       <Header />
       <Breadcrumb
         title={title}
-        img={thumbnail || "/assets/img/service/service-1.jpg"}
+        img={thumbnail || "/assets/img/services/service-1.jpg"}
       />
 
       {/* Service Detail */}

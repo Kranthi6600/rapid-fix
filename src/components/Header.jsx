@@ -85,7 +85,7 @@ const Header = () => {
                       <Link href="/about">About Us</Link>
                     </li>
                     <li>
-                      <Link href="/service">Services</Link>
+                      <Link href="/services">Services</Link>
                     </li>
                     <li>
                       <Link href="/blog">Blog</Link>
@@ -172,7 +172,7 @@ const Header = () => {
                 </li>
 
                 <li className="menu-item-has-children submenu-item-has-children">
-                  <Link href="/service">Service</Link>
+                  <Link href="/services">Service</Link>
                 </li>
                 
                 <li className="menu-item-has-children submenu-item-has-children">

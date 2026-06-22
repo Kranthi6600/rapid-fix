@@ -16,7 +16,7 @@ export default function ServiceNotFound() {
         <p className="text-muted mb-30">
           The service you are looking for does not exist or has been removed.
         </p>
-        <Link href="/service" className="btn style2">
+        <Link href="/services" className="btn style2">
           Browse All Services
         </Link>
       </div>

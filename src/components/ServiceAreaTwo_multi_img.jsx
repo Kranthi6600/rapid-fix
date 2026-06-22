@@ -93,7 +93,7 @@ const ServiceAreaTwo_multi_img = () => {
                     />
                   </div>
                   <h4 className="service-card_title h5">
-                    <Link href={`/service/${service.slug}`}>{service.title}</Link>
+                    <Link href={`/services/${service.slug}`}>{service.title}</Link>
                   </h4>
                   <p className="service-card_text">
                     {stripHtml(service.description)}
@@ -102,7 +102,7 @@ const ServiceAreaTwo_multi_img = () => {
                 <div className="service-card_img">
                   <img
                     src={
-                      service.thumbnail || "/assets/img/service/service-1.jpg"
+                      service.thumbnail || "/assets/img/services/service-1.jpg"
                     }
                     alt={service.thumbnail_alt || service.title}
                   />

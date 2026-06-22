@@ -27,7 +27,7 @@ const ServiceArea = () => {
               <div
                 className="service-card_content"
                 style={{
-                  backgroundImage: "url(/assets/img/service/service-8.jpg)",
+                  backgroundImage: "url(/assets/img/services/service-8.jpg)",
                 }}
               >
                 <div>
@@ -53,7 +53,7 @@ const ServiceArea = () => {
               <div
                 className="service-card_content"
                 style={{
-                  backgroundImage: "url(/assets/img/service/service-9.jpg)",
+                  backgroundImage: "url(/assets/img/services/service-9.jpg)",
                 }}
               >
                 <div>
@@ -79,7 +79,7 @@ const ServiceArea = () => {
               <div
                 className="service-card_content"
                 style={{
-                  backgroundImage: "url(/assets/img/service/service-10.jpg)",
+                  backgroundImage: "url(/assets/img/services/service-10.jpg)",
                 }}
               >
                 <div>

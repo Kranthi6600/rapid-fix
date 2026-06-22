@@ -55,22 +55,22 @@ const FooterArea = () => {
                 <div className="menu-all-pages-container">
                   <ul className="menu">
                     <li>
-                      <Link href="/service">Auto Repair</Link>
+                      <Link href="/services">Auto Repair</Link>
                     </li>
                     <li>
-                      <Link href="/service">Diesel Repair</Link>
+                      <Link href="/services">Diesel Repair</Link>
                     </li>
                     <li>
-                      <Link href="/service">Diagnostics</Link>
+                      <Link href="/services">Diagnostics</Link>
                     </li>
                     <li>
-                      <Link href="/service">Maintenance</Link>
+                      <Link href="/services">Maintenance</Link>
                     </li>
                     <li>
-                      <Link href="/service">Fleet Services</Link>
+                      <Link href="/services">Fleet Services</Link>
                     </li>
                     <li>
-                      <Link href="/service">Safety Standards Certificate</Link>
+                      <Link href="/services">Safety Standards Certificate</Link>
                     </li>
                   </ul>
                 </div>

@@ -49,7 +49,7 @@ const ProductArea = () => {
               <div className="product-card service-card h-100">
                 <div className="product-content text-center">
                   <h3 className="product-title">
-                    <Link href="/service">{p.title}</Link>
+                    <Link href="/services">{p.title}</Link>
                   </h3>
                   <p className="service-desc">{p.desc}</p>
                 </div>

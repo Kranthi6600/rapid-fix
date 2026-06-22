@@ -196,16 +196,16 @@ const BlogDetailContent = ({ blog }) => {
                     {related_services.map((svc) => (
                       <div className="recent-post" key={svc.id}>
                         <div className="media-img">
-                          <Link href={`/service/${svc.slug}`}>
+                          <Link href={`/services/${svc.slug}`}>
                             <img
-                              src={svc.thumbnail || "/assets/img/service/service-1.jpg"}
+                              src={svc.thumbnail || "/assets/img/services/service-1.jpg"}
                               alt={svc.title}
                             />
                           </Link>
                         </div>
                         <div className="media-body">
                           <h4 className="post-title">
-                            <Link className="text-inherit" href={`/service/${svc.slug}`}>
+                            <Link className="text-inherit" href={`/services/${svc.slug}`}>
                               {svc.title}
                             </Link>
                           </h4>
@@ -236,7 +236,7 @@ const BlogDetailContent = ({ blog }) => {
                 <p className="text-muted mb-20">
                   Get expert diagnostics and repairs from certified technicians.
                 </p>
-                <Link href="/service" className="btn style2 w-100 mb-10">
+                <Link href="/services" className="btn style2 w-100 mb-10">
                   View Services
                 </Link>
                 <Link href="/contact" className="btn style-border2 w-100">
