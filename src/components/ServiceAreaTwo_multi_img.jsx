@@ -16,6 +16,11 @@ const stripHtml = (html) => {
   return html.replace(/<[^>]*>?/gm, "");
 };
 
+const truncateText = (text, maxLength) => {
+  if (!text || text.length <= maxLength) return text;
+  return text.substring(0, maxLength).trim() + "...";
+};
+
 const ServiceAreaTwo_multi_img = () => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -96,7 +101,7 @@ const ServiceAreaTwo_multi_img = () => {
                     <Link href={`/services/${service.slug}`}>{service.title}</Link>
                   </h4>
                   <p className="service-card_text">
-                    {stripHtml(service.description)}
+                    {truncateText(stripHtml(service.description), 200)}
                   </p>
                 </div>
                 <div className="service-card_img">
