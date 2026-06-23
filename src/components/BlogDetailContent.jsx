@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const formatDate = (iso) => {
   if (!iso) return "";
@@ -52,6 +52,73 @@ const stripHtml = (html) => {
 
 const BlogDetailContent = ({ blog }) => {
   const [recentPosts, setRecentPosts] = useState([]);
+  const mainRef = useRef(null);
+  const needHelpRef = useRef(null);
+  const placeholderRef = useRef(null);
+
+  useEffect(() => {
+    const main = mainRef.current;
+    const needHelp = needHelpRef.current;
+    const placeholder = placeholderRef.current;
+    if (!main || !needHelp || !placeholder) return;
+
+    let pinned = false;
+    let rafId = null;
+
+    const setFixedPos = () => {
+      const rect = placeholder.getBoundingClientRect();
+      needHelp.style.left = `${rect.left}px`;
+      needHelp.style.width = `${rect.width}px`;
+    };
+
+    const tick = () => {
+      const placeRect = placeholder.getBoundingClientRect();
+      const mainRect = main.getBoundingClientRect();
+      const offset = 100;
+      const needHelpHeight = needHelp.offsetHeight;
+      const buffer = 50;
+
+      const shouldRelease = mainRect.bottom <= needHelpHeight + offset + 20;
+      const shouldPin = !shouldRelease && placeRect.top <= offset;
+      const shouldUnpin = pinned && placeRect.top > offset + buffer;
+
+      if ((shouldUnpin || shouldRelease) && pinned) {
+        pinned = false;
+        placeholder.style.height = "0px";
+        needHelp.style.position = "static";
+        needHelp.style.top = "auto";
+        needHelp.style.left = "auto";
+        needHelp.style.width = "auto";
+        needHelp.style.zIndex = "auto";
+      } else if (shouldPin && !pinned) {
+        pinned = true;
+        placeholder.style.height = `${needHelpHeight}px`;
+        setFixedPos();
+        needHelp.style.position = "fixed";
+        needHelp.style.top = `${offset}px`;
+        needHelp.style.zIndex = "auto";
+      }
+    };
+
+    const onScroll = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => { rafId = null; tick(); });
+    };
+
+    const onResize = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => { rafId = null; tick(); });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize, { passive: true });
+    tick();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
+  }, [blog]);
 
   useEffect(() => {
     fetch("/api/blogs")
@@ -88,7 +155,7 @@ const BlogDetailContent = ({ blog }) => {
     <section className="blog-area space-top space-extra-bottom">
       <div className="container">
         <div className="row gx-40">
-          <div className="col-xxl-8 col-lg-7">
+          <div className="col-xxl-8 col-lg-7" ref={mainRef}>
             <div className="blog-details-card">
               {thumbnail && (
                 <div className="blog-thumb">
@@ -187,8 +254,8 @@ const BlogDetailContent = ({ blog }) => {
 
           </div>
 
-          <div className="col-xxl-4 col-lg-5">
-            <aside className="sidebar-area">
+          <div className="col-xxl-4 col-lg-5 d-flex flex-column">
+            <aside className="sidebar-area" style={{ flex: "0 0 auto" }}>
               {/* Search */}
               <div className="widget widget_search">
                 <h3 className="widget_title">Search</h3>
@@ -287,9 +354,16 @@ const BlogDetailContent = ({ blog }) => {
                   Book Appointment
                 </Link>
               </div>
+            </aside>
 
-              {/* Quick Contact */}
-              <div className="widget bg-smoke rounded-4 p-30">
+            {/* Need Help — JS fixed with permanent placeholder */}
+            <div className="flex-grow-1" style={{ position: "relative" }}>
+              <div ref={placeholderRef} style={{ width: "100%" }} />
+              <div
+                className="widget bg-smoke rounded-4 p-30"
+                ref={needHelpRef}
+                style={{ position: "relative" }}
+              >
                 <h4 className="widget-title mb-20">Need Help?</h4>
                 <p className="text-muted mb-20">
                   Have questions? Our team is ready to assist you.
@@ -298,7 +372,7 @@ const BlogDetailContent = ({ blog }) => {
                   Contact Us
                 </Link>
               </div>
-            </aside>
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useServices } from "@/context/ServicesContext";
 
 const iconList = [
   "/assets/img/icon/service-icon_1-1.svg",
@@ -22,30 +22,7 @@ const truncateText = (text, maxLength) => {
 };
 
 const ServiceAreaTwo_multi_img = () => {
-  const [services, setServices] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchServices = async () => {
-      try {
-        const res = await fetch("/api/services/");
-        const result = await res.json();
-        console.log("Services API response:", result);
-        if (result.success) {
-          setServices(result.data);
-        } else {
-          setError(result.message || "Failed to load services");
-        }
-      } catch (err) {
-        console.error("Fetch services error:", err);
-        setError("Failed to load services");
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchServices();
-  }, []);
+  const { services, loading } = useServices();
 
   if (loading) {
     return (
@@ -54,16 +31,6 @@ const ServiceAreaTwo_multi_img = () => {
           <div className="spinner-border text-primary" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="service-area-1 space overflow-hidden">
-        <div className="container text-center py-5">
-          <p className="text-danger">{error}</p>
         </div>
       </div>
     );

@@ -216,6 +216,16 @@ img { max-width: 100%; height: auto; }
   }
 }
 
+// ─── Service sidebar Need Help mobile fallback ────────────────────────────
+@media (max-width: 991px) {
+  .service-sidebar .widget:last-child {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    width: auto !important;
+  }
+}
+
 // Init main SCSS File
 @import "~/public/assets/css/fontawesome.min.css";
 @import "/public/assets/css/demo.scss";

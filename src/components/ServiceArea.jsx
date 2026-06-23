@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useServices } from "@/context/ServicesContext";
 
 const bgImages = [
   "/assets/img/services/service-8.jpg",
@@ -25,26 +25,8 @@ const truncateText = (text, maxLength) => {
 };
 
 const ServiceArea = () => {
-  const [services, setServices] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchServices = async () => {
-      try {
-        const res = await fetch("/api/services/");
-        const result = await res.json();
-        console.log("Services API response:", result);
-        if (result.success) {
-          setServices(result.data.slice(0, 3));
-        }
-      } catch (err) {
-        console.error("Failed to load services", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchServices();
-  }, []);
+  const { services: allServices, loading } = useServices();
+  const services = allServices.slice(0, 3);
 
   return (
     <div className="service-area-2 space overflow-hidden">

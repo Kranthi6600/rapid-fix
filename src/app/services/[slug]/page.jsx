@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Breadcrumb from "@/components/Breadcrumb";
 import FooterArea from "@/components/FooterArea";
 import Header from "@/components/Header";
@@ -7,6 +7,7 @@ import Subscribe from "@/components/Subscribe";
 import Preloader from "@/helper/Preloader";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { useServices } from "@/context/ServicesContext";
 
 const stripHtml = (html) => {
   if (!html) return "";
@@ -16,9 +17,77 @@ const stripHtml = (html) => {
 const ServiceDetailPage = () => {
   const params = useParams();
   const slug = params?.slug;
+  const { services } = useServices();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const mainRef = useRef(null);
+  const needHelpRef = useRef(null);
+  const placeholderRef = useRef(null);
+
+  useEffect(() => {
+    const main = mainRef.current;
+    const needHelp = needHelpRef.current;
+    const placeholder = placeholderRef.current;
+    if (!main || !needHelp || !placeholder) return;
+
+    let pinned = false;
+    let rafId = null;
+
+    const setFixedPos = () => {
+      const rect = placeholder.getBoundingClientRect();
+      needHelp.style.left = `${rect.left}px`;
+      needHelp.style.width = `${rect.width}px`;
+    };
+
+    const tick = () => {
+      const placeRect = placeholder.getBoundingClientRect();
+      const mainRect = main.getBoundingClientRect();
+      const offset = 100;
+      const needHelpHeight = needHelp.offsetHeight;
+      const buffer = 50;
+
+      const shouldRelease = mainRect.bottom <= needHelpHeight + offset + 20;
+      const shouldPin = !shouldRelease && placeRect.top <= offset;
+      const shouldUnpin = pinned && placeRect.top > offset + buffer;
+
+      if ((shouldUnpin || shouldRelease) && pinned) {
+        pinned = false;
+        placeholder.style.height = "0px";
+        needHelp.style.position = "static";
+        needHelp.style.top = "auto";
+        needHelp.style.left = "auto";
+        needHelp.style.width = "auto";
+        needHelp.style.zIndex = "auto";
+      } else if (shouldPin && !pinned) {
+        pinned = true;
+        placeholder.style.height = `${needHelpHeight}px`;
+        setFixedPos();
+        needHelp.style.position = "fixed";
+        needHelp.style.top = `${offset}px`;
+        needHelp.style.zIndex = "auto";
+      }
+    };
+
+    const onScroll = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => { rafId = null; tick(); });
+    };
+
+    const onResize = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => { rafId = null; tick(); });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize, { passive: true });
+    tick();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
+  }, [data]);
 
   useEffect(() => {
     if (!slug) return;
@@ -39,6 +108,7 @@ const ServiceDetailPage = () => {
     };
     fetchService();
   }, [slug]);
+
 
   if (loading) {
     return (
@@ -93,11 +163,11 @@ const ServiceDetailPage = () => {
       />
 
       {/* Service Detail */}
-      <section className="service-details-area space-top space-extra-bottom overflow-hidden">
+      <section className="service-details-area space-top space-extra-bottom">
         <div className="container">
           <div className="row">
             {/* Main Content */}
-            <div className="col-xl-8 col-lg-7">
+            <div className="col-xl-8 col-lg-7" ref={mainRef}>
               {/* Thumbnail */}
               {thumbnail && (
                 <div className="service-thumb mb-40">
@@ -180,13 +250,61 @@ const ServiceDetailPage = () => {
             </div>
 
             {/* Sidebar */}
-            <div className="col-xl-4 col-lg-5">
-              <div className="service-sidebar ps-xl-30">
+            <div className="col-xl-4 col-lg-5 d-flex flex-column">
+              <div className="service-sidebar ps-xl-30" style={{ flex: "0 0 auto" }}>
+                {/* Services List */}
+                <div className="widget mb-40">
+                  <h4 className="widget-title mb-25">Our Services</h4>
+                  {services.length === 0 ? (
+                    <p className="text-muted small">Loading services...</p>
+                  ) : (
+                    <ul className="list-unstyled mb-0">
+                      {services.map((s) => {
+                        const isActive = s.slug === slug;
+                        return (
+                          <li key={s.id || s.slug} className="mb-2">
+                            <Link
+                              href={`/services/${s.slug}/`}
+                              className="d-flex align-items-center gap-2 p-2 rounded-3 text-decoration-none"
+                              style={{
+                                backgroundColor: isActive
+                                  ? "var(--theme-color, #E8092E)"
+                                  : "#f5f5f5",
+                                color: isActive ? "#fff" : "#171717",
+                                transition: "all 0.2s ease",
+                                fontSize: "15px",
+                                fontWeight: isActive ? 600 : 400,
+                              }}
+                              onMouseEnter={(e) => {
+                                if (!isActive) {
+                                  e.currentTarget.style.backgroundColor =
+                                    "var(--theme-color, #E8092E)";
+                                  e.currentTarget.style.color = "#fff";
+                                }
+                              }}
+                              onMouseLeave={(e) => {
+                                if (!isActive) {
+                                  e.currentTarget.style.backgroundColor =
+                                    "#f5f5f5";
+                                  e.currentTarget.style.color = "#171717";
+                                }
+                              }}
+                            >
+                              <span className="flex-grow-1">{s.title}</span>
+                              {isActive && (
+                                <i className="fas fa-chevron-right small" />
+                              )}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
+                </div>
+
                 {/* Related Blogs */}
                 {related_blogs?.length > 0 && (
-                  <div
-                    className="widget mb-40"
-                  >
+                  <div className="widget mb-40">
                     <h4 className="widget-title mb-25">Related Articles</h4>
                     <div className="related-posts">
                       {related_blogs.map((blog) => (
@@ -225,9 +343,16 @@ const ServiceDetailPage = () => {
                     </div>
                   </div>
                 )}
+              </div>
 
-                {/* Quick Contact */}
-                <div className="widget bg-smoke rounded-4 p-30">
+              {/* Need Help — JS fixed with permanent placeholder */}
+              <div className="ps-xl-30 flex-grow-1" style={{ position: "relative" }}>
+                <div ref={placeholderRef} style={{ width: "100%" }} />
+                <div
+                  className="widget bg-smoke rounded-4 p-30"
+                  ref={needHelpRef}
+                  style={{ position: "relative" }}
+                >
                   <h4 className="widget-title mb-20">Need Help?</h4>
                   <p className="text-muted mb-20">
                     Have questions about this service? Our team is ready to assist.

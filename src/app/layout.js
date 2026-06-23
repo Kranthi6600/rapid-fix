@@ -1,5 +1,6 @@
 import BootstrapInit from "@/helper/BootstrapInit";
 import Animation from "@/helper/Animation";
+import { ServicesProvider } from "@/context/ServicesContext";
 import "./font.css";
 import "./globals.scss";
 
@@ -35,7 +36,9 @@ export default function RootLayout({ children }) {
         />
         <BootstrapInit />
         <Animation />
-        {children}
+        <ServicesProvider>
+          {children}
+        </ServicesProvider>
       </body>
     </html>
   );
