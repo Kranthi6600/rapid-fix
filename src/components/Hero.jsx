@@ -21,17 +21,36 @@ const HeroThree = () => {
             <div
               className="hero-slide"
               style={{
-                backgroundImage: "url(assets/img/hero/banner8.jpeg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
+                position: "relative",
                 overflow: "hidden",
                 width: "100%",
                 height: "100vh",
                 maxHeight: "800px",
               }}
             >
-              <div className="container">
+              <img
+                src="/assets/img/hero/banner8.jpeg"
+                alt="Rapid Fix"
+                loading="eager"
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  zIndex: 0,
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  background: "linear-gradient(to right, rgba(23,23,23,0.85), rgba(23,23,23,0) 70%)",
+                  zIndex: 1,
+                }}
+              />
+              <div className="container" style={{ position: "relative", zIndex: 2 }}>
                 <div className="row">
                   <div className="col-xxl-6 col-xl-5 col-lg-6">
                     <div className="hero-style3">
@@ -99,17 +118,36 @@ const HeroThree = () => {
             <div
               className="hero-slide"
               style={{
-                backgroundImage: "url(assets/img/hero/banner9.jpeg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
+                position: "relative",
                 overflow: "hidden",
                 width: "100%",
                 height: "100vh",
                 maxHeight: "800px",
               }}
             >
-              <div className="container">
+              <img
+                src="/assets/img/hero/banner9.jpeg"
+                alt="Rapid Fix"
+                loading="eager"
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  zIndex: 0,
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  background: "linear-gradient(to right, rgba(23,23,23,0.85), rgba(23,23,23,0) 70%)",
+                  zIndex: 1,
+                }}
+              />
+              <div className="container" style={{ position: "relative", zIndex: 2 }}>
                 <div className="row">
                   <div className="col-xxl-6 col-xl-5 col-lg-6">
                     <div className="hero-style3">

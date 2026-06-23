@@ -1,7 +1,51 @@
-
+"use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
+const bgImages = [
+  "/assets/img/services/service-8.jpg",
+  "/assets/img/services/service-9.jpg",
+  "/assets/img/services/service-10.jpg",
+];
+
+const iconList = [
+  "assets/img/icon/service-icon_1-1.svg",
+  "assets/img/icon/service-icon_1-2.svg",
+  "assets/img/icon/service-icon_1-3.svg",
+];
+
+const stripHtml = (html) => {
+  if (!html) return "";
+  return html.replace(/<[^>]*>?/gm, "");
+};
+
+const truncateText = (text, maxLength) => {
+  if (!text || text.length <= maxLength) return text;
+  return text.substring(0, maxLength).trim() + "...";
+};
+
 const ServiceArea = () => {
+  const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const res = await fetch("/api/services/");
+        const result = await res.json();
+        console.log("Services API response:", result);
+        if (result.success) {
+          setServices(result.data.slice(0, 3));
+        }
+      } catch (err) {
+        console.error("Failed to load services", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchServices();
+  }, []);
+
   return (
     <div className="service-area-2 space overflow-hidden">
       <div className="container">
@@ -22,84 +66,48 @@ const ServiceArea = () => {
       </div>
       <div className="container">
         <div className="row gy-4 justify-content-center">
-          <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div className="service-card style2">
-              <div
-                className="service-card_content"
-                style={{
-                  backgroundImage: "url(/assets/img/services/service-8.jpg)",
-                }}
-              >
-                <div>
-                  <div className="service-card_icon">
-                    <img
-                      src="assets/img/icon/service-icon_1-1.svg"
-                      alt="Rapid Fix"
-                    />
-                  </div>
-                  <h4 className="service-card_title h5">
-                    <Link href="#">Mechanic Masters</Link>
-                  </h4>
-                  <p className="service-card_text">
-                    Fleet services, priority scheduling, honest pricing. Minimise
-                    downtime.
-                  </p>
-                </div>
+          {loading ? (
+            <div className="col-12 text-center py-5">
+              <div className="spinner-border text-primary" role="status">
+                <span className="visually-hidden">Loading...</span>
               </div>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div className="service-card style2">
+          ) : (
+            services.map((service, index) => (
               <div
-                className="service-card_content"
-                style={{
-                  backgroundImage: "url(/assets/img/services/service-9.jpg)",
-                }}
+                className="col-lg-4 col-md-6"
+                key={service.id || index}
+                data-aos="fade-up"
+                data-aos-delay={`${(index + 1) * 100}`}
               >
-                <div>
-                  <div className="service-card_icon">
-                    <img
-                      src="assets/img/icon/service-icon_1-2.svg"
-                      alt="Rapid Fix"
-                    />
+                <div className="service-card style2">
+                  <div
+                    className="service-card_content"
+                    style={{
+                      backgroundImage: `url(${service.thumbnail || bgImages[index % bgImages.length]})`,
+                    }}
+                  >
+                    <div>
+                      <div className="service-card_icon">
+                        <img
+                          src={iconList[index % iconList.length]}
+                          alt={service.title}
+                        />
+                      </div>
+                      <h4 className="service-card_title h5">
+                        <Link href={`/services/${service.slug}`}>
+                          {service.title}
+                        </Link>
+                      </h4>
+                      <p className="service-card_text">
+                        {truncateText(stripHtml(service.description), 120)}
+                      </p>
+                    </div>
                   </div>
-                  <h4 className="service-card_title h5">
-                    <Link href="#">Speedy Auto Repair</Link>
-                  </h4>
-                  <p className="service-card_text">
-                    Fast turnaround on auto & diesel repairs. Get back on the
-                    road quicker.
-                  </p>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div className="service-card style2">
-              <div
-                className="service-card_content"
-                style={{
-                  backgroundImage: "url(/assets/img/services/service-10.jpg)",
-                }}
-              >
-                <div>
-                  <div className="service-card_icon">
-                    <img
-                      src="assets/img/icon/service-icon_1-3.svg"
-                      alt="Rapid Fix"
-                    />
-                  </div>
-                  <h4 className="service-card_title h5">
-                    <Link href="#">Precision Auto Works</Link>
-                  </h4>
-                  <p className="service-card_text">
-                    Diagnostics, preventative maintenance, and Safety
-                    Certificates. Keep your fleet safe.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+            ))
+          )}
         </div>
       </div>
     </div>

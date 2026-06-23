@@ -99,7 +99,7 @@ const FooterArea = () => {
                     <div className="contact-grid-details">
                       <p>Phone Number</p>
                       <h6>
-                        <Link href="tel:(437) 836-4848">(437) 836-4848</Link>
+                        <Link href="tel:4378364848">(437) 836-4848</Link>
                         <p />
                       </h6>
                     </div>

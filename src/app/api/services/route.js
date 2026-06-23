@@ -9,17 +9,21 @@ export async function GET(req) {
   try {
     const { searchParams } = new URL(req.url);
     const page = searchParams.get('page') || '1';
-    const limit = searchParams.get('limit') || '100';
+    const limit = searchParams.get('limit') || '1000';
 
     const apiUrl = `${API_BASE_URL}/api/public/services?clientId=${API_CLIENT_ID}&page=${page}&limit=${limit}`;
+    console.log('Fetching services from:', apiUrl);
 
     const res = await fetch(apiUrl, {
       headers: { 'Content-Type': 'application/json' },
+      next: { revalidate: 0 },
     });
 
     if (!res.ok) {
+      const text = await res.text();
+      console.error('External API error:', res.status, text.slice(0, 200));
       return NextResponse.json(
-        { success: false, message: 'Failed to fetch services' },
+        { success: false, message: `External API error ${res.status}` },
         { status: res.status }
       );
     }

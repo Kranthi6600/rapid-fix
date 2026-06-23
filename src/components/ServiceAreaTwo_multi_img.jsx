@@ -29,14 +29,16 @@ const ServiceAreaTwo_multi_img = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const res = await fetch("/api/services");
+        const res = await fetch("/api/services/");
         const result = await res.json();
+        console.log("Services API response:", result);
         if (result.success) {
           setServices(result.data);
         } else {
           setError(result.message || "Failed to load services");
         }
       } catch (err) {
+        console.error("Fetch services error:", err);
         setError("Failed to load services");
       } finally {
         setLoading(false);

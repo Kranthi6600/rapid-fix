@@ -8,7 +8,7 @@ const Subscribe = () => {
           <Link href="/">
             <img
               style={{ width: "170px"}}
-              src="/assets/logo.png"
+              src="/assets/logo1.png"
               alt="Rapid Fix"
             />
           </Link>

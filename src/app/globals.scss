@@ -207,6 +207,15 @@ img { max-width: 100%; height: auto; }
   padding-bottom: 8px !important;
 }
 
+// ─── Quote button hover fix ─────────────────────────────────────────────────
+.btn-quote {
+  &:hover,
+  &:focus {
+    background-color: var(--theme-color) !important;
+    color: #000 !important;
+  }
+}
+
 // Init main SCSS File
 @import "~/public/assets/css/fontawesome.min.css";
 @import "/public/assets/css/demo.scss";

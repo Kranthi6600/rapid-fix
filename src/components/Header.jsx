@@ -154,20 +154,20 @@ const Header = () => {
                       </svg>
                     </div>
                     <div className="navbar-right-desc-details">
-                      <a className="link" href="tel:(437) 836-4848">
+                      <a className="link" href="tel:4378364848">
                         (437) 836-4848
                       </a>
                     </div>
                   </div>
-                  <button
-                    type="button"
-                    className="btn text-white"
+                  <a
+                    href="https://app.shopmonkey.cloud/public/quote-request/f3173cde-af0b-453f-93bd-1dbf406b64d0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn text-white btn-quote"
                     style={{ backgroundColor: "var(--theme-color)", border: "none", padding: "8px 16px", borderRadius: "4px" }}
-                    data-bs-toggle="modal"
-                    data-bs-target="#workRequestModal"
                   >
                     Request a Quote
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -217,15 +217,15 @@ const Header = () => {
                   <Link href="/contact">Contact</Link>
                 </li>
                 <li>
-                  <button
-                    type="button"
-                    className="btn text-white w-100 mt-2"
+                  <a
+                    href="https://app.shopmonkey.cloud/public/quote-request/f3173cde-af0b-453f-93bd-1dbf406b64d0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn text-white w-100 mt-2 btn-quote"
                     style={{ backgroundColor: "var(--theme-color)", border: "none", padding: "8px 16px", borderRadius: "4px" }}
-                    data-bs-toggle="modal"
-                    data-bs-target="#workRequestModal"
                   >
                     Request a Quote
-                  </button>
+                  </a>
                 </li>
               </ul>
             </div>
