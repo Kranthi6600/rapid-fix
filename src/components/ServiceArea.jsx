@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useServices } from "@/context/ServicesContext";
 
 const bgImages = [
@@ -25,6 +26,7 @@ const truncateText = (text, maxLength) => {
 };
 
 const ServiceArea = () => {
+  const router = useRouter();
   const { services: allServices, loading } = useServices();
   const services = allServices.slice(0, 3);
 
@@ -62,9 +64,14 @@ const ServiceArea = () => {
                 data-aos="fade-up"
                 data-aos-delay={`${(index + 1) * 100}`}
               >
-                <Link
-                  href={`/services/${service.slug}`}
-                  className="service-card style2 text-decoration-none"
+                <div
+                  className="service-card style2"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    if (service.slug) {
+                      router.push(`/services/${service.slug}`);
+                    }
+                  }}
                 >
                   <div
                     className="service-card_content"
@@ -80,14 +87,16 @@ const ServiceArea = () => {
                         />
                       </div>
                       <h4 className="service-card_title h5">
-                        {service.title}
+                        <Link href={`/services/${service.slug}`}>
+                          {service.title}
+                        </Link>
                       </h4>
                       <p className="service-card_text">
                         {truncateText(stripHtml(service.description), 120)}
                       </p>
                     </div>
                   </div>
-                </Link>
+                </div>
               </div>
             ))
           )}
