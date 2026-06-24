@@ -7,9 +7,11 @@ const stripHtml = (html) => {
   return html.replace(/<[^>]*>?/gm, "");
 };
 
-const truncateText = (text, maxLength) => {
-  if (!text || text.length <= maxLength) return text;
-  return text.substring(0, maxLength).trim() + "...";
+const truncateWords = (text, maxWords) => {
+  if (!text) return "";
+  const words = text.trim().split(/\s+/);
+  if (words.length <= maxWords) return text;
+  return words.slice(0, maxWords).join(" ") + "...";
 };
 
 const ProductArea = () => {
@@ -54,7 +56,7 @@ const ProductArea = () => {
                       </Link>
                     </h3>
                     <p className="service-desc">
-                      {truncateText(stripHtml(service.description), 120)}
+                      {truncateWords(stripHtml(service.description), 12)}
                     </p>
                   </div>
                 </div>
