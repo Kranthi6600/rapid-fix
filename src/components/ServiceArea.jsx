@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useServices } from "@/context/ServicesContext";
 
@@ -28,7 +27,7 @@ const truncateText = (text, maxLength) => {
 const ServiceArea = () => {
   const router = useRouter();
   const { services: allServices, loading } = useServices();
-  const services = allServices.slice(0, 3);
+  const services = allServices.filter((s) => s.slug).slice(0, 3);
 
   return (
     <div className="service-area-2 space overflow-hidden">
@@ -70,6 +69,8 @@ const ServiceArea = () => {
                   onClick={() => {
                     if (service.slug) {
                       router.push(`/services/${service.slug}`);
+                    } else {
+                      console.log("Missing slug for service:", service);
                     }
                   }}
                 >
@@ -87,9 +88,7 @@ const ServiceArea = () => {
                         />
                       </div>
                       <h4 className="service-card_title h5">
-                        <Link href={`/services/${service.slug}`}>
-                          {service.title}
-                        </Link>
+                        {service.title}
                       </h4>
                       <p className="service-card_text">
                         {truncateText(stripHtml(service.description), 120)}
