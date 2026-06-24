@@ -338,22 +338,6 @@ const BlogDetailContent = ({ blog }) => {
                 </div>
               )}
 
-              {/* Services CTA */}
-              <div className="widget bg-smoke rounded-4 p-30 text-center">
-                <div className="service-cta-icon mb-15">
-                  <i className="fas fa-wrench fa-3x text-primary" />
-                </div>
-                <h4 className="widget-title mb-15">Need Auto Repair?</h4>
-                <p className="text-muted mb-20">
-                  Get expert diagnostics and repairs from certified technicians.
-                </p>
-                <Link href="/services" className="btn style2 w-100 mb-10">
-                  View Services
-                </Link>
-                <Link href="/contact" className="btn style-border2 w-100">
-                  Book Appointment
-                </Link>
-              </div>
             </aside>
 
             {/* Need Help — JS fixed with permanent placeholder */}
