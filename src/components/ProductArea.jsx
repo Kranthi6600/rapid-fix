@@ -49,7 +49,9 @@ const ProductArea = () => {
                 <div className="product-card service-card h-100">
                   <div className="product-content text-center">
                     <h3 className="product-title">
-                      <Link href={`/services/${service.slug}`}>{service.title}</Link>
+                      <Link href={`/services/${service.slug}`}>
+                        {service.wehoware_service_categories?.name || service.title}
+                      </Link>
                     </h3>
                     <p className="service-desc">
                       {truncateText(stripHtml(service.description), 120)}
