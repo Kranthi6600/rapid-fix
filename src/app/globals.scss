@@ -251,3 +251,12 @@ img { max-width: 100%; height: auto; }
   transform: translateY(-3px) scale(1.04) !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
 }
+
+// ─── Need Help sticky widget links ──────────────────────────────────────────
+.need-help-link {
+  color: #171717 !important;
+  transition: color 0.2s ease;
+}
+.need-help-link:hover {
+  color: var(--theme-color, #E8092E) !important;
+}

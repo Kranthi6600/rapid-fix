@@ -364,10 +364,27 @@ const BlogDetailContent = ({ blog }) => {
                 ref={needHelpRef}
                 style={{ position: "relative" }}
               >
-                <h4 className="widget-title mb-20">Need Help?</h4>
-                <p className="text-muted mb-20">
+                <div className="text-center mb-20">
+                  <i className="fas fa-headset fa-3x text-theme" />
+                </div>
+                <h4 className="widget-title mb-15 text-center">Need Help?</h4>
+                <p className="text-dark mb-20 text-center">
                   Have questions? Our team is ready to assist you.
                 </p>
+                <div className="contact-info mb-20">
+                  <div className="d-flex align-items-center gap-2 mb-10">
+                    <i className="fas fa-phone text-theme" />
+                    <Link href="tel:4378364848" className="text-decoration-none fw-semibold need-help-link">(437) 836-4848</Link>
+                  </div>
+                  <div className="d-flex align-items-center gap-2 mb-10">
+                    <i className="fas fa-envelope text-theme" />
+                    <Link href="mailto:support@rapidfix.com" className="text-decoration-none fw-semibold need-help-link">support@rapidfix.com</Link>
+                  </div>
+                  <div className="d-flex align-items-start gap-2">
+                    <i className="fas fa-clock text-theme mt-1" />
+                    <span className="text-dark small fw-semibold">Mon - Sat: 8:00 AM - 6:00 PM</span>
+                  </div>
+                </div>
                 <Link href="/contact" className="btn style2 w-100">
                   Contact Us
                 </Link>
