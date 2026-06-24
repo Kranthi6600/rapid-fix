@@ -62,7 +62,10 @@ const ServiceArea = () => {
                 data-aos="fade-up"
                 data-aos-delay={`${(index + 1) * 100}`}
               >
-                <div className="service-card style2">
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="service-card style2 text-decoration-none"
+                >
                   <div
                     className="service-card_content"
                     style={{
@@ -77,16 +80,14 @@ const ServiceArea = () => {
                         />
                       </div>
                       <h4 className="service-card_title h5">
-                        <Link href={`/services/${service.slug}`}>
-                          {service.title}
-                        </Link>
+                        {service.title}
                       </h4>
                       <p className="service-card_text">
                         {truncateText(stripHtml(service.description), 120)}
                       </p>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))
           )}
