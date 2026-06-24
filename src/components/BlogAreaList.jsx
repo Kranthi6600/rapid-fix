@@ -73,7 +73,7 @@ const BlogAreaList = () => {
                   </div>
                   <div className="blog-content">
                     <div className="blog-meta">
-                      <Link href="/blog"><i className="fas fa-user" /> By Rapid Fix Team</Link>
+                      <Link href="/blog"><i className="fas fa-user" /> By RapidFix Team</Link>
                       {blog.wehoware_blog_categories?.name && (
                         <Link href="/blog"><i className="fas fa-tag" /> {blog.wehoware_blog_categories.name}</Link>
                       )}

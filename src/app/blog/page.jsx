@@ -6,9 +6,9 @@ import Subscribe from "@/components/Subscribe";
 import Preloader from "@/helper/Preloader";
 
 export const metadata = {
-  title: "Blog | Rapid Fix - Auto & Diesel Repair Tips",
+  title: "Blog | RapidFix - Auto & Diesel Repair Tips",
   description:
-    "Read the Rapid Fix blog for expert auto and diesel repair tips, maintenance advice, fleet management insights, and everything you need to keep your vehicle running at its best.",
+    "Read the RapidFix blog for expert auto and diesel repair tips, maintenance advice, fleet management insights, and everything you need to keep your vehicle running at its best.",
 };
 
 

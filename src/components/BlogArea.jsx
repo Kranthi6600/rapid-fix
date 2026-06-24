@@ -76,7 +76,7 @@ const BlogArea = () => {
                       <div className="blog-content">
                         <div className="blog-meta">
                           <Link href="/blog">
-                            <i className="fas fa-user" /> By Rapid Fix Team
+                            <i className="fas fa-user" /> By RapidFix Team
                           </Link>
                           {blog.wehoware_blog_categories?.name && (
                             <Link href="/blog">

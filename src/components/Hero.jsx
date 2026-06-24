@@ -30,7 +30,7 @@ const HeroThree = () => {
             >
               <img
                 src="/assets/img/hero/banner8.jpeg"
-                alt="Rapid Fix"
+                alt="RapidFix"
                 loading="eager"
                 style={{
                   position: "absolute",
@@ -62,7 +62,7 @@ const HeroThree = () => {
                         <span>
                           <img
                             src="assets/img/hero/hero_shape_3.png"
-                            alt="Rapid Fix"
+                            alt="RapidFix"
                           />
                           Fleet & Diesel Specialists
                         </span>{" "}
@@ -93,7 +93,7 @@ const HeroThree = () => {
                           <div className="icon">
                             <img
                               src="assets/img/icon/phone-1.svg"
-                              alt="Rapid Fix"
+                              alt="RapidFix"
                             />
                           </div>
                           <div className="media-body">
@@ -127,7 +127,7 @@ const HeroThree = () => {
             >
               <img
                 src="/assets/img/hero/banner9.jpeg"
-                alt="Rapid Fix"
+                alt="RapidFix"
                 loading="eager"
                 style={{
                   position: "absolute",
@@ -159,7 +159,7 @@ const HeroThree = () => {
                         <span>
                           <img
                             src="assets/img/hero/hero_shape_3.png"
-                            alt="Rapid Fix"
+                            alt="RapidFix"
                           />
                           Complete Car Care Experts
                         </span>{" "}
@@ -190,7 +190,7 @@ const HeroThree = () => {
                           <div className="icon">
                             <img
                               src="assets/img/icon/phone-1.svg"
-                              alt="Rapid Fix"
+                              alt="RapidFix"
                             />
                           </div>
                           <div className="media-body">

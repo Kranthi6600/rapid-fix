@@ -21,7 +21,7 @@ const Breadcrumb = ({ title, img = "/assets/img/normal/breadcrumb-thumb.png" }) 
             <div className="breadcumb-thumb">
               <img
                 src={img}
-                alt="Rapid Fix"
+                alt="RapidFix"
                 style={{
                   animation: "breadcrumbFloat 3s ease-in-out infinite",
                 }}

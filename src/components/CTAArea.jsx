@@ -32,7 +32,7 @@ const CTAArea = () => {
             </div>
             <div className="col-lg-5">
               <div className="cta2-bg-thumb">
-                <img src="/assets/img/services/service-22.png" alt="Rapid Fix" />
+                <img src="/assets/img/services/service-22.png" alt="RapidFix" />
               </div>
             </div>
           </div>

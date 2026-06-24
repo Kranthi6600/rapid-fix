@@ -12,12 +12,12 @@ const SubscribeTwo = () => {
       >
         <div className="footer-logo" data-aos="fade-down" data-aos-delay="100">
           <Link href="/">
-            <img style={{ width: "200px" }} src="/assets/logo1.png" alt="Rapid Fix" />
+            <img style={{ width: "200px" }} src="/assets/logo1.png" alt="RapidFix" />
           </Link>
         </div>
         <div className="call-media-wrap" data-aos="fade-up" data-aos-delay="200">
           <div className="icon">
-            <img src="/assets/img/icon/phone-1.svg" alt="Rapid Fix" />
+            <img src="/assets/img/icon/phone-1.svg" alt="RapidFix" />
           </div>
           <div className="media-body">
             <h6 className="title text-white">Requesting A Call:</h6>

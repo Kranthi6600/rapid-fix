@@ -10,8 +10,8 @@ const FaqArea = () => {
             <div className="faq-thumb2 mb-xl-0 mb-50">
               <div className="about-counter-grid jump">
                 <img
-                  src="assets/img/icon/faq2-counter-icon-1.svg"
-                  alt="Rapid Fix"
+                  src="/assets/img/icon/faq2-counter-icon-1.svg"
+                  alt="RapidFix"
                 />
                 <div className="media-right">
                   <h3 className="about-counter">
@@ -28,7 +28,7 @@ const FaqArea = () => {
                   <h4 className="about-counter-text">Happy customers served</h4>
                 </div>
               </div>
-              <img src="/assets/img/Faq/faq-3.png" alt="Rapid Fix" />
+              <img src="/assets/img/Faq/faq-3.png" alt="RapidFix" />
             </div>
           </div>
           <div className="col-xl-6" data-aos="fade-right" data-aos-duration="900">
@@ -38,8 +38,8 @@ const FaqArea = () => {
                 Everything You Need To Know <br /> About Auto Repair{" "}
                 <img
                   className="title-bg-shape"
-                  src="assets/img/bg/title-bg-shape.png"
-                  alt="Rapid Fix"
+                  src="/assets/img/bg/title-bg-shape.png"
+                  alt="RapidFix"
                 />
               </h2>
             </div>

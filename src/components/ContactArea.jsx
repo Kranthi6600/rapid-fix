@@ -179,7 +179,7 @@ const ContactArea = () => {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.6!2d-79.2724!3d43.7017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d0b0b0b0b0b1%3A0x0!2s112+Sinnott+Rd%2C+Scarborough%2C+ON+M1L+4S6!5e0!3m2!1sen!2sca!4v1700000000000"
               allowFullScreen=""
               loading="lazy"
-              title="Rapid Fix - 112 Sinnott Rd, Scarborough, ON"
+              title="RapidFix - 112 Sinnott Rd, Scarborough, ON"
             />
           </div>
         </div>
@@ -192,7 +192,7 @@ const ContactArea = () => {
                 <div className="about-counter-grid jump">
                   <img
                     src="/assets/img/icon/faq2-counter-icon-1.svg"
-                    alt="Rapid Fix"
+                    alt="RapidFix"
                   />
                   <div className="media-right">
                     <h3 className="about-counter">
@@ -201,7 +201,7 @@ const ContactArea = () => {
                     <h4 className="about-counter-text">Services we provide</h4>
                   </div>
                 </div>
-                <img src="/assets/img/contact/contact-1.jpeg" alt="Rapid Fix" />
+                <img src="/assets/img/contact/contact-1.jpeg" alt="RapidFix" />
               </div>
             </div>
             <div className="col-lg-6" data-aos="fade-right" data-aos-duration="900">

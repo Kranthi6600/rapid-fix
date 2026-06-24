@@ -9,12 +9,12 @@ const Subscribe = () => {
             <img
               style={{ width: "170px"}}
               src="/assets/logo1.png"
-              alt="Rapid Fix"
+              alt="RapidFix"
             />
           </Link>
         </div>
         <h3 className="footer-top-title text-white" data-aos="fade-up" data-aos-delay="150">
-          Stay connected with Rapid Fix
+          Stay connected with RapidFix
         </h3>
         <form className="newsletter-form" data-aos="fade-up" data-aos-delay="250">
           <div className="form-group">

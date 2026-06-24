@@ -39,7 +39,7 @@ export async function POST(req) {
     if (time) appointmentInfo.push(`Time: ${time}`);
 
     const mailOptions = {
-      from: `"Rapid Fix Website" <${process.env.EMAIL_USER}>`,
+      from: `"RapidFix Website" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
       replyTo: email,
       subject: `New Contact from ${name}`,

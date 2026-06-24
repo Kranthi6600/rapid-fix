@@ -230,3 +230,24 @@ img { max-width: 100%; height: auto; }
 @import "~/public/assets/css/fontawesome.min.css";
 @import "/public/assets/css/demo.scss";
 @import "/public/assets/sass/style.scss";
+
+// ─── Service Card style2: center icon & title, text slides up on hover ───────
+.service-card.style2 {
+  .service-card_content {
+    align-items: center;
+    justify-content: center;
+  }
+  .service-card_icon {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+// ─── Reusable button hover lift effect (matches AboutHome read-more) ──────
+.btn-hover-lift {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease !important;
+}
+.btn-hover-lift:hover {
+  transform: translateY(-3px) scale(1.04) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}

@@ -28,7 +28,7 @@ const MarqueeComponent = () => {
                 <Link href="#">
                   <img
                     src="assets/img/icon/marquee-icon-1-1.svg"
-                    alt="Rapid Fix"
+                    alt="RapidFix"
                   />
                   <span>Express Car Fix</span>
                 </Link>
@@ -37,7 +37,7 @@ const MarqueeComponent = () => {
                 <Link href="#">
                   <img
                     src="assets/img/icon/marquee-icon-1-2.svg"
-                    alt="Rapid Fix"
+                    alt="RapidFix"
                   />
                   <span className="text-stroke">Car Care Clinic</span>
                 </Link>
@@ -46,7 +46,7 @@ const MarqueeComponent = () => {
                 <Link href="#">
                   <img
                     src="assets/img/icon/marquee-icon-1-1.svg"
-                    alt="Rapid Fix"
+                    alt="RapidFix"
                   />
                   <span>Express Car Fix</span>
                 </Link>
@@ -55,7 +55,7 @@ const MarqueeComponent = () => {
                 <Link href="#">
                   <img
                     src="assets/img/icon/marquee-icon-1-2.svg"
-                    alt="Rapid Fix"
+                    alt="RapidFix"
                   />
                   <span className="text-stroke">Car Care Clinic</span>
                 </Link>

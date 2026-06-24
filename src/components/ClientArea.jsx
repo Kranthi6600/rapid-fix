@@ -46,7 +46,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-11.png" alt="Rapid Fix" />
+                      <img src="/assets/img/services/service-11.png" alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -55,7 +55,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-12.png" alt="Rapid Fix" />
+                      <img src="/assets/img/services/service-12.png" alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -64,7 +64,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-13.png" alt="Rapid Fix" />
+                      <img src="/assets/img/services/service-13.png" alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-14.png" alt="Rapid Fix" />
+                      <img src="/assets/img/services/service-14.png" alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-15.png" alt="Rapid Fix" />
+                      <img src="/assets/img/services/service-15.png" alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -91,7 +91,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-11.png" alt="Rapid Fix" />
+                      <img src="/assets/img/services/service-11.png" alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -100,7 +100,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-12.png" alt="Rapid Fix" />
+                      <img src="/assets/img/services/service-12.png" alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-13.png" alt="Rapid Fix" />
+                      <img src="/assets/img/services/service-13.png" alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -119,7 +119,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-14.png" alt="Rapid Fix" />
+                      <img src="/assets/img/services/service-14.png" alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-15.png" alt="Rapid Fix" />
+                      <img src="/assets/img/services/service-15.png" alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -150,7 +150,7 @@ const ClientArea = () => {
                   <h2 className="sec-title text-white">WHAT OUR CLIENT SAYS</h2>
                 </div>
                 <div className="quote-icon">
-                  <img src="/assets/img/icon/quote2-1.svg" alt="Rapid Fix" />
+                  <img src="/assets/img/icon/quote2-1.svg" alt="RapidFix" />
                 </div>
                 <div className="row global-carousel testi-slider-2">
                   <Swiper
@@ -192,7 +192,7 @@ const ClientArea = () => {
                               <div className="testi-profile_thumb">
                                 <img
                                   src="/assets/img/services/service-19.jpg"
-                                  alt="Rapid Fix"
+                                  alt="RapidFix"
                                   style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "50%" }}
                                 />
                               </div>
@@ -206,7 +206,7 @@ const ClientArea = () => {
                               </div>
                             </div>
                             <p className="testi-card_text">
-                              Rapid Fix handles all our fleet maintenance and never lets us down. Their priority scheduling keeps our trucks on the road and their pricing is transparent. Quality workmanship you can count on.
+                              RapidFix handles all our fleet maintenance and never lets us down. Their priority scheduling keeps our trucks on the road and their pricing is transparent. Quality workmanship you can count on.
                             </p>
                             <div className="rating" style={{ marginTop: "1rem" }}>
                               <i className="fas fa-star" />
@@ -227,7 +227,7 @@ const ClientArea = () => {
                               <div className="testi-profile_thumb">
                                 <img
                                   src="/assets/img/services/service-20.jpg"
-                                  alt="Rapid Fix"
+                                  alt="RapidFix"
                                   style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "50%" }}
                                 />
                               </div>
@@ -262,7 +262,7 @@ const ClientArea = () => {
                               <div className="testi-profile_thumb">
                                 <img
                                   src="/assets/img/services/service-21.jpg"
-                                  alt="Rapid Fix"
+                                  alt="RapidFix"
                                   style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "50%" }}
                                 />
                               </div>
@@ -276,7 +276,7 @@ const ClientArea = () => {
                               </div>
                             </div>
                             <p className="testi-card_text">
-                              I've taken both my personal car and work truck to Rapid Fix multiple times. Fast turnaround, honest pricing, and quality work every single visit. Finally, an auto and diesel shop I can actually trust.
+                              I've taken both my personal car and work truck to RapidFix multiple times. Fast turnaround, honest pricing, and quality work every single visit. Finally, an auto and diesel shop I can actually trust.
                             </p>
                             <div className="rating" style={{ marginTop: "1rem" }}>
                               <i className="fas fa-star" />
@@ -304,7 +304,7 @@ const ClientArea = () => {
           </div>
         </div>
         <div className="testimonial-thumb-2">
-          <img style={{borderRadius: "0px 10px 10px 0px"}} src="/assets/img/services/service-17.jpeg" alt="Rapid Fix" />
+          <img style={{borderRadius: "0px 10px 10px 0px"}} src="/assets/img/services/service-17.jpeg" alt="RapidFix" />
         </div>
       </div>
     </div>

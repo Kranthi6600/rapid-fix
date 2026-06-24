@@ -9,13 +9,13 @@ const About = () => {
           <div className="col-xxl-7 col-xl-6" data-aos="fade-right" data-aos-duration="900">
             <div className="about-thumb2 mb-40 mb-xl-0">
               <div className="about-img-1">
-                <img src="/assets/img/about/about-15.jpeg" alt="Rapid Fix" />
+                <img src="/assets/img/about/about-15.jpeg" alt="RapidFix" />
               </div>
               <div className="about-img-2">
-                <img src="/assets/img/about/about-16.jpg" alt="Rapid Fix" />
+                <img src="/assets/img/about/about-16.jpg" alt="RapidFix" />
               </div>
               <div className="about-counter-wrap jump-reverse">
-                <img src="/assets/img/icon/about_icon2-1.svg" alt="Rapid Fix" />
+                <img src="/assets/img/icon/about_icon2-1.svg" alt="RapidFix" />
                 <h3 className="about-counter">
                   <TrackVisibility once>
                     {({ isVisible }) =>
@@ -35,7 +35,7 @@ const About = () => {
                   <div className="icon">
                     <img
                       src="/assets/img/icon/about_icon2-2.png"
-                      alt="Rapid Fix"
+                      alt="RapidFix"
                     />
                   </div>
                   <h3 className="about-counter">
@@ -63,11 +63,11 @@ const About = () => {
                   <img
                     className="title-bg-shape shape-center"
                     src="/assets/img/bg/title-bg-shape.png"
-                    alt="Rapid Fix"
+                    alt="RapidFix"
                   />
                 </h2>
                 <p className="sec-text" data-aos="fade-up" data-aos-delay="300">
-                  At Rapid Fix, we're more than just mechanics — we're your
+                  At RapidFix, we're more than just mechanics — we're your
                   partners in keeping your vehicles running at peak performance.
                   Our team of certified technicians brings years of expertise in
                   both auto and diesel repair.
@@ -75,7 +75,7 @@ const About = () => {
               </div>
               <div className="about-feature-wrap style-shadow" data-aos="fade-up" data-aos-delay="350">
                 <div className="icon">
-                  <img src="/assets/img/icon/about_icon2-3.svg" alt="Rapid Fix" />
+                  <img src="/assets/img/icon/about_icon2-3.svg" alt="RapidFix" />
                 </div>
                 <div className="about-feature-wrap-details">
                   <h5 className="about-feature-title">
@@ -89,7 +89,7 @@ const About = () => {
               </div>
               <div className="about-feature-wrap style-shadow" data-aos="fade-up" data-aos-delay="450">
                 <div className="icon">
-                  <img src="/assets/img/icon/about_icon2-4.svg" alt="Rapid Fix" />
+                  <img src="/assets/img/icon/about_icon2-4.svg" alt="RapidFix" />
                 </div>
                 <div className="about-feature-wrap-details">
                   <h5 className="about-feature-title">Advanced Diagnostics & Fleet Service</h5>

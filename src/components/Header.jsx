@@ -69,21 +69,21 @@ const Header = () => {
               <div className="col-auto d-lg-none d-block">
                 <div className="header-logo">
                   <Link href="/">
-                    <img src="/assets/logo1.png" alt="Rapid Fix" width={200} style={{ maxWidth: "100%" }} />
+                    <img src="/assets/logo1.png" alt="RapidFix" width={200} style={{ maxWidth: "100%" }} />
                   </Link>
                 </div>
               </div>
               <div className="col-auto d-xl-block d-none header-sticky-none">
                 <div className="header-logo">
                   <Link href="/">
-                    <img src="/assets/logo1.png" alt="Rapid Fix" width={200} style={{ maxWidth: "100%" }} />
+                    <img src="/assets/logo1.png" alt="RapidFix" width={200} style={{ maxWidth: "100%" }} />
                   </Link>
                 </div>
               </div>
               <div className="col-auto header-sticky-logo">
                 <div className="header-logo">
                   <Link href="/">
-                    <img src="/assets/logo1.png" alt="Rapid Fix" width={200} style={{ maxWidth: "100%" }} />
+                    <img src="/assets/logo1.png" alt="RapidFix" width={200} style={{ maxWidth: "100%" }} />
                   </Link>
                 </div>
               </div>
@@ -179,7 +179,7 @@ const Header = () => {
           <div className="mobile-menu-area">
             <div className="mobile-logo">
               <Link href="/">
-                <img src="/assets/logo1.png" alt="Rapid Fix" />
+                <img src="/assets/logo1.png" alt="RapidFix" />
               </Link>
               <button className="menu-toggle" onClick={mobileMenu}>
                 <i className="fa fa-times" />

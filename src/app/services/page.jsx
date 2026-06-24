@@ -6,9 +6,9 @@ import Subscribe from "@/components/Subscribe";
 import Preloader from "@/helper/Preloader";
 
 export const metadata = {
-  title: "Services | Rapid Fix - Auto & Diesel Repair Specialists",
+  title: "Services | RapidFix - Auto & Diesel Repair Specialists",
   description:
-    "Explore Rapid Fix services: auto repair, diesel repair, diagnostics, maintenance, fleet services, and Safety Standards Certificate (SSC) inspections.",
+    "Explore RapidFix services: auto repair, diesel repair, diagnostics, maintenance, fleet services, and Safety Standards Certificate (SSC) inspections.",
 };
 
 

@@ -152,7 +152,7 @@ const About = () => {
                   <img
                     style={{ borderRadius: "10px" }}
                     src="assets/img/hero/banner7.jpeg"
-                    alt="Rapid Fix"
+                    alt="RapidFix"
                   />
                   <div className="about3-img-overlay" />
                 </div>
@@ -170,7 +170,7 @@ const About = () => {
                     <span>Expert Auto Repair Services</span>
                   </h2>
                   <p className="sec-text">
-                    Rapid Fix provides comprehensive auto and diesel repair
+                    RapidFix provides comprehensive auto and diesel repair
                     services in Scarborough, ON. Our certified technicians
                     deliver fast, honest, and affordable service for all your
                     vehicle needs.
@@ -205,7 +205,7 @@ const About = () => {
                 </div>
 
                 <div className="btn-wrap mt-40">
-                  <Link href="/about" className="btn style2 about3-btn">
+                  <Link href="/about" className="btn style2 btn-hover-lift">
                     Read More <i className="fas fa-arrow-right ms-2" />
                   </Link>
                 </div>

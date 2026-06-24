@@ -39,7 +39,7 @@ const ServiceArea = () => {
                 <img
                   className="title-bg-shape shape-center"
                   src="assets/img/bg/title-bg-shape.png"
-                  alt="Rapid Fix"
+                  alt="RapidFix"
                 />
               </h2>
             </div>

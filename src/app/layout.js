@@ -5,9 +5,9 @@ import "./font.css";
 import "./globals.scss";
 
 export const metadata = {
-  title: "Rapid Fix - Car Repair & Auto Services",
+  title: "RapidFix - Car Repair & Auto Services",
   description:
-    "Rapid Fix is your trusted auto repair and maintenance shop in Scarborough and Toronto. We specialize in car repairs, diesel services, routine maintenance, diagnostics, fleet servicing, brake repairs, oil changes, and more. Our certified technicians use advanced diagnostics and quality parts to keep your vehicle safe and reliable.",
+    "RapidFix is your trusted auto repair and maintenance shop in Scarborough and Toronto. We specialize in car repairs, diesel services, routine maintenance, diagnostics, fleet servicing, brake repairs, oil changes, and more. Our certified technicians use advanced diagnostics and quality parts to keep your vehicle safe and reliable.",
   icons: {
     icon: "/assets/img/favicons/favicon.png",
     shortcut: "/assets/img/favicons/favicon.png",

@@ -9,9 +9,9 @@ import Testimonials from "@/components/Testimonials";
 import Preloader from "@/helper/Preloader";
 
 export const metadata = {
-  title: "About Us | Rapid Fix - Auto & Diesel Repair Specialists",
+  title: "About Us | RapidFix - Auto & Diesel Repair Specialists",
   description:
-    "Learn about Rapid Fix � certified auto and diesel repair technicians with 15+ years of experience and 5,000+ vehicles serviced. We deliver fast, accurate, and affordable service for personal vehicles and commercial fleets.",
+    "Learn about RapidFix � certified auto and diesel repair technicians with 15+ years of experience and 5,000+ vehicles serviced. We deliver fast, accurate, and affordable service for personal vehicles and commercial fleets.",
 };
 
 

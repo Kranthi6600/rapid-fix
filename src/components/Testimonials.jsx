@@ -11,7 +11,7 @@ const Testimonials = () => {
         <div className="row">
           <div className="col-lg-6 d-flex align-items-center justify-content-center" data-aos="fade-right" data-aos-duration="900">
             <div className="testimonial-thumb1 text-center">
-              <img src="/assets/img/about/about-17.jpg" alt="Rapid Fix" style={{ maxWidth: "100%", margin: "0 auto" }} />
+              <img src="/assets/img/about/about-17.jpg" alt="RapidFix" style={{ maxWidth: "100%", margin: "0 auto" }} />
             </div>
           </div>
           <div className="col-lg-6" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
@@ -55,11 +55,11 @@ const Testimonials = () => {
                               <span className="testi-profile-desig">Customer</span>
                             </div>
                             <div className="quote-icon">
-                              <img src="/assets/img/icon/quote1-1.svg" alt="Rapid Fix" />
+                              <img src="/assets/img/icon/quote1-1.svg" alt="RapidFix" />
                             </div>
                           </div>
                           <p className="testi-card_text">
-                            Rapid Fix handles all our fleet maintenance and never lets us down. Their priority scheduling keeps our trucks on the road and their pricing is transparent. Quality workmanship you can count on.
+                            RapidFix handles all our fleet maintenance and never lets us down. Their priority scheduling keeps our trucks on the road and their pricing is transparent. Quality workmanship you can count on.
                           </p>
                           <div className="rating" style={{ marginTop: "1rem" }}>
                             <i className="fas fa-star" /><i className="fas fa-star" /><i className="fas fa-star" /><i className="fas fa-star" /><i className="fas fa-star" />
@@ -78,7 +78,7 @@ const Testimonials = () => {
                               <span className="testi-profile-desig">Customer</span>
                             </div>
                             <div className="quote-icon">
-                              <img src="/assets/img/icon/quote1-1.svg" alt="Rapid Fix" />
+                              <img src="/assets/img/icon/quote1-1.svg" alt="RapidFix" />
                             </div>
                           </div>
                           <p className="testi-card_text">
@@ -101,11 +101,11 @@ const Testimonials = () => {
                               <span className="testi-profile-desig">Customer</span>
                             </div>
                             <div className="quote-icon">
-                              <img src="/assets/img/icon/quote1-1.svg" alt="Rapid Fix" />
+                              <img src="/assets/img/icon/quote1-1.svg" alt="RapidFix" />
                             </div>
                           </div>
                           <p className="testi-card_text">
-                            I've taken both my personal car and work truck to Rapid Fix multiple times. Fast turnaround, honest pricing, and quality work every single visit. Finally, an auto and diesel shop I can actually trust.
+                            I've taken both my personal car and work truck to RapidFix multiple times. Fast turnaround, honest pricing, and quality work every single visit. Finally, an auto and diesel shop I can actually trust.
                           </p>
                           <div className="rating" style={{ marginTop: "1rem" }}>
                             <i className="fas fa-star" /><i className="fas fa-star" /><i className="fas fa-star" /><i className="fas fa-star" /><i className="fas fa-star" />

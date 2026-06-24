@@ -40,10 +40,7 @@ const FooterArea = () => {
                       <Link href="/about">About</Link>
                     </li>
                     <li>
-                      <Link href="/contact">Faq</Link>
-                    </li>
-                    <li>
-                      <Link href="/contact">Privacy Policy</Link>
+                      <Link href="/faq">FAQ</Link>
                     </li>
                   </ul>
                 </div>
@@ -128,7 +125,7 @@ const FooterArea = () => {
           <div className="row gy-3 justify-content-md-between justify-content-center">
             <div className="col-auto align-self-center">
               <p className="copyright-text text-center">
-                © <Link href="#">Rapid Fix</Link> 2025 | All Rights Reserved | Developed by <Link href="https://wehoware.com" target="_blank" rel="noopener noreferrer">Wehoware</Link>
+                © <Link href="#">RapidFix</Link> {new Date().getFullYear()} | All Rights Reserved | Developed by <Link href="https://wehoware.com" target="_blank" rel="noopener noreferrer">Wehoware</Link>
               </p>
             </div>
             <div className="col-auto">

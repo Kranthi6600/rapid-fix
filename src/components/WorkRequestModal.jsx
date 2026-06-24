@@ -44,7 +44,7 @@ const WorkRequestModal = () => {
                   width="100%"
                   height="700"
                   frameBorder="0"
-                  title="Rapid Fix Work Request Form"
+                  title="RapidFix Work Request Form"
                   style={{ display: "block", maxWidth: "100%", border: "none" }}
                 />
               ) : (

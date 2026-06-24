@@ -12,11 +12,12 @@ import MarqueeComponent from "@/components/Marquee";
 import Subscribe from "@/components/Subscribe.jsx";
 import CTAArea from "@/components/CTAArea.jsx";
 import Counter from "@/components/Counter.jsx";
+import TruckServices from "@/components/TruckServices";
 
 export const metadata = {
-  title: "Rapid Fix | Auto & Diesel Repair in Scarborough, ON",
+  title: "RapidFix | Auto & Diesel Repair in Scarborough, ON",
   description:
-    "Rapid Fix offers expert auto and diesel repair in Scarborough, ON. From brakes and diagnostics to fleet maintenance and SSC inspections — fast, honest, and affordable service at 112 Sinnott Rd.",
+    "RapidFix offers expert auto and diesel repair in Scarborough, ON. From brakes and diagnostics to fleet maintenance and SSC inspections — fast, honest, and affordable service at 112 Sinnott Rd.",
 };
 
 const page = () => {
@@ -39,6 +40,9 @@ const page = () => {
 
       {/* About Home */}
       <AboutHome />
+
+      {/* Truck Services */}
+      <TruckServices />
 
       {/* Marquee */}
       <MarqueeComponent />

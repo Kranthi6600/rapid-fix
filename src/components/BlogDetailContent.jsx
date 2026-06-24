@@ -162,7 +162,7 @@ const BlogDetailContent = ({ blog }) => {
                   <img src={thumbnail} alt={thumbnail_alt || title} />
                   <div className="blog-meta">
                     <span>
-                      <i className="far fa-user" /> By Rapid Fix Team
+                      <i className="far fa-user" /> By RapidFix Team
                     </span>
                     {category && (
                       <span>
