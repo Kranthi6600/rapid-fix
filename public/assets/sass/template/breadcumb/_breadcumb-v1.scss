@@ -69,6 +69,39 @@
         bottom: 0;
     }
 }
+.breadcumb-wrapper.right-bottom {
+    .row {
+        align-items: flex-end;
+    }
+    .breadcumb-content {
+        margin-left: auto;
+        text-align: right;
+    }
+    .breadcumb-menu {
+        justify-content: flex-end;
+        li {
+            padding-right: 0;
+            padding-left: 11px;
+            &:after {
+                margin-left: 0;
+                margin-right: 16px;
+                content: none;
+            }
+            &:before {
+                content: "\f104";
+                position: relative;
+                margin-right: 16px;
+                font-size: 14px;
+                font-weight: 700;
+                font-family: $icon-font;
+                color: $white-color;
+            }
+            &:last-child:before {
+                display: none;
+            }
+        }
+    }
+}
 @include lg {
     .breadcumb-wrapper {
         padding: 262px 0 120px;
