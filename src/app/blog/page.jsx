@@ -22,7 +22,7 @@ const page = () => {
       <Header />
 
       {/* Breadcrumb */}
-      <Breadcrumb title="Blog" img="/assets/img/blog/blog-1.jpg" className="right-bottom" />
+      <Breadcrumb title={"Blog"} img="/assets/img/blog/blog-1.jpg"/>
 
       {/* Blog Area List */}
       <BlogAreaList />

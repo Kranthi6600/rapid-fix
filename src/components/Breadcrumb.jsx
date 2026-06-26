@@ -1,12 +1,12 @@
 
 import Link from "next/link";
 
-const Breadcrumb = ({ title, img = "/assets/img/normal/breadcrumb-thumb.png", className = "" }) => {
+const Breadcrumb = ({ title, img = "/assets/img/normal/breadcrumb-thumb.png" }) => {
   return (
-    <div className={`breadcumb-wrapper ${className}`}>
+    <div className="breadcumb-wrapper">
       <div className="container">
         <div className="row">
-          <div className={`col-lg-6 ${className.includes("right-bottom") ? "order-lg-last" : ""}`}>
+          <div className="col-lg-6">
             <div className="breadcumb-content" data-aos="fade-right" data-aos-duration="800">
               <h1 className="breadcumb-title">{title}</h1>
               <ul className="breadcumb-menu">
@@ -17,7 +17,7 @@ const Breadcrumb = ({ title, img = "/assets/img/normal/breadcrumb-thumb.png", cl
               </ul>
             </div>
           </div>
-          <div className={`col-lg-6 d-lg-block d-none ${className.includes("right-bottom") ? "order-lg-first" : ""}`} data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+          <div className="col-lg-6 d-lg-block d-none" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
             <div className="breadcumb-thumb">
               <img
                 src={img}
