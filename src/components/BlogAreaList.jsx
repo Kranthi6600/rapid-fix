@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const POSTS_PER_PAGE = 3;
 
@@ -27,6 +27,9 @@ const BlogAreaList = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
+  const mainRef = useRef(null);
+  const needHelpRef = useRef(null);
+  const placeholderRef = useRef(null);
 
   useEffect(() => {
     fetch("/api/blogs")
@@ -38,6 +41,78 @@ const BlogAreaList = () => {
       .finally(() => setLoading(false));
   }, []);
 
+  useEffect(() => {
+    const main = mainRef.current;
+    const needHelp = needHelpRef.current;
+    const placeholder = placeholderRef.current;
+    if (!main || !needHelp || !placeholder) return;
+
+    let pinned = false;
+    let rafId = null;
+
+    const setFixedPos = () => {
+      const rect = placeholder.getBoundingClientRect();
+      needHelp.style.left = `${rect.left}px`;
+      needHelp.style.width = `${rect.width}px`;
+    };
+
+    const tick = () => {
+      const placeRect = placeholder.getBoundingClientRect();
+      const mainRect = main.getBoundingClientRect();
+      const offset = 100;
+      const needHelpHeight = needHelp.offsetHeight;
+      const buffer = 50;
+
+      const shouldRelease = mainRect.bottom <= needHelpHeight + offset + 20;
+      const shouldPin = !shouldRelease && placeRect.top <= offset;
+      const shouldUnpin = pinned && placeRect.top > offset + buffer;
+
+      if ((shouldUnpin || shouldRelease) && pinned) {
+        pinned = false;
+        placeholder.style.height = "0px";
+        needHelp.style.position = "static";
+        needHelp.style.top = "auto";
+        needHelp.style.left = "auto";
+        needHelp.style.width = "auto";
+        needHelp.style.zIndex = "auto";
+      } else if (shouldPin && !pinned) {
+        pinned = true;
+        placeholder.style.height = `${needHelpHeight}px`;
+        setFixedPos();
+        needHelp.style.position = "fixed";
+        needHelp.style.top = `${offset}px`;
+        needHelp.style.zIndex = "auto";
+      }
+    };
+
+    const onScroll = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => { rafId = null; tick(); });
+    };
+
+    const onResize = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => { rafId = null; tick(); });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize, { passive: true });
+    tick();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+      if (rafId) cancelAnimationFrame(rafId);
+      if (pinned) {
+        placeholder.style.height = "0px";
+        needHelp.style.position = "static";
+        needHelp.style.top = "auto";
+        needHelp.style.left = "auto";
+        needHelp.style.width = "auto";
+        needHelp.style.zIndex = "auto";
+      }
+    };
+  }, [blogs, loading]);
+
   const totalPages = Math.ceil(blogs.length / POSTS_PER_PAGE);
   const start = (currentPage - 1) * POSTS_PER_PAGE;
   const paginated = blogs.slice(start, start + POSTS_PER_PAGE);
@@ -46,7 +121,7 @@ const BlogAreaList = () => {
     <section className="blog-area space-top space-extra-bottom">
       <div className="container">
         <div className="row gx-40">
-          <div className="col-xxl-8 col-lg-7">
+          <div className="col-xxl-8 col-lg-7" ref={mainRef}>
             {loading && (
               <div className="text-center py-5">
                 <div className="spinner-border text-primary" role="status">
@@ -122,8 +197,8 @@ const BlogAreaList = () => {
             </div>
           </div>
 
-          <div className="col-xxl-4 col-lg-5" data-aos="fade-left" data-aos-duration="900">
-            <aside className="sidebar-area">
+          <div className="col-xxl-4 col-lg-5 d-flex flex-column">
+            <aside className="sidebar-area" style={{ flex: "0 0 auto" }}>
               <div className="widget widget_search" data-aos="fade-up" data-aos-delay="100">
                 <h3 className="widget_title">Search</h3>
                 <form className="search-form">
@@ -184,6 +259,41 @@ const BlogAreaList = () => {
                 </div>
               </div>
             </aside>
+
+            {/* Need Help — JS fixed with permanent placeholder */}
+            <div className="flex-grow-1" style={{ position: "relative" }}>
+              <div ref={placeholderRef} style={{ width: "100%" }} />
+              <div
+                className="widget bg-smoke rounded-4 p-30"
+                ref={needHelpRef}
+                style={{ position: "relative" }}
+              >
+                <div className="text-center mb-20">
+                  <i className="fas fa-headset fa-3x text-theme" />
+                </div>
+                <h4 className="widget-title mb-15 text-center">Need Help?</h4>
+                <p className="text-dark mb-20 text-center">
+                  Have questions? Our team is ready to assist you.
+                </p>
+                <div className="contact-info mb-20">
+                  <div className="d-flex align-items-center gap-2 mb-10">
+                    <i className="fas fa-phone text-theme" />
+                    <Link href="tel:4378364848" className="text-decoration-none fw-semibold need-help-link">(437) 836-4848</Link>
+                  </div>
+                  <div className="d-flex align-items-center gap-2 mb-10">
+                    <i className="fas fa-envelope text-theme" />
+                    <Link href="mailto:support@rapidfix.com" className="text-decoration-none fw-semibold need-help-link">support@rapidfix.com</Link>
+                  </div>
+                  <div className="d-flex align-items-start gap-2">
+                    <i className="fas fa-clock text-theme mt-1" />
+                    <span className="text-dark small fw-semibold">Mon - Sat: 8:00 AM - 6:00 PM</span>
+                  </div>
+                </div>
+                <Link href="/contact" className="btn style2 w-100">
+                  Contact Us
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
