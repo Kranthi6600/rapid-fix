@@ -54,15 +54,15 @@
     display: flex;
     gap: 10px;
     a {
-        height: 50px;
-        width: 50px;
-        line-height: 50px;
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
         border-radius: 5px;
         display: inline-block;
         background-color: rgba($color: #ffffff, $alpha: 0.2);
         color: $white-color;
         text-align: center;
-        font-size: 16px;
+        font-size: 24px;
         &:hover {
             background: $white-color;
             color: $theme-color;
@@ -86,12 +86,12 @@
     &.style3 {
         a {
             background: $gray-color;
-            width: 30px;
-            height: 30px;
-            line-height: 32px;
+            width: 44px;
+            height: 44px;
+            line-height: 46px;
             border-radius: 50%;
             color: $white-color;
-            font-size: 14px;
+            font-size: 20px;
             &:hover {
                 background: $theme-color;
                 color: $white-color;

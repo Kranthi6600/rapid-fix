@@ -29,13 +29,7 @@ const SubscribeTwo = () => {
           </div>
         </div>
         <div className="social-btn" data-aos="fade-up" data-aos-delay="300">
-          <a href="https://facebook.com/">
-            <i className="fab fa-facebook-f" />
-          </a>
-          <a href="https://twitter.com/">
-            <i className="fab fa-twitter" />
-          </a>
-          <a href="https://instagram.com/">
+          <a href="https://www.instagram.com/p/DaEkC23v6Tq/?igsh=bXc2enk0bnVxcWJm" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-instagram" />
           </a>
         </div>

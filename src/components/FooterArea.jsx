@@ -16,17 +16,8 @@ const FooterArea = () => {
                   Expert auto and diesel repair you can trust. Fast turnaround, honest pricing, and quality workmanship — every time.
                 </p>
                 <div className="social-btn style3">
-                  <Link href="https://www.instagram.com/" tabIndex={-1}>
+                  <Link href="https://www.instagram.com/p/DaEkC23v6Tq/?igsh=bXc2enk0bnVxcWJm" target="_blank" rel="noopener noreferrer" tabIndex={-1}>
                     <i className="fab fa-instagram" />
-                  </Link>
-                  <Link href="https://linkedin.com/" tabIndex={-1}>
-                    <i className="fab fa-linkedin-in" />
-                  </Link>
-                  <Link href="https://twitter.com/" tabIndex={-1}>
-                    <i className="fab fa-twitter" />
-                  </Link>
-                  <Link href="https://facebook.com/" tabIndex={-1}>
-                    <i className="fab fa-facebook-f" />
                   </Link>
                 </div>
               </div>
