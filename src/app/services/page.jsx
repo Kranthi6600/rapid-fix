@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import ServiceAreaTwo_multi_img from "@/components/ServiceAreaTwo_multi_img";
 import Subscribe from "@/components/Subscribe";
 import Preloader from "@/helper/Preloader";
+import JsonLd from "@/components/JsonLd";
+import { fetchServicesList } from "@/lib/servicesApi";
 
 export const metadata = {
   title: "Services | RapidFix - Auto & Diesel Repair Specialists",
@@ -12,9 +14,16 @@ export const metadata = {
 };
 
 
-const page = () => {
+const page = async () => {
+  const listData = await fetchServicesList();
+
   return (
     <>
+      {/* Schema.org JSON-LD */}
+      <JsonLd
+        data={[listData?.schema?.item_list, listData?.schema?.collection_page]}
+      />
+
       {/* Preloader */}
  <Preloader />
 

@@ -4,6 +4,8 @@ import FooterArea from "@/components/FooterArea";
 import Header from "@/components/Header";
 import Subscribe from "@/components/Subscribe";
 import Preloader from "@/helper/Preloader";
+import JsonLd from "@/components/JsonLd";
+import { fetchBlogsList } from "@/lib/blogsApi";
 
 export const metadata = {
   title: "Blog | RapidFix - Auto & Diesel Repair Tips",
@@ -12,9 +14,16 @@ export const metadata = {
 };
 
 
-const page = () => {
+const page = async () => {
+  const listData = await fetchBlogsList();
+
   return (
     <>
+      {/* Schema.org JSON-LD */}
+      <JsonLd
+        data={[listData?.schema?.item_list, listData?.schema?.collection_page]}
+      />
+
       {/* Preloader */}
  <Preloader />
 
