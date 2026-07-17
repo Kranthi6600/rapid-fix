@@ -1,0 +1,549 @@
+.three-d-page {
+  background: #0a0a0a;
+  color: #f5f5f7;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.three-d-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.three-d-content {
+  position: relative;
+  z-index: 1;
+}
+
+// ─── Nav ──────────────────────────────────────────────
+.nav3d {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  transition: all 0.4s ease;
+  background: transparent;
+
+  &.scrolled {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 10px 40px;
+    border-bottom: 1px solid rgba(232, 9, 46, 0.2);
+  }
+}
+
+.nav3dLogo {
+  img {
+    height: 40px;
+    width: auto;
+  }
+}
+
+.nav3dLinks {
+  display: flex;
+  gap: 32px;
+
+  a {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #e8092e;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.nav3dCta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav3dPhone {
+  a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+
+    &:hover {
+      color: #e8092e;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.nav3dQuoteBtn {
+  background: #e8092e;
+  color: #fff !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(232, 9, 46, 0.4);
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.nav3dMobileToggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #1a1a1a;
+  font-size: 22px;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+// ─── Section shared ───────────────────────────────────
+.section3d {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 8%;
+  position: relative;
+}
+
+.glassCard {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 40px;
+  transition: all 0.4s ease;
+
+  &:hover {
+    border-color: rgba(232, 9, 46, 0.3);
+    transform: translateY(-4px);
+  }
+}
+
+.sectionTitle {
+  font-family: "Yantramanav", sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #1a1a1a 0%, rgba(26, 26, 26, 0.6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sectionSubtitle {
+  color: #e8092e;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.sectionText {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 1.1rem;
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+.btn3d {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #e8092e;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(232, 9, 46, 0.4);
+  }
+}
+
+.checklist3d {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+
+    i {
+      color: #e8092e;
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ─── Hero ─────────────────────────────────────────────
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  position: relative;
+}
+
+.heroContent {
+  max-width: 600px;
+}
+
+.heroTitle {
+  font-family: "Yantramanav", sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0 0 24px;
+  background: linear-gradient(135deg, #1a1a1a 0%, rgba(26, 26, 26, 0.5) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+.heroText {
+  font-size: 1.25rem;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 440px;
+}
+
+.heroBtns {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.heroPhone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .phoneIcon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(232, 9, 46, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e8092e;
+    font-size: 18px;
+  }
+
+  .phoneLabel {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.45);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .phoneNum {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-decoration: none;
+
+    &:hover {
+      color: #e8092e;
+    }
+  }
+}
+
+// ─── Counter ──────────────────────────────────────────
+.counterGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.counterCard {
+  text-align: center;
+  padding: 32px 20px;
+
+  .counterNum {
+    font-family: "Yantramanav", sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #e8092e;
+    margin-bottom: 8px;
+  }
+
+  .counterLabel {
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+// ─── About ────────────────────────────────────────────
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.aboutImage {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+// ─── Services ─────────────────────────────────────────
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.serviceCard3d {
+  padding: 32px;
+  cursor: pointer;
+
+  .serviceIcon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: rgba(232, 9, 46, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  .serviceTitle {
+    font-family: "Yantramanav", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+
+  .serviceText {
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+// ─── CTA ──────────────────────────────────────────────
+.ctaSection {
+  text-align: center;
+  padding: 120px 8%;
+}
+
+.ctaTitle {
+  font-family: "Yantramanav", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.ctaForm {
+  display: flex;
+  gap: 12px;
+  max-width: 500px;
+  margin: 32px auto 0;
+
+  input {
+    flex: 1;
+    padding: 14px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.6);
+    color: #1a1a1a;
+    font-size: 15px;
+    outline: none;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    &:focus {
+      border-color: #e8092e;
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+// ─── Footer ───────────────────────────────────────────
+.footer3d {
+  padding: 80px 8% 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  gap: 40px;
+  margin-bottom: 40px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footerTitle {
+  font-family: "Yantramanav", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.footerText {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 10px;
+
+    a {
+      color: rgba(0, 0, 0, 0.5);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #e8092e;
+      }
+    }
+  }
+}
+
+.footerContactItem {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+
+  i {
+    color: #e8092e;
+    font-size: 16px;
+    margin-top: 2px;
+  }
+
+  .footerContactLabel {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+  }
+
+  .footerContactValue {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.75);
+  }
+}
+
+.footerBottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 13px;
+
+  a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+
+    &:hover {
+      color: #e8092e;
+    }
+  }
+}
