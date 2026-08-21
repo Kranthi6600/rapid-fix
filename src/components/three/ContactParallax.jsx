@@ -454,6 +454,7 @@ export default function ContactParallax() {
         {/* Right: 3D Model viewer */}
         <div
           ref={modelRef}
+          className="contact-3d-model"
           style={{
             position: "relative",
             overflow: "hidden",
@@ -590,6 +591,9 @@ export default function ContactParallax() {
         @media (max-width: 900px) {
           .contact-main-grid {
             grid-template-columns: 1fr !important;
+          }
+          .contact-3d-model {
+            display: none !important;
           }
         }
       `}</style>

@@ -101,8 +101,10 @@ export default function ServicesParallax() {
       });
 
       // Horizontal scroll gallery — pin section, track moves left on scroll
+      // Skip on mobile to avoid extra gap from pin spacer
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
       const cards = cardRefs.current.filter(Boolean);
-      if (cards.length > 0 && cardsTrackRef.current) {
+      if (cards.length > 0 && cardsTrackRef.current && !isMobile) {
         const track = cardsTrackRef.current;
         const scrollDistance = track.scrollWidth - window.innerWidth + 100;
 
@@ -281,6 +283,7 @@ export default function ServicesParallax() {
       {/* Horizontal scroll cards container */}
       <div
         ref={cardsContainerRef}
+        className="services-cards-container"
         style={{
           height: "100vh",
           overflow: "hidden",
@@ -339,6 +342,7 @@ export default function ServicesParallax() {
         </div>
         <div
           ref={cardsTrackRef}
+          className="services-cards-track"
           style={{
             display: "flex",
             gap: "40px",
@@ -621,7 +625,28 @@ export default function ServicesParallax() {
         .scroll-hint-arrow {
           animation: scrollHintBounce 1.5s ease-in-out infinite;
         }
-        @media (max-width: 900px) {
+        @media (max-width: 768px) {
+          .services-cards-container {
+            height: auto !important;
+            overflow: visible !important;
+            display: block !important;
+            padding-bottom: 40px !important;
+          }
+          .services-cards-container > div:first-child,
+          .services-cards-container > div:nth-child(2) {
+            display: none !important;
+          }
+          .services-cards-track {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 24px !important;
+            padding: 0 16px !important;
+            transform: none !important;
+          }
+          .services-cards-track > div {
+            width: 100% !important;
+            flex-shrink: 1 !important;
+          }
           .services-parallax-card-inner {
             grid-template-columns: 1fr !important;
             height: auto !important;

@@ -224,6 +224,22 @@
 }
 
 // ─── Hero ─────────────────────────────────────────────
+.heroDesktop {
+  display: block;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.heroMobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
 .heroSection {
   min-height: 100vh;
   display: flex;

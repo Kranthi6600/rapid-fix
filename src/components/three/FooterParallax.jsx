@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const footerLinks = {
@@ -33,9 +34,15 @@ const socialLinks = [
 
 export default function FooterParallax() {
   const router = useRouter();
+  const [openSection, setOpenSection] = useState(null);
+
+  const toggleSection = (title) => {
+    setOpenSection(openSection === title ? null : title);
+  };
 
   return (
     <footer
+      className="footer-parallax"
       style={{
         background: "#ffffff",
         color: "rgba(0,0,0,0.6)",
@@ -60,6 +67,7 @@ export default function FooterParallax() {
 
       {/* Main footer content */}
       <div
+        className="footer-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "1.5fr 1fr 1fr 1fr",
@@ -69,7 +77,7 @@ export default function FooterParallax() {
         }}
       >
         {/* Brand column */}
-        <div>
+        <div className="footer-brand">
           <img
             src="/assets/logo1.png"
             alt="RapidFix"
@@ -126,12 +134,58 @@ export default function FooterParallax() {
               </a>
             ))}
           </div>
+
+          {/* Mobile CTA buttons */}
+          <div className="footer-mobile-cta" style={{ display: "none" }}>
+            <a
+              href="tel:+15551234567"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "8px",
+                padding: "14px 20px",
+                borderRadius: "12px",
+                background: "linear-gradient(135deg, #e8092e 0%, #c50724 100%)",
+                color: "#fff",
+                textDecoration: "none",
+                fontWeight: 700,
+                fontSize: "15px",
+                boxShadow: "0 6px 20px rgba(232,9,46,0.25)",
+              }}
+            >
+              <i className="fas fa-phone-alt" style={{ fontSize: "14px" }} />
+              Call Now
+            </a>
+            <a
+              href="/contact"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "8px",
+                padding: "14px 20px",
+                borderRadius: "12px",
+                background: "rgba(232,9,46,0.06)",
+                border: "1px solid rgba(232,9,46,0.15)",
+                color: "#e8092e",
+                textDecoration: "none",
+                fontWeight: 700,
+                fontSize: "15px",
+              }}
+            >
+              <i className="fas fa-calendar-alt" style={{ fontSize: "14px" }} />
+              Book Service
+            </a>
+          </div>
         </div>
 
         {/* Link columns */}
         {Object.entries(footerLinks).map(([title, links]) => (
-          <div key={title}>
+          <div key={title} className="footer-link-col">
             <h4
+              className="footer-link-title"
+              onClick={() => toggleSection(title)}
               style={{
                 fontFamily: '"Yantramanav", sans-serif',
                 fontSize: "14px",
@@ -140,11 +194,20 @@ export default function FooterParallax() {
                 margin: "0 0 16px",
                 textTransform: "uppercase",
                 letterSpacing: "1.5px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                cursor: "pointer",
               }}
             >
               {title}
+              <i
+                className={`fas fa-chevron-down footer-chevron ${openSection === title ? "footer-chevron-open" : ""}`}
+                style={{ fontSize: "10px", color: "rgba(0,0,0,0.3)", transition: "transform 0.3s ease" }}
+              />
             </h4>
             <ul
+              className={`footer-link-list ${openSection === title ? "footer-link-list-open" : ""}`}
               style={{
                 listStyle: "none",
                 padding: 0,
@@ -185,6 +248,7 @@ export default function FooterParallax() {
 
       {/* Contact info bar */}
       <div
+        className="footer-contact-bar"
         style={{
           display: "flex",
           flexWrap: "wrap",
@@ -203,6 +267,7 @@ export default function FooterParallax() {
         ].map((item, i) => (
           <div
             key={i}
+            className="footer-contact-item"
             style={{
               display: "flex",
               alignItems: "center",
@@ -222,6 +287,7 @@ export default function FooterParallax() {
 
       {/* Bottom bar */}
       <div
+        className="footer-bottom-bar"
         style={{
           maxWidth: "1200px",
           margin: "32px auto 0",
@@ -259,11 +325,101 @@ export default function FooterParallax() {
         @media (max-width: 900px) {
           .footer-grid {
             grid-template-columns: 1fr 1fr !important;
+            gap: 30px !important;
+          }
+          .footer-brand {
+            grid-column: 1 / -1 !important;
           }
         }
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+          .footer-parallax {
+            padding: 40px 16px 20px !important;
+          }
           .footer-grid {
             grid-template-columns: 1fr !important;
+            gap: 0 !important;
+          }
+          .footer-brand {
+            grid-column: auto !important;
+            padding-bottom: 28px !important;
+            margin-bottom: 8px !important;
+            border-bottom: 1px solid rgba(0,0,0,0.06) !important;
+          }
+          .footer-brand p {
+            font-size: 13px !important;
+            line-height: 1.6 !important;
+          }
+          .footer-mobile-cta {
+            display: flex !important;
+            gap: 12px !important;
+            margin-top: 20px !important;
+          }
+          .footer-mobile-cta a {
+            flex: 1 !important;
+          }
+          .footer-link-col {
+            border-bottom: 1px solid rgba(0,0,0,0.06) !important;
+            padding: 14px 0 !important;
+          }
+          .footer-link-title {
+            margin: 0 !important;
+            padding: 4px 0 !important;
+            font-size: 13px !important;
+            user-select: none !important;
+          }
+          .footer-chevron {
+            display: inline-block !important;
+          }
+          .footer-chevron-open {
+            transform: rotate(180deg) !important;
+          }
+          .footer-link-list {
+            max-height: 0 !important;
+            overflow: hidden !important;
+            transition: max-height 0.35s ease, gap 0.35s ease, margin 0.35s ease !important;
+            gap: 0 !important;
+            margin: 0 !important;
+          }
+          .footer-link-list-open {
+            max-height: 300px !important;
+            gap: 10px !important;
+            margin: 12px 0 4px !important;
+          }
+          .footer-contact-bar {
+            flex-direction: column !important;
+            gap: 14px !important;
+            margin: 28px auto 0 !important;
+            padding-top: 24px !important;
+          }
+          .footer-contact-item {
+            font-size: 12px !important;
+            gap: 12px !important;
+            padding: 10px 14px !important;
+            border-radius: 10px !important;
+            background: rgba(232,9,46,0.03) !important;
+            border: 1px solid rgba(232,9,46,0.06) !important;
+          }
+          .footer-contact-item i {
+            font-size: 13px !important;
+            width: 18px !important;
+            text-align: center !important;
+          }
+          .footer-bottom-bar {
+            flex-direction: column !important;
+            text-align: center !important;
+            gap: 8px !important;
+            margin: 24px auto 0 !important;
+          }
+          .footer-bottom-bar p {
+            font-size: 11px !important;
+          }
+        }
+        @media (min-width: 769px) {
+          .footer-chevron {
+            display: none !important;
+          }
+          .footer-link-list {
+            max-height: none !important;
           }
         }
       `}</style>

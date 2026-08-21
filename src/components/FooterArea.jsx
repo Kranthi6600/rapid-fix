@@ -121,8 +121,8 @@ const FooterArea = () => {
             </div>
             <div className="col-auto">
               <div className="footer-links">
-                <Link href="/contact">Terms &amp; Conditions</Link>
-                <Link href="/contact">Privacy Policy</Link>
+                <Link href="/privacy-policy">Terms &amp; Conditions</Link>
+                <Link href="/privacy-policy">Privacy Policy</Link>
                 <Link href="/contact">Contact Us</Link>
               </div>
             </div>
