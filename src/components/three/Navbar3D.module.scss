@@ -228,6 +228,32 @@
   }
 }
 
+.callBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #E03A3A 0%, #b02a2a 100%);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 14px rgba(224, 58, 58, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(224, 58, 58, 0.45);
+  }
+
+  @media (max-width: 880px) {
+    display: none;
+  }
+}
+
 // ─── Mobile toggle ─────────────────────────────────────
 .mobileToggle {
   display: none;
@@ -295,6 +321,20 @@
 
     &:hover {
       background: linear-gradient(135deg, #e8092e 0%, #c50724 100%);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+  }
+
+  .mobileCallBtn {
+    margin-top: 8px;
+    background: linear-gradient(135deg, #E03A3A 0%, #b02a2a 100%);
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(224, 58, 58, 0.3);
+
+    &:hover {
+      background: linear-gradient(135deg, #E03A3A 0%, #b02a2a 100%);
       color: #fff;
       transform: translateY(-1px);
     }

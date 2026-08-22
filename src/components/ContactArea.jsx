@@ -325,7 +325,28 @@ const ContactArea = () => {
                     />
                     {errors.message && <div className="invalid-feedback">{errors.message}</div>}
                   </div>
-                  <div className="form-btn col-12">
+                  <div className="form-btn col-12 d-flex gap-2 flex-wrap">
+                    <a
+                      href="tel:4378364848"
+                      className="btn-call-now"
+                      style={{
+                        backgroundColor: "#E03A3A",
+                        color: "#fff",
+                        border: "none",
+                        padding: "18px 28px",
+                        borderRadius: "5px",
+                        fontSize: "16px",
+                        fontWeight: 700,
+                        letterSpacing: "1px",
+                        textTransform: "uppercase",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        textDecoration: "none",
+                        lineHeight: 1,
+                      }}
+                    >
+                      <i className="fas fa-phone-alt me-2" /> Call Now
+                    </a>
                     <a
                       href="#"
                       className={`btn style2 ${isSubmitting ? 'disabled' : ''}`}

@@ -76,6 +76,13 @@ export default function Navbar3D() {
             </a>
 
             <a
+              href="tel:4378364848"
+              className={styles.callBtn}
+            >
+              <i className="fas fa-phone" /> Call Now
+            </a>
+
+            <a
               href="https://app.shopmonkey.cloud/public/quote-request/f3173cde-af0b-453f-93bd-1dbf406b64d0"
               target="_blank"
               rel="noopener noreferrer"
@@ -109,6 +116,12 @@ export default function Navbar3D() {
                 {link.label}
               </Link>
             ))}
+            <a
+              href="tel:4378364848"
+              className={styles.mobileCallBtn}
+            >
+              <i className="fas fa-phone" /> Call Now
+            </a>
             <a
               href="https://app.shopmonkey.cloud/public/quote-request/f3173cde-af0b-453f-93bd-1dbf406b64d0"
               target="_blank"

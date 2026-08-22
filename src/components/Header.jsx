@@ -160,6 +160,13 @@ const Header = () => {
                     </div>
                   </div>
                   <a
+                    href="tel:4378364848"
+                    className="btn text-white btn-call-now"
+                    style={{ backgroundColor: "#E03A3A", border: "none", padding: "8px 16px", borderRadius: "4px" }}
+                  >
+                    <i className="fas fa-phone-alt me-1" /> Call Now
+                  </a>
+                  <a
                     href="https://app.shopmonkey.cloud/public/quote-request/f3173cde-af0b-453f-93bd-1dbf406b64d0"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -215,6 +222,15 @@ const Header = () => {
 
                 <li>
                   <Link href="/contact">Contact</Link>
+                </li>
+                <li>
+                  <a
+                    href="tel:4378364848"
+                    className="btn text-white w-100 mt-2 btn-call-now"
+                    style={{ backgroundColor: "#E03A3A", border: "none", padding: "8px 16px", borderRadius: "4px" }}
+                  >
+                    <i className="fas fa-phone-alt me-1" /> Call Now
+                  </a>
                 </li>
                 <li>
                   <a

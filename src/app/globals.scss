@@ -216,6 +216,15 @@ img { max-width: 100%; height: auto; }
   }
 }
 
+// ─── Call Now button hover (mirrors .btn-quote) ─────────────────────────────
+.btn-call-now {
+  &:hover,
+  &:focus {
+    background-color: #E03A3A !important;
+    color: #000 !important;
+  }
+}
+
 // ─── Service sidebar Need Help mobile fallback ────────────────────────────
 @media (max-width: 991px) {
   .service-sidebar .widget:last-child {

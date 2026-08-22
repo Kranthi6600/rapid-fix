@@ -55,20 +55,34 @@ const WorkRequestModal = () => {
                   <p className="mb-3">
                     The form couldn&apos;t load inside this page.
                   </p>
-                  <a
-                    href={SHOPMONKEY_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn text-white"
-                    style={{
-                      backgroundColor: "var(--theme-color)",
-                      border: "none",
-                      padding: "10px 24px",
-                      borderRadius: "4px",
-                    }}
-                  >
-                    Open Request Form
-                  </a>
+                  <div className="d-flex gap-2 justify-content-center">
+                    <a
+                      href="tel:4378364848"
+                      className="btn text-white"
+                      style={{
+                        backgroundColor: "#E03A3A",
+                        border: "none",
+                        padding: "10px 24px",
+                        borderRadius: "4px",
+                      }}
+                    >
+                      <i className="fas fa-phone-alt me-1" /> Call Now
+                    </a>
+                    <a
+                      href={SHOPMONKEY_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn text-white"
+                      style={{
+                        backgroundColor: "var(--theme-color)",
+                        border: "none",
+                        padding: "10px 24px",
+                        borderRadius: "4px",
+                      }}
+                    >
+                      Open Request Form
+                    </a>
+                  </div>
                 </div>
               )}
             </div>
