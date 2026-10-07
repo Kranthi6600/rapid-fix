@@ -200,6 +200,60 @@ img { max-width: 100%; height: auto; }
   @media (max-width: 575px) { height: 260px; }
 }
 
+// ─── Header single-row fix (992–1399px) ─────────────────────────────────
+// Bootstrap .container is 960px (lg) / 1140px (xl) — too narrow for
+// logo + nav + phone block, which wraps to a second row. Hide the phone
+// desc block (Call Now button remains as the tel: link) and shrink the logo.
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .nav-header.header-layout4 .menu-area {
+    .navbar-right-desc { display: none; }
+    .header-logo img { width: 170px; }
+  }
+}
+
+// ─── Mobile header animated call button ────────────────────────────────────
+.call-btn-mobile {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-right: 12px;
+  border-radius: 50%;
+  background-color: var(--theme-color);
+  color: #fff !important;
+  font-size: 16px;
+  z-index: 1;
+
+  i {
+    animation: callBtnShake 1.2s ease-in-out infinite;
+    transform-origin: 50% 0;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid var(--theme-color);
+    animation: popupBtn 2s ease-out infinite;
+    z-index: -1;
+  }
+  &::after {
+    animation-delay: 1s;
+  }
+}
+
+@keyframes callBtnShake {
+  0%, 100% { transform: rotate(0deg); }
+  20%      { transform: rotate(-15deg); }
+  40%      { transform: rotate(15deg); }
+  60%      { transform: rotate(-10deg); }
+  80%      { transform: rotate(10deg); }
+}
+
 // ─── Reduce gap between nav item and dropdown ─────────────────────────────
 .main-menu ul.sub-menu {
   top: calc(100% - 5px) !important;

@@ -73,7 +73,7 @@ const Header = () => {
                   </Link>
                 </div>
               </div>
-              <div className="col-auto d-xl-block d-none header-sticky-none">
+              <div className="col-auto d-lg-block d-none header-sticky-none">
                 <div className="header-logo">
                   <Link href="/">
                     <img src="/assets/logo1.png" alt="RapidFix" width={200} style={{ maxWidth: "100%" }} />
@@ -119,6 +119,13 @@ const Header = () => {
                   </ul>
                 </nav>
                 <div className="navbar-right d-inline-flex d-lg-none">
+                  <a
+                    href="tel:4378364848"
+                    className="call-btn-mobile"
+                    aria-label="Call RapidFix"
+                  >
+                    <i className="fas fa-phone-alt" />
+                  </a>
                   <button
                     type="button"
                     className="menu-toggle icon-btn"
