@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { captureAttribution, getAttribution, pushLeadEvent } from "@/lib/attribution";
 import "./ContactArea.css";
 
 const ContactArea = () => {
@@ -16,6 +17,11 @@ const ContactArea = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
+
+  // Persist gclid/UTM params from the landing URL so leads carry ad attribution
+  useEffect(() => {
+    captureAttribution();
+  }, []);
 
   const validateForm = () => {
     const newErrors = {};
@@ -63,6 +69,7 @@ const ContactArea = () => {
       // Format the appointment data
       const appointmentData = {
         ...formData,
+        attribution: getAttribution(),
         timestamp: new Date().toISOString(),
         type: 'appointment_request'
       };
@@ -80,6 +87,9 @@ const ContactArea = () => {
 
       if (response.ok && data.success) {
         setSubmitStatus('success');
+        // Notify GTM -> Google Ads conversion tag (with user data for
+        // Enhanced Conversions for Leads)
+        pushLeadEvent({ email: formData.email, phone: formData.phone });
         // Reset form
         setFormData({
           name: '',
