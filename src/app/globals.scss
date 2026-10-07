@@ -207,7 +207,7 @@ img { max-width: 100%; height: auto; }
 @media (min-width: 992px) and (max-width: 1399.98px) {
   .nav-header.header-layout4 .menu-area {
     .navbar-right-desc { display: none; }
-    .header-logo img { width: 170px; }
+    .header-logo img { width: 150px; }
   }
 }
 
@@ -217,13 +217,18 @@ img { max-width: 100%; height: auto; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 46px;
+  gap: 8px;
   height: 46px;
+  padding: 0 18px;
   margin-right: 12px;
-  border-radius: 50%;
+  border-radius: 23px;
   background-color: var(--theme-color);
   color: #fff !important;
-  font-size: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
   z-index: 1;
 
   i {
@@ -236,22 +241,27 @@ img { max-width: 100%; height: auto; }
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 50%;
+    border-radius: 23px;
     border: 2px solid var(--theme-color);
-    animation: popupBtn 2s ease-out infinite;
+    animation: callBtnPulse 1.8s ease-out infinite;
     z-index: -1;
   }
   &::after {
-    animation-delay: 1s;
+    animation-delay: 0.9s;
   }
+}
+
+@keyframes callBtnPulse {
+  0%   { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.35); opacity: 0; }
 }
 
 @keyframes callBtnShake {
   0%, 100% { transform: rotate(0deg); }
-  20%      { transform: rotate(-15deg); }
-  40%      { transform: rotate(15deg); }
-  60%      { transform: rotate(-10deg); }
-  80%      { transform: rotate(10deg); }
+  20%      { transform: rotate(-8deg); }
+  40%      { transform: rotate(8deg); }
+  60%      { transform: rotate(-5deg); }
+  80%      { transform: rotate(5deg); }
 }
 
 // ─── Reduce gap between nav item and dropdown ─────────────────────────────

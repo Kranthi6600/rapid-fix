@@ -69,21 +69,21 @@ const Header = () => {
               <div className="col-auto d-lg-none d-block">
                 <div className="header-logo">
                   <Link href="/">
-                    <img src="/assets/logo1.png" alt="RapidFix" width={200} style={{ maxWidth: "100%" }} />
+                    <img src="/assets/logo1.png" alt="RapidFix" width={160} style={{ maxWidth: "100%" }} />
                   </Link>
                 </div>
               </div>
               <div className="col-auto d-lg-block d-none header-sticky-none">
                 <div className="header-logo">
                   <Link href="/">
-                    <img src="/assets/logo1.png" alt="RapidFix" width={200} style={{ maxWidth: "100%" }} />
+                    <img src="/assets/logo1.png" alt="RapidFix" width={160} style={{ maxWidth: "100%" }} />
                   </Link>
                 </div>
               </div>
               <div className="col-auto header-sticky-logo">
                 <div className="header-logo">
                   <Link href="/">
-                    <img src="/assets/logo1.png" alt="RapidFix" width={200} style={{ maxWidth: "100%" }} />
+                    <img src="/assets/logo1.png" alt="RapidFix" width={160} style={{ maxWidth: "100%" }} />
                   </Link>
                 </div>
               </div>
@@ -125,6 +125,7 @@ const Header = () => {
                     aria-label="Call RapidFix"
                   >
                     <i className="fas fa-phone-alt" />
+                    <span>Call Now</span>
                   </a>
                   <button
                     type="button"
